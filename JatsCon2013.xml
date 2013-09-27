@@ -4,46 +4,67 @@
   <front>
     <article-meta>
       <title-group>
-        <article-title>Comparing Forward-Error Correction and Redundancy</article-title>
+        <article-title>Inconsistent XML as a barrier to reuse of Open Access Content</article-title>
       </title-group>
       <contrib-group>
         <contrib contrib-type="author">
           <name>
-            <surname>Mouse</surname>
-            <given-names>Anon E.</given-names>
+            <surname>Mietchen</surname>
+            <given-names>Daniel</given-names>
           </name>
-          <role>Master of Ceremonies</role>
-          <aff>Institute of Scientific Research in Redundancy</aff>
-          <address>
-            <country>USA</country>
-            <phone>301.555.1234</phone>
-          </address>
-          <email>anon.e.mouse@nowhere.net</email>
+          <aff>Museum für Naturkunde - Leibniz-Institut für Evolutions- und Biodiversitätsforschung, Berlin, Germany</aff>
+          <aff>Open Knowledge Foundation, Berlin, Germany</aff>
           <bio>
-            <p>Anon E. Mouse is Master of Ceremonies at the Institute of Scientific Research in
-              Redundancy. Her research in the field has been recognized by publications known
-              thoughout the world as leading publications in her research field. Anon has made
-              significant contributions to the standards most commonly used in the fields of error
-              reporting and correction and continues to participate in the working groups for said
-              standards.</p>
+            <p>Daniel Mietchen is a biophysicist and a consultant to Open Access publishers on 
+              matters of publishing technology, including XML-based workflows.</p>
+          </bio>
+        </contrib>
+        <contrib>
+          <name>
+            <surname>Maloney</surname>
+            <given-names>Chris</given-names>
+          </name>
+          <aff>PMC/NCBI/NIH, Bethesda, MD</aff>
+          <bio>
+            <p>Chris Maloney is a web developer working for NCBI’s PMC and Bookshelf resources. He has worked with XML technologies for over ten years.</p>
+          </bio>
+        </contrib>
+        <contrib>
+          <name>
+            <surname>Nils</surname>
+            <given-names>Dagsson Moskopp</given-names>
+          </name>
+          <aff>?</aff>
+          <bio>
+            <p>Nils Dagsson Moskopp is a philosophy student, blogger and programmer with focus on 
+              web development.</p>
           </bio>
         </contrib>
       </contrib-group>
+
       <permissions>
-        <copyright-statement>Copyright 2010 by Anon E. Mouse</copyright-statement>
-        <copyright-year>2010</copyright-year>
-        <copyright-holder>Anon E. Mouse</copyright-holder>
+        <copyright-statement>Copyright 2013 by Daniel Mietchen</copyright-statement>
+        <copyright-year>2013</copyright-year>
+        <copyright-holder>Daniel Mietchen</copyright-holder>
         <license>
           <license-p>The copyright holder grants the U.S. National Library of Medicine permission to
             archive and post a copy of this paper on the Journal Article Tag Suite Conference
             proceedings website.</license-p>
         </license>
         <license license-type="open-access"
-          xlink:href="http://creativecommons.org/licenses/by-nc/3.0/us/">
-          <license-p>This work is licensed under a Creative Commons Attribution-Noncommercial 3.0
-            United States License</license-p>
+                 xlink:href="http://creativecommons.org/licenses/by/3.0/">
+          <license-p>
+            This work is licensed under a <ext-link xlink:href="http://creativecommons.org/licenses/by/3.0/">Creative 
+              Commons Attribution 3.0 Unported License</ext-link>.
+          </license-p>
         </license>
       </permissions>
+
+
+
+
+
+
       <abstract abstract-type="brief">
         <p>The implications of "smart" technology have been far-reaching and pervasive. In this
           position paper, we disprove the evaluation of thin clients. Such a claim is generally an
