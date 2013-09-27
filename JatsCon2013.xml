@@ -36,7 +36,7 @@
             <surname>Moskopp</surname>
             <given-names>Nils Dagsson</given-names>
           </name>
-          <aff>?</aff>
+          <aff>Humboldt University, Berlin (student)</aff>
           <bio>
             <p>Nils Dagsson Moskopp is a philosophy student, blogger and programmer with focus on
               web development.</p>
@@ -55,10 +55,11 @@
             archive and post a copy of this paper on the Journal Article Tag Suite Conference
             proceedings website.</license-p>
         </license>
-        <license license-type="open-access" xlink:href="http://creativecommons.org/licenses/by/3.0/">
-          <license-p> This work is licensed under a <ext-link
-              xlink:href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution
-              3.0 Unported License</ext-link>. </license-p>
+        <license license-type="public-domain" 
+          xlink:href="http://creativecommons.org/publicdomain/zero/1.0/">
+          <license-p> To the extent possible under law, the authors of this paper have waived all 
+            copyright and related or neighboring rights to "Inconsistent XML as a barrier to reuse 
+            of Open Access Content". This work is published from: United States.</license-p>
         </license>
       </permissions>
 
