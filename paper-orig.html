@@ -22,10 +22,10 @@
   </abstract>
 
 
-  <h1 id="introduction">Introduction</h1>
+<sec><title>Introduction</title>
 
 
-  <h2 id="scope-of-this-paper">Scope of this paper</h2>
+<sec><title>Scope of this paper</title>
   <p>The aim of this paper is to describe the problems that we came across when attempting to reuse
     materials from the <ext-link ext-link-type="uri"
       xlink:href="http://www.ncbi.nlm.nih.gov/pmc/tools/openftlist/">PMC Open Access
@@ -40,7 +40,8 @@
 
 
 
-  <h2 id="the-open-access-media-importer">The Open Access Media Importer</h2>
+  </sec>
+<sec><title>The Open Access Media Importer</title>
   <p>The <ext-link ext-link-type="uri"
       xlink:href="http://commons.wikimedia.org/wiki/User:Open_Access_Media_Importer_Bot">Open Access
       Media Importer</ext-link> is an automated bot, developed with <ext-link ext-link-type="uri"
@@ -72,7 +73,9 @@
 
 
 
-  <h1 id="license-tagging">License tagging</h1>
+</sec>
+</sec>
+  <sec><title>License tagging</title>
   <p>As mentioned above, an important function of the OAMI is to determine, for each media file, the
     license under which it or its parent article has been released.</p>
   <p>In reading and analyzing the license data, the OAMI looks for licenses that are truly open, in
@@ -187,7 +190,7 @@
       <em>Recommendations</em> section, below.</p>
 
 
-  <h2 id="problems-encountered-by-the-bot">Problems encountered by the bot</h2>
+<sec><title>Problems encountered by the bot</title>
   <p>While developing and deploying the OAMI, we discovered that automatically discerning the
     licensing terms and reuse rights was non-trivial.  In contrast to the example of
     &quot;good&quot; markup above, within the article XML available from the PMC OA subset,
@@ -331,7 +334,8 @@
       BY</ext-link>).</p>
 
 
-  <h2 id="impact-of-these-problems-on-pmc">Impact of these problems on PMC</h2>
+  </sec>
+<sec><title>Impact of these problems on PMC</title>
   <p>PMC recently implemented a search-by-license feature, described on their <ext-link
       ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/pmc/tools/openftlist/">Open Access
       Subset</ext-link> page. This feature allows users to query for articles matching specific
@@ -349,7 +353,8 @@
     articles would not be discoverable through this search feature.</p>
 
 
-  <h2 id="impact-of-these-problems-beyond-pmc">Impact of these problems beyond PMC</h2>
+  </sec>
+<sec><title>Impact of these problems beyond PMC</title>
   <p>In the OAMI, these problems necessitated the development of a fairly sophisticated text-mining
     module that examined both the machine-readable URI in the &lt;license&gt; element, as well as
     the human-readable expressions, so as to determine the publisher's intent. Because of Wikimedia
@@ -375,7 +380,8 @@
     JATS XML articles.</p>
 
 
-  <h2 id="broader-license-issues">Broader license issues</h2>
+  </sec>
+<sec><title>Broader license issues</title>
   <p>
     <strong>
       <em>Multiple licenses with different scope</em>
@@ -453,7 +459,8 @@
     below.</p>
 
 
-  <h2 id="standardization-efforts">Standardization efforts</h2>
+  </sec>
+<sec><title>Standardization efforts</title>
   <p>There have been a number of efforts to standardize the expression of license metadata. Among
     these are:</p>
   <ul>
@@ -478,7 +485,9 @@
 
 
 
-  <h1 id="media-types">Media types</h1>
+</sec>
+  </sec>
+  <sec><title>Media types</title>
   <p>In addition to the problems with communicating the licensing terms, the media types of
     supplementary materials are frequently not indicated properly, which reduces discoverability and
     translates into extra efforts before any reuse becomes possible.</p>
@@ -536,7 +545,7 @@
   <p>So, there is some ambiguity as to the best practice for tagging supplementary media files.</p>
 
 
-  <h2 id="media-type-and-related-problems">Media type and related problems</h2>
+<sec><title>Media type and related problems</title>
   <p>The following are some examples of the problems that we encountered that are related to media
     types.</p>
   <p>Foremost were those resulting from mismatches among:</p>
@@ -700,7 +709,8 @@
     but, again, no reference to that from the XML.</p>
 
 
-  <h2 id="recent-efforts-at-pmc">Recent efforts at PMC</h2>
+  </sec>
+<sec><title>Recent efforts at PMC</title>
   <p>Many of the problems described above were due to PMC's incorrectly adding @mimetype and
     @mime-subtype attributes to XML that it received, based on the assumption that the media file's
     extension accurately reflects its media type. When it was recognized that the filename extension
@@ -722,7 +732,8 @@
     adjust the @mimetype or @mime-subtype attributes for any new articles received.</p>
 
 
-  <h2 id="standardization-efforts-1">Standardization efforts</h2>
+  </sec>
+<sec><title>Standardization efforts</title>
   <p>Over the past few years, the NISO/NFAIS Supplemental Journal Article Materials Working Group
     has been working on standards for handling supplementary materials, and has published <ext-link
       ext-link-type="uri" xlink:href="http://www.niso.org/publications/rp/rp-15-2013">NISO
@@ -743,7 +754,9 @@
 
 
 
-  <h1 id="keywords">Keywords</h1>
+</sec>
+  </sec>
+  <sec><title>Keywords</title>
   <p>The OAMI, when it uploads files to Wikimedia Commons, assigns them to Wikimedia Commons
     categories, so as to facilitate search and discovery by users. The OAMI attempts to determine
     these categories based on keywords or subjects in the source XML, or MeSH terms supplied by the
@@ -762,7 +775,7 @@
   </ol>
 
 
-  <h2 id="tagging-with-kwd-family-elements">Tagging with kwd-family elements</h2>
+<sec><title>Tagging with kwd-family elements</title>
   <p>The &lt;kwd-group&gt; element is a container for other elements that specify the keywords
     themselves. It takes an attribute, @kwd-group-type, that qualifies the type of keywords that
     appear in the group. The JATS specification <ext-link ext-link-type="uri"
@@ -790,7 +803,8 @@
 <span class="kw">&lt;/kwd-group&gt;</span></code></pre>
 
 
-  <h2 id="tagging-with-subject">Tagging with &lt;subject&gt;</h2>
+  </sec>
+<sec><title>Tagging with &lt;subject&gt;</title>
   <p>In many articles, keywords are tagged within &lt;subject&gt; elements, that are nested
     hierarchically inside &lt;subj-group&gt; elements.</p>
   <p>An example of reasonably good tagging is from <ext-link ext-link-type="uri"
@@ -824,7 +838,8 @@
 <span class="kw">&lt;/subj-group&gt;</span></code></pre>
 
 
-  <h2 id="tagging-problems">Tagging problems</h2>
+  </sec>
+<sec><title>Tagging problems</title>
   <p>
     <strong>
       <em>Bad keywords</em>
@@ -906,13 +921,15 @@
 
 
 
-  <h1 id="recommendations">Recommendations</h1>
+</sec>
+  </sec>
+  <sec><title>Recommendations</title>
   <p>We will thus end by discussing some more long-term prospects for enhancing the discoverability
     of reuseable open-access content, combined with practical recommendations for how the current
     situation might be improved. </p>
 
 
-  <h2 id="license-tagging-1">License tagging</h2>
+<sec><title>License tagging</title>
   <p>We recommend that the PMC Tagging Guidelines and Style Checker be changed to require that, if a
     license is defined by a URI (as are CC licenses), that the article <em>must</em> put this URL
     into the @xlink:href on the &lt;license&gt; element. This should be the sole place that a
@@ -931,7 +948,8 @@
       >this service call</ext-link>).</p>
 
 
-  <h2 id="pmc-license-metadata">PMC license metadata</h2>
+  </sec>
+<sec><title>PMC license metadata</title>
   <p>The license metadata for articles in the PMC archive, because it is based on the markup of the
     source XML, is not reliable. One effect of this, as discussed above, is that it detracts from
     the usefulness of the search-by-license feature.</p>
@@ -967,7 +985,8 @@
 <span class="kw">&lt;/permissions&gt;</span></code></pre>
 
 
-  <h2 id="media-types-and-format">Media types and format</h2>
+  </sec>
+<sec><title>Media types and format</title>
   <p>The PMC Tagging Guidelines should be changed to require the media types to be in the @mimetype
     attribute only, and deprecate @mime-subtype. The Style Checker should verify that the @mimetype
     attribute is present, that it has a valid form, and that @mime-subtype is not given.</p>
@@ -1012,14 +1031,16 @@
     recommendation.</p>
 
 
-  <h2 id="keywords-1">Keywords</h2>
+  </sec>
+<sec><title>Keywords</title>
   <p>As mentioned above, we support the suggestion on the <ext-link ext-link-type="uri"
       xlink:href="http://www.niso.org/apps/group_public/view_comment.php?comment_id=252">NISO JATS
       document page</ext-link> requesting that the &lt;kwd-group&gt; element be added to the content
     model of several new elements, including &lt;media&gt; and &lt;supplementary-material&gt;.</p>
 
 
-  <h2 id="public-versioning-of-pmcoa-xml-files">Public versioning of PMC/OA XML files</h2>
+  </sec>
+<sec><title>Public versioning of PMC/OA XML files</title>
   <p>Many of the issues discussed here could in principle be fixed by running some dedicated scripts
     over the affected XML files. However, even if such scripts were functional and readily
     available, there is currently no mechanism that would allow such fixes to be fed back
@@ -1039,7 +1060,8 @@
     identifiers, or &quot;in press&quot; references.</p>
 
 
-  <h2 id="use-cases">Use cases</h2>
+  </sec>
+<sec><title>Use cases</title>
   <p>So far, JATS has mainly been used to exchange information between publishers and archives.
     Under traditional notions of copyright, large-scale reuse of such information by third parties
     is very limited but PMC's Open Access Subset – particularly the Wikimedia-compatibly licensed
@@ -1057,7 +1079,9 @@
 
 
 
-  <h1 id="references">References</h1>
+</sec>
+  </sec>
+  <sec><title>References</title>
 
 
   <ul>
@@ -1074,6 +1098,7 @@
         standards for identifying these vocabularies in machine-readable form.&quot;</li>
     </ul>
   </blockquote>
-
+  </sec>
+  
 
 </html>
