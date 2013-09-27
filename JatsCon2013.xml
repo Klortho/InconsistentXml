@@ -770,7 +770,7 @@
   &lt;/caption&gt;
 &lt;/media&gt;</preformat>
         <p>After September, 2013, when PMC stopped writing these attributes into source XML (see
-          &quot;Recent efforts at PMC&quot;, below) the frequency of this problem went up, but the
+          <xref rid='mt-pmc-efforts'>Recent efforts at PMC</xref>, below) the frequency of this problem went up, but the
           frequency of incorrect attribute values went down, as would be expected.</p>
         <p>
           <bold>
@@ -867,7 +867,8 @@
           Group has been working on standards for handling supplementary materials, and has
           published <ext-link ext-link-type="uri"
             xlink:href="http://www.niso.org/publications/rp/rp-15-2013">NISO RP-15-2013, Recommended
-            Practices for Online Supplemental Journal Article Materials</ext-link> earlier this
+            Practices for Online Supplemental Journal Article Materials</ext-link><xref
+              ref-type="bibr" rid="r1"/> earlier this
           year.</p>
         <p>This document lists &quot;recommended minimal and extended metadata&quot; (section B.2.2
           Metadata Elements), and recommends open formats that can be rendered by free, open-source,
@@ -881,11 +882,9 @@
           provide much more information than the simple media type.</p>
         <p>The kind of media type issues reported here would be much less frequent in articles
           properly tagged according to these NISO recommendations.</p>
-
-
-
       </sec>
     </sec>
+    
     <sec id='keywords'>
       <title>Keywords</title>
       <p>The OAMI, when it uploads files to Wikimedia Commons, assigns them to Wikimedia Commons
