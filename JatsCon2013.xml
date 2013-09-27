@@ -244,11 +244,11 @@
           >license information</ext-link>.</p>
       <p>Recently, in part in order to minimize some of the inconsistencies in tagging that are
         described below, PMC has amended these to include the following statement:</p>
-      <blockquote>
+      <disp-quote>
         <p>When including a URI for a license, the URI should be included either on the
           &lt;license&gt; in @xlink:href (preferred) or in an &lt;ext-link&gt; in the content of the
           license. The URI must not be tagged in both places.</p>
-      </blockquote>
+      </disp-quote>
       <p>Complementing that, the <ext-link ext-link-type="uri"
           xlink:href="http://www.ncbi.nlm.nih.gov/pmc/tools/stylechecker/">Style Checker</ext-link>
         now has additional checks to help ensure the consistency of the license information. In
@@ -627,12 +627,12 @@
           xlink:href="http://www.ncbi.nlm.nih.gov/pmc/pmcdoc/tagging-guidelines/article/tags.html#el-suppl"
           >PMC Tagging Guidelines</ext-link> stipulate, for the &lt;supplementary-material&gt;
         element:</p>
-      <blockquote>
+      <disp-quote>
         <p>Should include &lt;media&gt; or &lt;graphic&gt; to identify the supplemental file. File
           description in &lt;media&gt; or &lt;graphic&gt; must include the file name (including file
           extension) in @xlink:href; &lt;media&gt; also requires @mime-type [sic], and
           @mime-subtype.</p>
-      </blockquote>
+      </disp-quote>
       <p>So, there is some ambiguity as to the best practice for tagging supplementary media
         files.</p>
 
@@ -1197,14 +1197,12 @@
     
     <sec>
       <title>References</title>
+      <p>
           <ext-link ext-link-type="uri"
             xlink:href="http://www.niso.org/apps/group_public/download.php/10055/RP-15-2013_Supplemental_Materials.pdf"
             >NISO RP-15-2013 Recommended Practices for Online Supplemental Journal Article
             Materials</ext-link>
-
-      <list-item><p>Perhaps a ref for &quot;The Semantic Web and related technologies provide
-            well-established standards for identifying these vocabularies in machine-readable
-            form.&quot;</p></list-item>
+      </p>
     </sec>
 
 
