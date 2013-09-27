@@ -136,9 +136,7 @@
             <title>Figure 1. Daily uploads by the Open Access Media Importer to Wikimedia Commons
               between July 2012 and September 2013.</title>
           </caption>
-          <graphic
-            xlink:href="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Uploads_by_the_Open_Access_Media_Importer_to_Wikimedia_Commons_between_July_2012_and_September_2013.png/1280px-Uploads_by_the_Open_Access_Media_Importer_to_Wikimedia_Commons_between_July_2012_and_September_2013.png"
-          />
+          <graphic xlink:href="OAMI-uploads.png"/>
         </fig>
       </sec>
     </sec>
@@ -167,7 +165,7 @@
           <title>Figure 2. Licenses of supplementary materials in the PMC OA subset, by license URI,
             for the first week of May 2013.</title>
         </caption>
-        <graphic xlink:href="http://daten.dieweltistgarnichtso.net/tmp/pics/licenses.png"/>
+        <graphic xlink:href="licenses.png"/>
       </fig>
       <p>This information is tagged in the source XML for each article. In the rest of this section,
         we will review the JATS elements and attributes related to license data, and then describe
@@ -688,7 +686,7 @@
               from a sample of articles indexed in the first week of May 2013. Unknown refers to MS
               Office files, between the different formats of which we did not distinguish.</title>
           </caption>
-          <graphic xlink:href="http://chrismaloney.org/notes/mediatype-mismatches-by-publisher.png"
+          <graphic xlink:href="mediatype-mismatches-by-publisher.png"
           />
         </fig>
         <p>For an example of such a mismatch, in the article <ext-link ext-link-type="uri"
