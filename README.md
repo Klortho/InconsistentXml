@@ -9,10 +9,15 @@ alias `saxon9`.
 # Get the DTD
 wget ftp://ftp.ncbi.nlm.nih.gov/pub/jats/articleauthoring/1.0/jats-articleauthoring-dtd-1.0.zip
 unzip -d dtd jats-articleauthoring-dtd-1.0.zip
+
+# Get this paper
 git clone https://github.com/Klortho/InconsistentXml.git
+
+# Get the JATS preview stylesheets
 git clone https://github.com/NCBITools/JATSPreviewStylesheets.git
 cd InconsistentXml
-cp ../JATSPreviewStylesheets/jats-preview.css .
+
+# Transform!  Result is in InconsistentXml.html, which you can re-commit, if you want.
 saxon9 -s:JatsCon2013.xml -o:JatsCon2013.html \
   -xsl:../JATSPreviewStylesheets/xslt/main/jats-html.xsl
 ```
