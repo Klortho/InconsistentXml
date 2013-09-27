@@ -131,13 +131,13 @@
             >over 13,000 multimedia files</ext-link> had been processed this way. Figure 1
           illustrates the timeline of uploads per day from the OAMI to Wikimedia Commons, from its
           inception up to the present time.</p>
-        <div class="figure">
+        <fig id="">
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Uploads_by_the_Open_Access_Media_Importer_to_Wikimedia_Commons_between_July_2012_and_September_2013.png/1280px-Uploads_by_the_Open_Access_Media_Importer_to_Wikimedia_Commons_between_July_2012_and_September_2013.png"
             alt="Figure 1. Daily uploads by the Open Access Media Importer to Wikimedia Commons between July 2012 and September 2013."/>
           <p class="caption">Figure 1. Daily uploads by the Open Access Media Importer to Wikimedia
             Commons between July 2012 and September 2013.</p>
-        </div>
+        </fig>
       </sec>
     </sec>
     
@@ -160,12 +160,12 @@
           xlink:href="http://freedomdefined.org/">Definition of Free Cultural Works</ext-link> and
         the <ext-link ext-link-type="uri" xlink:href="http://opendefinition.org/">Open
           Definition</ext-link>.</p>
-      <div class="figure">
+      <fig id="">
         <img src="http://daten.dieweltistgarnichtso.net/tmp/pics/licenses.png"
           alt="Figure 2. Licenses of supplementary materials in the PMC OA subset, by license URI, for the first week of May 2013"/>
         <p class="caption">Figure 2. Licenses of supplementary materials in the PMC OA subset, by
           license URI, for the first week of May 2013</p>
-      </div>
+      </fig>
       <p>This information is tagged in the source XML for each article. In the rest of this section,
         we will review the JATS elements and attributes related to license data, and then describe
         some of the problems we encountered when trying to harvest this data from actual
@@ -656,13 +656,13 @@
           </strong>
         </p>
         <p>The following figure suggests the scope of the problem of media type mismatches.</p>
-        <div class="figure">
+        <fig id="">
           <img src="http://chrismaloney.org/notes/mediatype-mismatches-by-publisher.png"
             alt="Figure 3. Supplementary media files with the wrong media type, by DOI prefix, from a sample of articles indexed in the first week of May 2013. Unknown refers to MS Office files, between the different formats of which we did not distinguish."/>
           <p class="caption">Figure 3. Supplementary media files with the wrong media type, by DOI
             prefix, from a sample of articles indexed in the first week of May 2013. Unknown refers
             to MS Office files, between the different formats of which we did not distinguish.</p>
-        </div>
+        </fig>
         <p>For an example of such a mismatch, in the article <ext-link ext-link-type="uri"
             xlink:href="http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&amp;id=PMC3162007/"
             >PMC3162007</ext-link>, the <ext-link ext-link-type="uri"
