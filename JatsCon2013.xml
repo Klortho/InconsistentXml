@@ -173,27 +173,24 @@
       <p>In JATS 1.0, there are several XML elements and attributes that are used to specify license
         information for an article and its accompanying multimedia files.</p>
       <list list-type="bullet">
-        <list-item><ext-link ext-link-type="uri"
+        <list-item><p><ext-link ext-link-type="uri"
             xlink:href="http://jats.nlm.nih.gov/archiving/tag-library/1.0/?elem=permissions"
             >&lt;permissions&gt;</ext-link> - this is a container element, within which all
-          copyright and license metadata should appear</list-item>
+          copyright and license metadata should appear</p></list-item>
         <list-item>
           <p><ext-link ext-link-type="uri"
               xlink:href="http://jats.nlm.nih.gov/archiving/tag-library/1.0/?elem=license"
               >&lt;license&gt;</ext-link> - this is the main element for specifying license
             information. Among the attributes allowed on this element, the following are
-            relevant:</p>
-          <list list-type="bullet">
-            <list-item><ext-link ext-link-type="uri"
+            relevant:</p></list-item>
+            <list-item><p><ext-link ext-link-type="uri"
                 xlink:href="http://jats.nlm.nih.gov/archiving/tag-library/1.0/?attr=license-type"
                 >@license-type</ext-link> - the value is not constrained; &quot;open-access&quot; is
-              one suggested value.</list-item>
-            <list-item><ext-link ext-link-type="uri"
+              one suggested value.</p></list-item>
+            <list-item><p><ext-link ext-link-type="uri"
                 xlink:href="http://jats.nlm.nih.gov/archiving/tag-library/1.0/?attr=xlink:href"
                 >@xlink:href</ext-link> - takes an external URL; often the URL identifying the
-              specific Creative Commons license.</list-item>
-          </list>
-        </list-item>
+              specific Creative Commons license.</p></list-item>
         <list-item>
           <p><ext-link ext-link-type="uri"
               xlink:href="http://jats.nlm.nih.gov/archiving/tag-library/1.0/?elem=license-p"
@@ -210,7 +207,7 @@
               xlink:href="http://jats.nlm.nih.gov/archiving/tag-library/1.0/?elem=ext-link"
               >&lt;ext-link&gt;</ext-link> - can appear within the &lt;license-p&gt; element, and
             provides a link to an external resource. This also takes an optional
-              <code>xlink:href</code> attribute.</p>
+              xlink:href attribute.</p>
         </list-item>
       </list>
       <p>An example of good license tagging, from the <ext-link ext-link-type="uri"
@@ -225,7 +222,7 @@
       distribution, and reproduction in any medium, provided the original
       work is properly cited.<span class="kw">&lt;/license-p&gt;</span>
   <span class="kw">&lt;/license&gt;</span>
-<span class="kw">&lt;/permissions&gt;</span></code></pre>
+<span class="kw">&lt;/permissions&gt;</span></pre>
       <p>In the above example, the Creative Commons license is unambiguously identified by the URI
         in the @xlink:href attribute of the &lt;license&gt; element. The &lt;license-p&gt; element
         provides the human-readable text of the license, which matches the machine-readable version
@@ -254,7 +251,7 @@
       <p>Complementing that, the <ext-link ext-link-type="uri"
           xlink:href="http://www.ncbi.nlm.nih.gov/pmc/tools/stylechecker/">Style Checker</ext-link>
         now has additional checks to help ensure the consistency of the license information. In
-        particular, it will generate an error if there is an <code>xlink:href</code> attribute on
+        particular, it will generate an error if there is an xlink:href attribute on
         the &lt;license&gt; element, and one on a descendent &lt;ext-link&gt; element, and the URIs
         do not match.</p>
       <p>Unfortunately, these recent changes do little to address most of the problems described in
@@ -285,7 +282,7 @@
 <span class="ot">         xlink:href=</span><span class="st">&quot;http://creativecommons.org/licenses/by/2.5/&quot;</span><span class="kw">&gt;</span>
   <span class="kw">&lt;p&gt;</span>Re-use of this article is permitted in accordance with the Creative Commons Deed,
     Attribution 2.5, which does not permit commercial exploitation.<span class="kw">&lt;/p&gt;</span>
-<span class="kw">&lt;/license&gt;</span></code></pre>
+<span class="kw">&lt;/license&gt;</span></pre>
         <p>In other examples, the human-readable descriptions were actually self-contradictory. The
           following is an example from <ext-link ext-link-type="uri"
             xlink:href="http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&amp;id=PMC3143982"
@@ -294,7 +291,7 @@
   <span class="kw">&lt;license-p&gt;</span>This work is licensed under a Creative Commons Attr0ibution 3.0 License
     (by-nc 3.0).<span class="kw">&lt;/license-p&gt;</span>
   ...
-<span class="kw">&lt;/license&gt;</span></code></pre>
+<span class="kw">&lt;/license&gt;</span></pre>
         <p>We have found that the phenomenon of self-contradictory licenses is rather common and not
           restricted to small and lesser known publishers. The next example is from <ext-link
             ext-link-type="uri"
@@ -306,7 +303,7 @@
   <span class="kw">&lt;license-p&gt;</span>Re-use of this article is permitted in accordance with the Creative
     Commons Deed, Attribution 2.5, which does not permit commercial
     exploitation.<span class="kw">&lt;/license-p&gt;</span>
-<span class="kw">&lt;/license&gt;</span></code></pre>
+<span class="kw">&lt;/license&gt;</span></pre>
         <p>
           <strong>
             <em>License information outside the &lt;license&gt; element</em>
@@ -324,13 +321,13 @@
     and source are credited.
   <span class="kw">&lt;/copyright-statement&gt;</span>
   <span class="kw">&lt;copyright-year&gt;</span>2011<span class="kw">&lt;/copyright-year&gt;</span>
-<span class="kw">&lt;/permissions&gt;</span></code></pre>
+<span class="kw">&lt;/permissions&gt;</span></pre>
         <p>These statements in the &lt;copyright-statement&gt; element may (<ext-link
             ext-link-type="uri"
             xlink:href="http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&amp;id=PMC3143982PMC3605902/"
             >PMC3605902</ext-link>) or may not (<ext-link ext-link-type="uri"
             xlink:href="http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&amp;id=PMC3143982PMC3589467/"
-            >PMC3589467</ext-link>) contain an <code>xlink:href</code> attribute, even within
+            >PMC3589467</ext-link>) contain an xlink:href attribute, even within
           otherwise identical license text.</p>
         <p>At the time of this writing, PMC has <ext-link ext-link-type="uri"
             xlink:href="http://www.ncbi.nlm.nih.gov/pmc/?term=%22author+manuscript%22%5Bfilter%5D"
@@ -352,7 +349,7 @@
 <span class="ot">      xlink:href=</span><span class="st">&quot;http://creativecommons.org/licenses/by/3.0/&quot;</span>
     <span class="kw">&gt;</span>http://creativecommons.org/licenses/by/3.0/<span class="kw">&lt;/ext-link&gt;</span>
   <span class="kw">&lt;/p&gt;</span>
-<span class="kw">&lt;/fn&gt;</span></code></pre>
+<span class="kw">&lt;/fn&gt;</span></pre>
         <p>This effectively makes it undiscoverable, because any automatic process attempting to
           determine the license of an article would have to exclude things outside of the
           &lt;permissions&gt; element, otherwise there would be the possibility of false positives
@@ -389,7 +386,7 @@
       distribution, and reproduction in any medium, provided the original author
       and source are credited.<span class="kw">&lt;/license-p&gt;</span>
   <span class="kw">&lt;/license&gt;</span>
-<span class="kw">&lt;/permissions&gt;</span></code></pre>
+<span class="kw">&lt;/permissions&gt;</span></pre>
         <p>This is particularly troubling, since PLOS papers represent a large and quickly
           increasing percentage of PMC, and especially PMC's OA content. Additionally, the phrasing
           of the human-readable text may vary across articles from the same journal that are under
@@ -493,7 +490,7 @@
       the Creative Commons Zero &quot;No rights reserved&quot; data waiver (CC0 1.0 Public
       domain dedication).<span class="kw">&lt;/license-p&gt;</span>
   <span class="kw">&lt;/license&gt;</span>
-<span class="kw">&lt;/permissions&gt;</span></code></pre>
+<span class="kw">&lt;/permissions&gt;</span></pre>
         <p>The scope and the intent of each of the two &lt;license&gt; elements is clear to a human
           reader, but, unfortunately, there is no way for an automated bot to be able to
           unambiguously identify the two different scopes.</p>
@@ -535,7 +532,7 @@
 <span class="ot">      xlink:href=</span><span class="st">&quot;http://creativecommons.org/licenses/by-nc-sa/3.0/&quot;</span><span class="kw">&gt;</span>
     http://creativecommons.org/licenses/by-nc-sa/3.0/<span class="kw">&lt;/ext-link&gt;</span>).
   <span class="kw">&lt;/license-p&gt;</span>
-<span class="kw">&lt;/license&gt;</span></code></pre>
+<span class="kw">&lt;/license&gt;</span></pre>
         <p>One problem with this is that both licenses are given within a single &lt;license&gt;
           element, which would complicate the data model for any program attempting to process
           these. Another is that there is no machine-readable indication of the time period covered
@@ -615,11 +612,11 @@
   <span class="kw">&lt;caption&gt;</span>
     <span class="kw">&lt;p&gt;</span>Supplementary PDF file supplied by authors.<span class="kw">&lt;/p&gt;</span>
   <span class="kw">&lt;/caption&gt;</span>
-<span class="kw">&lt;/supplementary-material&gt;</span></code></pre>
+<span class="kw">&lt;/supplementary-material&gt;</span></pre>
       <p>Note:</p>
       <list list-type="bullet">
-        <list-item>The <code>mimetype</code> attribute is used to store both parts of the media type,
-          rather than splitting out the &quot;subtype&quot; into the <code>mime-subtype</code>
+        <list-item>The mimetype attribute is used to store both parts of the media type,
+          rather than splitting out the &quot;subtype&quot; into the mime-subtype
           attribute</list-item>
         <list-item>The information about the media file is given right on the
           &lt;supplementary-material&gt; element, rather than, for example, a child &lt;media&gt;
@@ -672,14 +669,14 @@
           &quot;application/x-rar-compressed&quot;. The original <ext-link ext-link-type="uri"
             xlink:href="http://www.plosone.org/article/fetchObjectAttachment.action?uri=info%3Adoi%2F10.1371%2Fjournal.pone.0023819&amp;representation=XML"
             >publisher XML</ext-link> encodes this correctly:</p>
-        <pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;supplementary-material</span><span class="ot"> id=</span><span class="st">&quot;pone.0023819.s009&quot;</span><span class="ot"> mimetype=</span><span class="st">&quot;application/x-rar-compressed&quot;</span> <span class="er">...</span></code></pre>
+        <pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;supplementary-material</span><span class="ot"> id=</span><span class="st">&quot;pone.0023819.s009&quot;</span><span class="ot"> mimetype=</span><span class="st">&quot;application/x-rar-compressed&quot;</span> <span class="er">...</span></pre>
         <p>However, the <ext-link ext-link-type="uri"
             xlink:href="http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&amp;id=PMC3162007"
             >XML from PMC</ext-link> is wrong:</p>
         <pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;supplementary-material</span><span class="ot"> content-type=</span><span class="st">&quot;local-data&quot;</span><span class="ot"> id=</span><span class="st">&quot;pone.0023819.s009&quot;</span><span class="kw">&gt;</span>
   ...
   <span class="kw">&lt;media</span><span class="ot"> xlink:href=</span><span class="st">&quot;pone.0023819.s009.rar&quot;</span><span class="ot"> mimetype=</span><span class="st">&quot;audio&quot;</span><span class="ot"> mime-subtype=</span><span class="st">&quot;x-realaudio&quot;</span><span class="kw">&gt;</span>
-  ...</code></pre>
+  ...</pre>
         <p>Furthermore, PMC returns the (wrong) HTTP &quot;Content-Type&quot; header
           &quot;application/octet-stream&quot;.</p>
         <p>
@@ -700,7 +697,7 @@
         <pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;supplementary-material</span><span class="ot"> content-type=</span><span class="st">&quot;local-data&quot;</span><span class="ot"> id=</span><span class="st">&quot;pone.0002276.s002&quot;</span><span class="kw">&gt;</span>
   ...
   <span class="kw">&lt;media</span><span class="ot"> xlink:href=</span><span class="st">&quot;pone.0002276.s002.doc&quot;</span><span class="ot"> mimetype=</span><span class="st">&quot;application&quot;</span><span class="ot"> mime-subtype=</span><span class="st">&quot;msword&quot;</span><span class="kw">&gt;</span>
-  ...</code></pre>
+  ...</pre>
         <p>
           <strong>
             <em>Media type misidentified in publisher XML</em>
@@ -714,13 +711,13 @@
           tagged incorrectly in the <ext-link ext-link-type="uri"
             xlink:href="http://www.frontiersin.org/Journal/DownloadFile.ashx?xml=1&amp;FileId=15567&amp;articleId=41661&amp;Version=1&amp;ContentTypeId=22&amp;FileName=Finalxml.xml&amp;JournalAbbr=fnbot&amp;JournalSeqNo=00005&amp;JournalVolume=07"
             >publisher’s XML</ext-link> (notice the misspelling):</p>
-        <pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;supplementary-material</span><span class="ot"> xlink:href=</span><span class="st">&quot;Movie_1.MP4&quot;</span><span class="ot"> id=</span><span class="st">&quot;SM1&quot;</span><span class="ot"> mimetype=</span><span class="st">&quot;applicationn/MP4&quot;</span> <span class="er">...</span></code></pre>
+        <pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;supplementary-material</span><span class="ot"> xlink:href=</span><span class="st">&quot;Movie_1.MP4&quot;</span><span class="ot"> id=</span><span class="st">&quot;SM1&quot;</span><span class="ot"> mimetype=</span><span class="st">&quot;applicationn/MP4&quot;</span> <span class="er">...</span></pre>
         <p>The <ext-link ext-link-type="uri"
             xlink:href="http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&amp;id=PMC3619089"
             >PMC XML</ext-link> is wrong too, but in a different way:</p>
         <pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;supplementary-material</span><span class="ot"> content-type=</span><span class="st">&quot;local-data&quot;</span><span class="ot"> id=</span><span class="st">&quot;SM1&quot;</span><span class="kw">&gt;</span>
   <span class="kw">&lt;media</span><span class="ot"> xlink:href=</span><span class="st">&quot;Movie_1.MP4&quot;</span><span class="ot"> mimetype=</span><span class="st">&quot;video&quot;</span><span class="ot"> mime-subtype=</span><span class="st">&quot;quicktime&quot;</span><span class="kw">&gt;</span>
-  ...</code></pre>
+  ...</pre>
         <p>
           <strong>
             <em>Missing media type in XML</em>
@@ -741,7 +738,7 @@
   <span class="kw">&lt;caption&gt;</span>
     <span class="kw">&lt;p&gt;</span>Click here for file<span class="kw">&lt;/p&gt;</span>
   <span class="kw">&lt;/caption&gt;</span>
-<span class="kw">&lt;/media&gt;</span></code></pre>
+<span class="kw">&lt;/media&gt;</span></pre>
         <p>After September, 2013, when PMC stopped writing these attributes into source XML (see
           &quot;Recent efforts at PMC&quot;, below) the frequency of this problem went up, but the
           frequency of incorrect attribute values went down, as would be expected.</p>
@@ -774,7 +771,7 @@
     <span class="kw">&lt;caption&gt;&lt;p&gt;</span>Click here for additional data file.<span class="kw">&lt;/p&gt;&lt;/caption&gt;</span>
   <span class="kw">&lt;/media&gt;</span>
 <span class="kw">&lt;/supplementary-material&gt;</span>
-...</code></pre>
+...</pre>
         <p>Other articles, for example, <ext-link ext-link-type="uri"
             xlink:href="http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&amp;id=PMC3656359"
             >PMC3656359</ext-link>, do not provide any content-related information in the
@@ -785,7 +782,7 @@
       <span class="kw">&lt;p&gt;</span>Click here for additional data file.<span class="kw">&lt;/p&gt;</span>
     <span class="kw">&lt;/caption&gt;</span>
   <span class="kw">&lt;/media&gt;</span>
-<span class="kw">&lt;/supplementary-material&gt;</span></code></pre>
+<span class="kw">&lt;/supplementary-material&gt;</span></pre>
         <p>
           <strong>
             <em>Missing references to supplementary materials</em>
@@ -908,7 +905,7 @@
   <span class="kw">&lt;kwd&gt;</span>medical semiotics<span class="kw">&lt;/kwd&gt;</span>
   <span class="kw">&lt;kwd&gt;</span>diagnosis<span class="kw">&lt;/kwd&gt;</span>
   <span class="kw">&lt;kwd&gt;</span>hospital<span class="kw">&lt;/kwd&gt;</span>
-<span class="kw">&lt;/kwd-group&gt;</span></code></pre>
+<span class="kw">&lt;/kwd-group&gt;</span></pre>
 
 
       </sec>
@@ -944,7 +941,7 @@
   <span class="kw">&lt;subj-group&gt;</span>
     <span class="kw">&lt;subject&gt;</span>Synthetic Biology<span class="kw">&lt;/subject&gt;</span>
   <span class="kw">&lt;/subj-group&gt;</span>
-<span class="kw">&lt;/subj-group&gt;</span></code></pre>
+<span class="kw">&lt;/subj-group&gt;</span></pre>
 
 
       </sec>
@@ -1011,7 +1008,7 @@
             >PMC3425056</ext-link> has only this markup:</p>
         <pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;subj-group</span><span class="ot"> subj-group-type=</span><span class="st">&quot;heading&quot;</span><span class="kw">&gt;</span>
   <span class="kw">&lt;subject&gt;</span>Case Report<span class="kw">&lt;/subject&gt;</span>
-<span class="kw">&lt;/subj-group&gt;</span></code></pre>
+<span class="kw">&lt;/subj-group&gt;</span></pre>
         <p>
           <strong>
             <em>Inconsistent use of the @kwd-group-type attribute</em>
@@ -1089,7 +1086,7 @@
   <span class="kw">&lt;license</span><span class="ot"> license-type=</span><span class="st">&quot;open-access&quot;</span>
 <span class="ot">           specific-use=</span><span class="st">&quot;scope: data&quot;</span>
 <span class="ot">           xlink:href=</span><span class="st">&quot;http://creativecommons.org/publicdomain/zero/1.0/&quot;</span><span class="kw">&gt;</span>...<span class="kw">&lt;/license&gt;</span>
-<span class="kw">&lt;/permissions&gt;</span></code></pre>
+<span class="kw">&lt;/permissions&gt;</span></pre>
         <p>If the article has a license that changes over time, then that could be marked up as
           follows (this is meant to be suggestive, only).</p>
         <pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;permissions&gt;</span>
@@ -1099,7 +1096,7 @@
   <span class="kw">&lt;license</span><span class="ot"> license-type=</span><span class="st">&quot;open-access&quot;</span>
 <span class="ot">           specific-use=</span><span class="st">&quot;start-date: 2013-10-23&quot;</span>
 <span class="ot">           xlink:href=</span><span class="st">&quot;http://creativecommons.org/publicdomain/zero/1.0/&quot;</span><span class="kw">&gt;</span>...<span class="kw">&lt;/license&gt;</span>
-<span class="kw">&lt;/permissions&gt;</span></code></pre>
+<span class="kw">&lt;/permissions&gt;</span></pre>
 
 
       </sec>
