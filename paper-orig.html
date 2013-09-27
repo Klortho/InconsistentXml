@@ -22,130 +22,137 @@
   </abstract>
 
 
-<sec><title>Introduction</title>
+  <sec>
+    <title>Introduction</title>
 
 
-<sec><title>Scope of this paper</title>
-  <p>The aim of this paper is to describe the problems that we came across when attempting to reuse
-    materials from the <ext-link ext-link-type="uri"
-      xlink:href="http://www.ncbi.nlm.nih.gov/pmc/tools/openftlist/">PMC Open Access
-      Subset</ext-link> in an automated fashion and at scale. Some of the issues are specific to
-    certain kinds of content, others are a barrier to reuse more generally. Some of them are
-    specific to individual articles, journals or publishers, while others apply more widely.</p>
-  <p>In discussing these issues, we take the perspective of a re-user of JATS-conveyed content,
-    conscious of the possibility that the perspectives of producers and curators of this content and
-    of maintainers of JATS standards may differ. We conclude with a series of recommendations that
-    would have facilitated the implementation of our reuse project and that could serve as the basis
-    for a discussion on how to facilitate reuse more generally.</p>
+    <sec>
+      <title>Scope of this paper</title>
+      <p>The aim of this paper is to describe the problems that we came across when attempting to
+        reuse materials from the <ext-link ext-link-type="uri"
+          xlink:href="http://www.ncbi.nlm.nih.gov/pmc/tools/openftlist/">PMC Open Access
+          Subset</ext-link> in an automated fashion and at scale. Some of the issues are specific to
+        certain kinds of content, others are a barrier to reuse more generally. Some of them are
+        specific to individual articles, journals or publishers, while others apply more widely.</p>
+      <p>In discussing these issues, we take the perspective of a re-user of JATS-conveyed content,
+        conscious of the possibility that the perspectives of producers and curators of this content
+        and of maintainers of JATS standards may differ. We conclude with a series of
+        recommendations that would have facilitated the implementation of our reuse project and that
+        could serve as the basis for a discussion on how to facilitate reuse more generally.</p>
 
 
 
+    </sec>
+    <sec>
+      <title>The Open Access Media Importer</title>
+      <p>The <ext-link ext-link-type="uri"
+          xlink:href="http://commons.wikimedia.org/wiki/User:Open_Access_Media_Importer_Bot">Open
+          Access Media Importer</ext-link> is an automated bot, developed with <ext-link
+          ext-link-type="uri"
+          xlink:href="https://en.wikiversity.org/wiki/User:OpenScientist/Open_grant_writing/Wissenswert_2011"
+          >initial support</ext-link> from <ext-link ext-link-type="uri"
+          xlink:href="http://www.wikimedia.de/wiki/Hauptseite">Wikimedia Deutschland</ext-link>,
+        that harvests multimedia content from open access repositories, and uploads that content to
+          <ext-link ext-link-type="uri" xlink:href="http://commons.wikimedia.org/">Wikimedia
+          Commons</ext-link>, the media repository used by the Wikipedias and their sister project.
+        Once in Wikimedia Commons, those multimedia files are very easy to insert into Wikipedia
+        pages, and to be reused on a wide variety of other wikis and Wikimedia projects.</p>
+      <p>Currently, the OAMI harvests content from the PMC Open Access Subset. Since most articles
+        in the subset are actually not Open Access (in the sense of being free to reuse, revise,
+        remix and redistribute), the bot scans the XML sources of new articles and reads the license
+        information in order to determine those that are. It then checks whether these have
+        multimedia files in their supplementary materials. If so, they are downloaded, converted and
+        uploaded to Wikimedia Commons along with the available metadata. At the time of writing,
+          <ext-link ext-link-type="uri"
+          xlink:href="https://commons.wikimedia.org/wiki/Category:Uploaded_with_Open_Access_Media_Importer"
+          >over 13,000 multimedia files</ext-link> had been processed this way. Figure 1 illustrates
+        the timeline of uploads per day from the OAMI to Wikimedia Commons, from its inception up to
+        the present time.</p>
+      <div class="figure">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Uploads_by_the_Open_Access_Media_Importer_to_Wikimedia_Commons_between_July_2012_and_September_2013.png/1280px-Uploads_by_the_Open_Access_Media_Importer_to_Wikimedia_Commons_between_July_2012_and_September_2013.png"
+          alt="Figure 1. Daily uploads by the Open Access Media Importer to Wikimedia Commons between July 2012 and September 2013." />
+        <p class="caption">Figure 1. Daily uploads by the Open Access Media Importer to Wikimedia
+          Commons between July 2012 and September 2013.</p>
+      </div>
+
+
+
+    </sec>
   </sec>
-<sec><title>The Open Access Media Importer</title>
-  <p>The <ext-link ext-link-type="uri"
-      xlink:href="http://commons.wikimedia.org/wiki/User:Open_Access_Media_Importer_Bot">Open Access
-      Media Importer</ext-link> is an automated bot, developed with <ext-link ext-link-type="uri"
-      xlink:href="https://en.wikiversity.org/wiki/User:OpenScientist/Open_grant_writing/Wissenswert_2011"
-      >initial support</ext-link> from <ext-link ext-link-type="uri"
-      xlink:href="http://www.wikimedia.de/wiki/Hauptseite">Wikimedia Deutschland</ext-link>, that
-    harvests multimedia content from open access repositories, and uploads that content to <ext-link
-      ext-link-type="uri" xlink:href="http://commons.wikimedia.org/">Wikimedia Commons</ext-link>,
-    the media repository used by the Wikipedias and their sister project. Once in Wikimedia Commons,
-    those multimedia files are very easy to insert into Wikipedia pages, and to be reused on a wide
-    variety of other wikis and Wikimedia projects.</p>
-  <p>Currently, the OAMI harvests content from the PMC Open Access Subset. Since most articles in
-    the subset are actually not Open Access (in the sense of being free to reuse, revise, remix and
-    redistribute), the bot scans the XML sources of new articles and reads the license information
-    in order to determine those that are. It then checks whether these have multimedia files in
-    their supplementary materials. If so, they are downloaded, converted and uploaded to Wikimedia
-    Commons along with the available metadata. At the time of writing, <ext-link ext-link-type="uri"
-      xlink:href="https://commons.wikimedia.org/wiki/Category:Uploaded_with_Open_Access_Media_Importer"
-      >over 13,000 multimedia files</ext-link> had been processed this way. Figure 1 illustrates the
-    timeline of uploads per day from the OAMI to Wikimedia Commons, from its inception up to the
-    present time.</p>
-  <div class="figure">
-    <img
-      src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Uploads_by_the_Open_Access_Media_Importer_to_Wikimedia_Commons_between_July_2012_and_September_2013.png/1280px-Uploads_by_the_Open_Access_Media_Importer_to_Wikimedia_Commons_between_July_2012_and_September_2013.png"
-      alt="Figure 1. Daily uploads by the Open Access Media Importer to Wikimedia Commons between July 2012 and September 2013." />
-    <p class="caption">Figure 1. Daily uploads by the Open Access Media Importer to Wikimedia
-      Commons between July 2012 and September 2013.</p>
-  </div>
-
-
-
-</sec>
-</sec>
-  <sec><title>License tagging</title>
-  <p>As mentioned above, an important function of the OAMI is to determine, for each media file, the
-    license under which it or its parent article has been released.</p>
-  <p>In reading and analyzing the license data, the OAMI looks for licenses that are truly open, in
-    the sense of being free to reuse, revise, remix and redistribute, as laid out in the <ext-link
-      ext-link-type="uri" xlink:href="http://www.budapestopenaccessinitiative.org/read">Budapest
-      Open Access Initiative</ext-link> a decade ago. Licenses with &quot;non-commercial&quot; and
-    &quot;no derivatives&quot; clauses are <ext-link ext-link-type="uri"
-      xlink:href="https://commons.wikimedia.org/wiki/Commons:Licensing">not acceptable</ext-link> on
-    Wikimedia Commons. Figure 2 shows a breakdown of the licenses we have found in the PMC OA subset
-    for articles indexed during the first week of May this year, with color-coding to illustrate
-    which licenses are &quot;free&quot; in the sense of allowing reuse on Wikimedia Commons, and
-    which are not. More formal definitions of this sense of freedom can be found in the <ext-link
-      ext-link-type="uri" xlink:href="http://freedomdefined.org/">Definition of Free Cultural
-      Works</ext-link> and the <ext-link ext-link-type="uri" xlink:href="http://opendefinition.org/"
-      >Open Definition</ext-link>.</p>
-  <div class="figure">
-    <img src="http://daten.dieweltistgarnichtso.net/tmp/pics/licenses.png"
-      alt="Figure 2. Licenses of supplementary materials in the PMC OA subset, by license URI, for the first week of May 2013" />
-    <p class="caption">Figure 2. Licenses of supplementary materials in the PMC OA subset, by
-      license URI, for the first week of May 2013</p>
-  </div>
-  <p>This information is tagged in the source XML for each article. In the rest of this section, we
-    will review the JATS elements and attributes related to license data, and then describe some of
-    the problems we encountered when trying to harvest this data from actual articles.</p>
-  <p>In JATS 1.0, there are several XML elements and attributes that are used to specify license
-    information for an article and its accompanying multimedia files.</p>
-  <ul>
-    <li><ext-link ext-link-type="uri"
-        xlink:href="http://jats.nlm.nih.gov/archiving/tag-library/1.0/?elem=permissions"
-        >&lt;permissions&gt;</ext-link> - this is a container element, within which all copyright
-      and license metadata should appear</li>
-    <li>
-      <p><ext-link ext-link-type="uri"
-          xlink:href="http://jats.nlm.nih.gov/archiving/tag-library/1.0/?elem=license"
-          >&lt;license&gt;</ext-link> - this is the main element for specifying license information.
-        Among the attributes allowed on this element, the following are relevant:</p>
-      <ul>
-        <li><ext-link ext-link-type="uri"
-            xlink:href="http://jats.nlm.nih.gov/archiving/tag-library/1.0/?attr=license-type"
-            >@license-type</ext-link> - the value is not constrained; &quot;open-access&quot; is one
-          suggested value.</li>
-        <li><ext-link ext-link-type="uri"
-            xlink:href="http://jats.nlm.nih.gov/archiving/tag-library/1.0/?attr=xlink:href"
-            >@xlink:href</ext-link> - takes an external URL; often the URL identifying the specific
-          Creative Commons license.</li>
-      </ul>
-    </li>
-    <li>
-      <p><ext-link ext-link-type="uri"
-          xlink:href="http://jats.nlm.nih.gov/archiving/tag-library/1.0/?elem=license-p"
-          >&lt;license-p&gt;</ext-link> - paragraph of text within a &lt;license&gt; element.
-        Semantically, this is a <ext-link ext-link-type="uri"
-          xlink:href="http://jats.nlm.nih.gov/archiving/tag-library/1.0/?elem=p"
-          >&lt;p&gt;</ext-link> element with the addition of <ext-link ext-link-type="uri"
-          xlink:href="http://jats.nlm.nih.gov/archiving/tag-library/1.0/?elem=price"
-          >&lt;price&gt;</ext-link> to the content model. (Prior to the NLM Tag Set version 3.0, the
-        &lt;p&gt; element was used here.)</p>
-    </li>
-    <li>
-      <p><ext-link ext-link-type="uri"
-          xlink:href="http://jats.nlm.nih.gov/archiving/tag-library/1.0/?elem=ext-link"
-          >&lt;ext-link&gt;</ext-link> - can appear within the &lt;license-p&gt; element, and
-        provides a link to an external resource. This also takes an optional <code>xlink:href</code>
-        attribute.</p>
-    </li>
-  </ul>
-  <p>An example of good license tagging, from the <ext-link ext-link-type="uri"
-      xlink:href="http://jats.nlm.nih.gov/archiving/tag-library/1.0/?elem=license">JATS 1.0 Tag
-      Library documentation</ext-link>, is the following.</p>
-  <pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;permissions&gt;</span>
+  <sec>
+    <title>License tagging</title>
+    <p>As mentioned above, an important function of the OAMI is to determine, for each media file,
+      the license under which it or its parent article has been released.</p>
+    <p>In reading and analyzing the license data, the OAMI looks for licenses that are truly open,
+      in the sense of being free to reuse, revise, remix and redistribute, as laid out in the
+        <ext-link ext-link-type="uri" xlink:href="http://www.budapestopenaccessinitiative.org/read"
+        >Budapest Open Access Initiative</ext-link> a decade ago. Licenses with
+      &quot;non-commercial&quot; and &quot;no derivatives&quot; clauses are <ext-link
+        ext-link-type="uri" xlink:href="https://commons.wikimedia.org/wiki/Commons:Licensing">not
+        acceptable</ext-link> on Wikimedia Commons. Figure 2 shows a breakdown of the licenses we
+      have found in the PMC OA subset for articles indexed during the first week of May this year,
+      with color-coding to illustrate which licenses are &quot;free&quot; in the sense of allowing
+      reuse on Wikimedia Commons, and which are not. More formal definitions of this sense of
+      freedom can be found in the <ext-link ext-link-type="uri"
+        xlink:href="http://freedomdefined.org/">Definition of Free Cultural Works</ext-link> and the
+        <ext-link ext-link-type="uri" xlink:href="http://opendefinition.org/">Open
+        Definition</ext-link>.</p>
+    <div class="figure">
+      <img src="http://daten.dieweltistgarnichtso.net/tmp/pics/licenses.png"
+        alt="Figure 2. Licenses of supplementary materials in the PMC OA subset, by license URI, for the first week of May 2013" />
+      <p class="caption">Figure 2. Licenses of supplementary materials in the PMC OA subset, by
+        license URI, for the first week of May 2013</p>
+    </div>
+    <p>This information is tagged in the source XML for each article. In the rest of this section,
+      we will review the JATS elements and attributes related to license data, and then describe
+      some of the problems we encountered when trying to harvest this data from actual articles.</p>
+    <p>In JATS 1.0, there are several XML elements and attributes that are used to specify license
+      information for an article and its accompanying multimedia files.</p>
+    <ul>
+      <li><ext-link ext-link-type="uri"
+          xlink:href="http://jats.nlm.nih.gov/archiving/tag-library/1.0/?elem=permissions"
+          >&lt;permissions&gt;</ext-link> - this is a container element, within which all copyright
+        and license metadata should appear</li>
+      <li>
+        <p><ext-link ext-link-type="uri"
+            xlink:href="http://jats.nlm.nih.gov/archiving/tag-library/1.0/?elem=license"
+            >&lt;license&gt;</ext-link> - this is the main element for specifying license
+          information. Among the attributes allowed on this element, the following are relevant:</p>
+        <ul>
+          <li><ext-link ext-link-type="uri"
+              xlink:href="http://jats.nlm.nih.gov/archiving/tag-library/1.0/?attr=license-type"
+              >@license-type</ext-link> - the value is not constrained; &quot;open-access&quot; is
+            one suggested value.</li>
+          <li><ext-link ext-link-type="uri"
+              xlink:href="http://jats.nlm.nih.gov/archiving/tag-library/1.0/?attr=xlink:href"
+              >@xlink:href</ext-link> - takes an external URL; often the URL identifying the
+            specific Creative Commons license.</li>
+        </ul>
+      </li>
+      <li>
+        <p><ext-link ext-link-type="uri"
+            xlink:href="http://jats.nlm.nih.gov/archiving/tag-library/1.0/?elem=license-p"
+            >&lt;license-p&gt;</ext-link> - paragraph of text within a &lt;license&gt; element.
+          Semantically, this is a <ext-link ext-link-type="uri"
+            xlink:href="http://jats.nlm.nih.gov/archiving/tag-library/1.0/?elem=p"
+            >&lt;p&gt;</ext-link> element with the addition of <ext-link ext-link-type="uri"
+            xlink:href="http://jats.nlm.nih.gov/archiving/tag-library/1.0/?elem=price"
+            >&lt;price&gt;</ext-link> to the content model. (Prior to the NLM Tag Set version 3.0,
+          the &lt;p&gt; element was used here.)</p>
+      </li>
+      <li>
+        <p><ext-link ext-link-type="uri"
+            xlink:href="http://jats.nlm.nih.gov/archiving/tag-library/1.0/?elem=ext-link"
+            >&lt;ext-link&gt;</ext-link> - can appear within the &lt;license-p&gt; element, and
+          provides a link to an external resource. This also takes an optional
+            <code>xlink:href</code> attribute.</p>
+      </li>
+    </ul>
+    <p>An example of good license tagging, from the <ext-link ext-link-type="uri"
+        xlink:href="http://jats.nlm.nih.gov/archiving/tag-library/1.0/?elem=license">JATS 1.0 Tag
+        Library documentation</ext-link>, is the following.</p>
+    <pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;permissions&gt;</span>
   ...
   <span class="kw">&lt;license</span><span class="ot"> license-type=</span><span class="st">&quot;open-access&quot;</span>
 <span class="ot">           xlink:href=</span><span class="st">&quot;http://creativecommons.org/licenses/by/2.0/&quot;</span><span class="kw">&gt;</span>
@@ -155,95 +162,97 @@
       work is properly cited.<span class="kw">&lt;/license-p&gt;</span>
   <span class="kw">&lt;/license&gt;</span>
 <span class="kw">&lt;/permissions&gt;</span></code></pre>
-  <p>In the above example, the Creative Commons license is unambiguously identified by the URI in
-    the @xlink:href attribute of the &lt;license&gt; element. The &lt;license-p&gt; element provides
-    the human-readable text of the license, which matches the machine-readable version (except for
-    not including the version number of the Creative Commons license, and the hyperlink.)</p>
-  <p>
-    <strong>
-      <em>PMC Tagging Guidelines and Style Checker</em>
-    </strong>
-  </p>
-  <p>PMC provides additional recommendations and specifications for article tagging, which are
-    layered on top of the requirements of the JATS standard. These are documented at the <ext-link
-      ext-link-type="uri"
-      xlink:href="http://www.ncbi.nlm.nih.gov/pmc/pmcdoc/tagging-guidelines/article/style.html">PMC
-      Tagging Guidelines</ext-link>, and they include guidelines for tagging <ext-link
-      ext-link-type="uri"
-      xlink:href="http://www.ncbi.nlm.nih.gov/pmc/pmcdoc/tagging-guidelines/article/dobs.html#dob-license"
-      >license information</ext-link>.</p>
-  <p>Recently, in part in order to minimize some of the inconsistencies in tagging that are
-    described below, PMC has amended these to include the following statement:</p>
-  <blockquote>
-    <p>When including a URI for a license, the URI should be included either on the &lt;license&gt;
-      in @xlink:href (preferred) or in an &lt;ext-link&gt; in the content of the license. The URI
-      must not be tagged in both places.</p>
-  </blockquote>
-  <p>Complementing that, the <ext-link ext-link-type="uri"
-      xlink:href="http://www.ncbi.nlm.nih.gov/pmc/tools/stylechecker/">Style Checker</ext-link> now
-    has additional checks to help ensure the consistency of the license information. In particular,
-    it will generate an error if there is an <code>xlink:href</code> attribute on the
-    &lt;license&gt; element, and one on a descendent &lt;ext-link&gt; element, and the URIs do not
-    match.</p>
-  <p>Unfortunately, these recent changes do little to address most of the problems described in this
-    paper. We provide some recommendations for how these resources could be further improved, in the
-      <em>Recommendations</em> section, below.</p>
+    <p>In the above example, the Creative Commons license is unambiguously identified by the URI in
+      the @xlink:href attribute of the &lt;license&gt; element. The &lt;license-p&gt; element
+      provides the human-readable text of the license, which matches the machine-readable version
+      (except for not including the version number of the Creative Commons license, and the
+      hyperlink.)</p>
+    <p>
+      <strong>
+        <em>PMC Tagging Guidelines and Style Checker</em>
+      </strong>
+    </p>
+    <p>PMC provides additional recommendations and specifications for article tagging, which are
+      layered on top of the requirements of the JATS standard. These are documented at the <ext-link
+        ext-link-type="uri"
+        xlink:href="http://www.ncbi.nlm.nih.gov/pmc/pmcdoc/tagging-guidelines/article/style.html"
+        >PMC Tagging Guidelines</ext-link>, and they include guidelines for tagging <ext-link
+        ext-link-type="uri"
+        xlink:href="http://www.ncbi.nlm.nih.gov/pmc/pmcdoc/tagging-guidelines/article/dobs.html#dob-license"
+        >license information</ext-link>.</p>
+    <p>Recently, in part in order to minimize some of the inconsistencies in tagging that are
+      described below, PMC has amended these to include the following statement:</p>
+    <blockquote>
+      <p>When including a URI for a license, the URI should be included either on the
+        &lt;license&gt; in @xlink:href (preferred) or in an &lt;ext-link&gt; in the content of the
+        license. The URI must not be tagged in both places.</p>
+    </blockquote>
+    <p>Complementing that, the <ext-link ext-link-type="uri"
+        xlink:href="http://www.ncbi.nlm.nih.gov/pmc/tools/stylechecker/">Style Checker</ext-link>
+      now has additional checks to help ensure the consistency of the license information. In
+      particular, it will generate an error if there is an <code>xlink:href</code> attribute on the
+      &lt;license&gt; element, and one on a descendent &lt;ext-link&gt; element, and the URIs do not
+      match.</p>
+    <p>Unfortunately, these recent changes do little to address most of the problems described in
+      this paper. We provide some recommendations for how these resources could be further improved,
+      in the <em>Recommendations</em> section, below.</p>
 
 
-<sec><title>Problems encountered by the bot</title>
-  <p>While developing and deploying the OAMI, we discovered that automatically discerning the
-    licensing terms and reuse rights was non-trivial.  In contrast to the example of
-    &quot;good&quot; markup above, within the article XML available from the PMC OA subset,
-    licensing metadata is not expressed consistently across journals, and sometimes not even across
-    different articles of the same journal.  Here, we list a few examples.</p>
-  <p>
-    <strong>
-      <em>Contradictory information</em>
-    </strong>
-  </p>
-  <p>In many cases, the URI identifying the Creative Commons license was contradicted by the
-    human-readable text.  For example, from the article <ext-link ext-link-type="uri"
-      xlink:href="http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&amp;id=PMC2658715"
-      >PMC2658715</ext-link> (<ext-link ext-link-type="uri"
-      xlink:href="http://onlinelibrary.wiley.com/doi/10.1111/j.1471-4159.2008.05520.x/abstract"
-      >publisher version</ext-link>), the URI specifies &quot;CC-BY&quot;, but the human-readable
-    description adds the extra &quot;NC&quot; (non-commercial) restriction:</p>
-  <pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;license</span><span class="ot"> license-type=</span><span class="st">&quot;open-access&quot;</span>
+    <sec>
+      <title>Problems encountered by the bot</title>
+      <p>While developing and deploying the OAMI, we discovered that automatically discerning the
+        licensing terms and reuse rights was non-trivial.  In contrast to the example of
+        &quot;good&quot; markup above, within the article XML available from the PMC OA subset,
+        licensing metadata is not expressed consistently across journals, and sometimes not even
+        across different articles of the same journal.  Here, we list a few examples.</p>
+      <p>
+        <strong>
+          <em>Contradictory information</em>
+        </strong>
+      </p>
+      <p>In many cases, the URI identifying the Creative Commons license was contradicted by the
+        human-readable text.  For example, from the article <ext-link ext-link-type="uri"
+          xlink:href="http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&amp;id=PMC2658715"
+          >PMC2658715</ext-link> (<ext-link ext-link-type="uri"
+          xlink:href="http://onlinelibrary.wiley.com/doi/10.1111/j.1471-4159.2008.05520.x/abstract"
+          >publisher version</ext-link>), the URI specifies &quot;CC-BY&quot;, but the
+        human-readable description adds the extra &quot;NC&quot; (non-commercial) restriction:</p>
+      <pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;license</span><span class="ot"> license-type=</span><span class="st">&quot;open-access&quot;</span>
 <span class="ot">         xlink:href=</span><span class="st">&quot;http://creativecommons.org/licenses/by/2.5/&quot;</span><span class="kw">&gt;</span>
   <span class="kw">&lt;p&gt;</span>Re-use of this article is permitted in accordance with the Creative Commons Deed,
     Attribution 2.5, which does not permit commercial exploitation.<span class="kw">&lt;/p&gt;</span>
 <span class="kw">&lt;/license&gt;</span></code></pre>
-  <p>In other examples, the human-readable descriptions were actually self-contradictory. The
-    following is an example from <ext-link ext-link-type="uri"
-      xlink:href="http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&amp;id=PMC3143982"
-      >PMC3143982</ext-link> that also has a typo in the license name.</p>
-  <pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;license</span><span class="ot"> license-type=</span><span class="st">&quot;open-access&quot;</span><span class="kw">&gt;</span>
+      <p>In other examples, the human-readable descriptions were actually self-contradictory. The
+        following is an example from <ext-link ext-link-type="uri"
+          xlink:href="http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&amp;id=PMC3143982"
+          >PMC3143982</ext-link> that also has a typo in the license name.</p>
+      <pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;license</span><span class="ot"> license-type=</span><span class="st">&quot;open-access&quot;</span><span class="kw">&gt;</span>
   <span class="kw">&lt;license-p&gt;</span>This work is licensed under a Creative Commons Attr0ibution 3.0 License
     (by-nc 3.0).<span class="kw">&lt;/license-p&gt;</span>
   ...
 <span class="kw">&lt;/license&gt;</span></code></pre>
-  <p>We have found that the phenomenon of self-contradictory licenses is rather common and not
-    restricted to small and lesser known publishers. The next example is from <ext-link
-      ext-link-type="uri"
-      xlink:href="http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&amp;id=PMC3468739/"
-      >PMC3468739</ext-link>. While the machine-readable license is CC BY, the human-readable
-    version has a non-commercial clause.</p>
-  <pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;license</span><span class="ot"> license-type=</span><span class="st">&quot;open-access&quot;</span>
+      <p>We have found that the phenomenon of self-contradictory licenses is rather common and not
+        restricted to small and lesser known publishers. The next example is from <ext-link
+          ext-link-type="uri"
+          xlink:href="http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&amp;id=PMC3468739/"
+          >PMC3468739</ext-link>. While the machine-readable license is CC BY, the human-readable
+        version has a non-commercial clause.</p>
+      <pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;license</span><span class="ot"> license-type=</span><span class="st">&quot;open-access&quot;</span>
 <span class="ot">         xlink:href=</span><span class="st">&quot;http://creativecommons.org/licenses/by/2.5/&quot;</span><span class="kw">&gt;</span>
   <span class="kw">&lt;license-p&gt;</span>Re-use of this article is permitted in accordance with the Creative
     Commons Deed, Attribution 2.5, which does not permit commercial
     exploitation.<span class="kw">&lt;/license-p&gt;</span>
 <span class="kw">&lt;/license&gt;</span></code></pre>
-  <p>
-    <strong>
-      <em>License information outside the &lt;license&gt; element</em>
-    </strong>
-  </p>
-  <p>In the following example, from <ext-link ext-link-type="uri"
-      xlink:href="http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&amp;id=PMC3158088/"
-      >PMC3158088</ext-link>, the Creative Commons license text is given in the
-    &lt;copyright-statement&gt; element rather than the &lt;license&gt; element.</p>
-  <pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;permissions&gt;</span>
+      <p>
+        <strong>
+          <em>License information outside the &lt;license&gt; element</em>
+        </strong>
+      </p>
+      <p>In the following example, from <ext-link ext-link-type="uri"
+          xlink:href="http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&amp;id=PMC3158088/"
+          >PMC3158088</ext-link>, the Creative Commons license text is given in the
+        &lt;copyright-statement&gt; element rather than the &lt;license&gt; element.</p>
+      <pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;permissions&gt;</span>
   <span class="kw">&lt;copyright-statement&gt;</span>
     Uosaki et al. This is an open-access article distributed under the terms of
     the Creative Commons Attribution License, which permits unrestricted use,
@@ -252,24 +261,25 @@
   <span class="kw">&lt;/copyright-statement&gt;</span>
   <span class="kw">&lt;copyright-year&gt;</span>2011<span class="kw">&lt;/copyright-year&gt;</span>
 <span class="kw">&lt;/permissions&gt;</span></code></pre>
-  <p>These statements in the &lt;copyright-statement&gt; element may (<ext-link ext-link-type="uri"
-      xlink:href="http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&amp;id=PMC3143982PMC3605902/"
-      >PMC3605902</ext-link>) or may not (<ext-link ext-link-type="uri"
-      xlink:href="http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&amp;id=PMC3143982PMC3589467/"
-      >PMC3589467</ext-link>) contain an <code>xlink:href</code> attribute, even within otherwise
-    identical license text.</p>
-  <p>At the time of this writing, PMC has <ext-link ext-link-type="uri"
-      xlink:href="http://www.ncbi.nlm.nih.gov/pmc/?term=%22author+manuscript%22%5Bfilter%5D">281,148
-      author manuscripts</ext-link>, of which <ext-link ext-link-type="uri"
-      xlink:href="http://www.ncbi.nlm.nih.gov/pmc/?term=%22author+manuscript%22%5Bfilter%5D+AND+%22open+access%22%5Bfilter%5D"
-      >5383</ext-link> (about 2%) are in the OA subset. In a sample of those that are not in the OA
-    subset, it was found that 1%, do in fact have a Creative Commons license, but the license
-    information is completely outside of the &lt;permissions&gt; element. For example, in <ext-link
-      ext-link-type="uri"
-      xlink:href="http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&amp;id=PMC3143982PMC3717328/"
-      >PMC3717328</ext-link>, the license information is given in a &lt;fn&gt; element within the
-    back matter:</p>
-  <pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;fn</span><span class="ot"> id=</span><span class="st">&quot;FN5&quot;</span><span class="kw">&gt;</span>
+      <p>These statements in the &lt;copyright-statement&gt; element may (<ext-link
+          ext-link-type="uri"
+          xlink:href="http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&amp;id=PMC3143982PMC3605902/"
+          >PMC3605902</ext-link>) or may not (<ext-link ext-link-type="uri"
+          xlink:href="http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&amp;id=PMC3143982PMC3589467/"
+          >PMC3589467</ext-link>) contain an <code>xlink:href</code> attribute, even within
+        otherwise identical license text.</p>
+      <p>At the time of this writing, PMC has <ext-link ext-link-type="uri"
+          xlink:href="http://www.ncbi.nlm.nih.gov/pmc/?term=%22author+manuscript%22%5Bfilter%5D"
+          >281,148 author manuscripts</ext-link>, of which <ext-link ext-link-type="uri"
+          xlink:href="http://www.ncbi.nlm.nih.gov/pmc/?term=%22author+manuscript%22%5Bfilter%5D+AND+%22open+access%22%5Bfilter%5D"
+          >5383</ext-link> (about 2%) are in the OA subset. In a sample of those that are not in the
+        OA subset, it was found that 1%, do in fact have a Creative Commons license, but the license
+        information is completely outside of the &lt;permissions&gt; element. For example, in
+          <ext-link ext-link-type="uri"
+          xlink:href="http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&amp;id=PMC3143982PMC3717328/"
+          >PMC3717328</ext-link>, the license information is given in a &lt;fn&gt; element within
+        the back matter:</p>
+      <pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;fn</span><span class="ot"> id=</span><span class="st">&quot;FN5&quot;</span><span class="kw">&gt;</span>
   <span class="kw">&lt;p</span><span class="ot"> content-type=</span><span class="st">&quot;publisher-disclaimer&quot;</span><span class="kw">&gt;</span>
     <span class="kw">&lt;bold&gt;</span>Open Access<span class="kw">&lt;/bold&gt;</span>: This article is distributed under the terms of the Creative
     Commons Attribution License 3.0 which permits any use, distribution, and reproduction in
@@ -279,31 +289,33 @@
     <span class="kw">&gt;</span>http://creativecommons.org/licenses/by/3.0/<span class="kw">&lt;/ext-link&gt;</span>
   <span class="kw">&lt;/p&gt;</span>
 <span class="kw">&lt;/fn&gt;</span></code></pre>
-  <p>This effectively makes it undiscoverable, because any automatic process attempting to determine
-    the license of an article would have to exclude things outside of the &lt;permissions&gt;
-    element, otherwise there would be the possibility of false positives resulting from articles
-    that <em>discuss</em> and <em>quote</em> licenses and license text within the article body.</p>
-  <p>
-    <strong>
-      <em>Contradictory URIs</em>
-    </strong>
-  </p>
-  <p>Until recently, many articles in PMC had mismatches between the URIs that appear on the
-    &lt;license&gt; element and those that appear inside the license text within &lt;ext-link&gt;
-    elements. To address this problem, as mentioned above, PMC has instituted a new Style Checker
-    rule that requires that if there are multiple URIs, they must match.</p>
-  <p>In addition, PMC has fixed most instances of such conflicts within the existing database.</p>
-  <p>
-    <strong>
-      <em>No machine-readable URI</em>
-    </strong>
-  </p>
-  <p>Some articles (including the vast majority of those deposited by PLOS) have Creative Commons
-    licenses, but don't contain any machine-readable URI identifying that license. An example of the
-    tagging from a recent PLOS ONE article, <ext-link ext-link-type="uri"
-      xlink:href="http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&amp;id=PMC3738584/"
-      >PMC3738584</ext-link>, is:</p>
-  <pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;permissions&gt;</span>
+      <p>This effectively makes it undiscoverable, because any automatic process attempting to
+        determine the license of an article would have to exclude things outside of the
+        &lt;permissions&gt; element, otherwise there would be the possibility of false positives
+        resulting from articles that <em>discuss</em> and <em>quote</em> licenses and license text
+        within the article body.</p>
+      <p>
+        <strong>
+          <em>Contradictory URIs</em>
+        </strong>
+      </p>
+      <p>Until recently, many articles in PMC had mismatches between the URIs that appear on the
+        &lt;license&gt; element and those that appear inside the license text within
+        &lt;ext-link&gt; elements. To address this problem, as mentioned above, PMC has instituted a
+        new Style Checker rule that requires that if there are multiple URIs, they must match.</p>
+      <p>In addition, PMC has fixed most instances of such conflicts within the existing
+        database.</p>
+      <p>
+        <strong>
+          <em>No machine-readable URI</em>
+        </strong>
+      </p>
+      <p>Some articles (including the vast majority of those deposited by PLOS) have Creative
+        Commons licenses, but don't contain any machine-readable URI identifying that license. An
+        example of the tagging from a recent PLOS ONE article, <ext-link ext-link-type="uri"
+          xlink:href="http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&amp;id=PMC3738584/"
+          >PMC3738584</ext-link>, is:</p>
+      <pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;permissions&gt;</span>
   <span class="kw">&lt;copyright-year&gt;</span>2013<span class="kw">&lt;/copyright-year&gt;</span>
   <span class="kw">&lt;copyright-holder&gt;</span>Bassaneze et al<span class="kw">&lt;/copyright-holder&gt;</span>
   <span class="kw">&lt;license&gt;</span>
@@ -313,86 +325,92 @@
       and source are credited.<span class="kw">&lt;/license-p&gt;</span>
   <span class="kw">&lt;/license&gt;</span>
 <span class="kw">&lt;/permissions&gt;</span></code></pre>
-  <p>This is particularly troubling, since PLOS papers represent a large and quickly increasing
-    percentage of PMC, and especially PMC's OA content. Additionally, the phrasing of the
-    human-readable text may vary across articles from the same journal that are under the same
-    license.</p>
-  <p>
-    <strong>
-      <em>Missing license information altogether</em>
-    </strong>
-  </p>
-  <p>Finally, there are the cases of articles in the OA subset (e.g. <ext-link ext-link-type="uri"
-      xlink:href="http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&amp;id=PMC3775889/"
-      >PMC3775889</ext-link>) that have no license information in the XML at all, meaning that an
-    automated tool would either have to consider the article to be under &quot;all rights
-    reserved&quot; – which would even prohibit the kind of data mining that the OA subset is
-    intended for and that the OAMI performs – or to contain code specific to particular journals or
-    publishers, or require manual assistance by a human (who, in the case of the cited example,
-    would find out that the article in question is <ext-link ext-link-type="uri"
-      xlink:href="http://currents.plos.org/genomictests/terms-of-use/">actually licensed CC
-      BY</ext-link>).</p>
+      <p>This is particularly troubling, since PLOS papers represent a large and quickly increasing
+        percentage of PMC, and especially PMC's OA content. Additionally, the phrasing of the
+        human-readable text may vary across articles from the same journal that are under the same
+        license.</p>
+      <p>
+        <strong>
+          <em>Missing license information altogether</em>
+        </strong>
+      </p>
+      <p>Finally, there are the cases of articles in the OA subset (e.g. <ext-link
+          ext-link-type="uri"
+          xlink:href="http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&amp;id=PMC3775889/"
+          >PMC3775889</ext-link>) that have no license information in the XML at all, meaning that
+        an automated tool would either have to consider the article to be under &quot;all rights
+        reserved&quot; – which would even prohibit the kind of data mining that the OA subset is
+        intended for and that the OAMI performs – or to contain code specific to particular journals
+        or publishers, or require manual assistance by a human (who, in the case of the cited
+        example, would find out that the article in question is <ext-link ext-link-type="uri"
+          xlink:href="http://currents.plos.org/genomictests/terms-of-use/">actually licensed CC
+          BY</ext-link>).</p>
 
 
-  </sec>
-<sec><title>Impact of these problems on PMC</title>
-  <p>PMC recently implemented a search-by-license feature, described on their <ext-link
-      ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/pmc/tools/openftlist/">Open Access
-      Subset</ext-link> page. This feature allows users to query for articles matching specific
-    Creative Commons licenses, and can be combined with other search terms.</p>
-  <p>Unfortunately, because of the tagging problems described above, the PMC indexer, in many cases,
-    cannot correctly determine the license of articles. Therefore, the search result sets are much
-    smaller than they otherwise would be.</p>
-  <p>For example, in a sample of 100 articles that are in the OA subset, but that do not match the
-    &quot;cc license&quot; filter (<ext-link ext-link-type="uri"
-      xlink:href="http://www.ncbi.nlm.nih.gov/pmc/?term=%22open+access%22%5Bfilter%5D+NOT+%22cc+license%22%5Bfilter%5D"
-      >PMC search</ext-link>), it was found that 99 did, in fact, have CC licenses, but that tagging
-    problems prevented them from being correctly identified as such. At the time of this writing,
-    there were 663,843 articles in the OA subset, and 52% did not match the &quot;cc license&quot;
-    filter. If the sample described above is representative, then that means about 340,000 eligible
-    articles would not be discoverable through this search feature.</p>
+    </sec>
+    <sec>
+      <title>Impact of these problems on PMC</title>
+      <p>PMC recently implemented a search-by-license feature, described on their <ext-link
+          ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/pmc/tools/openftlist/">Open
+          Access Subset</ext-link> page. This feature allows users to query for articles matching
+        specific Creative Commons licenses, and can be combined with other search terms.</p>
+      <p>Unfortunately, because of the tagging problems described above, the PMC indexer, in many
+        cases, cannot correctly determine the license of articles. Therefore, the search result sets
+        are much smaller than they otherwise would be.</p>
+      <p>For example, in a sample of 100 articles that are in the OA subset, but that do not match
+        the &quot;cc license&quot; filter (<ext-link ext-link-type="uri"
+          xlink:href="http://www.ncbi.nlm.nih.gov/pmc/?term=%22open+access%22%5Bfilter%5D+NOT+%22cc+license%22%5Bfilter%5D"
+          >PMC search</ext-link>), it was found that 99 did, in fact, have CC licenses, but that
+        tagging problems prevented them from being correctly identified as such. At the time of this
+        writing, there were 663,843 articles in the OA subset, and 52% did not match the &quot;cc
+        license&quot; filter. If the sample described above is representative, then that means about
+        340,000 eligible articles would not be discoverable through this search feature.</p>
 
 
-  </sec>
-<sec><title>Impact of these problems beyond PMC</title>
-  <p>In the OAMI, these problems necessitated the development of a fairly sophisticated text-mining
-    module that examined both the machine-readable URI in the &lt;license&gt; element, as well as
-    the human-readable expressions, so as to determine the publisher's intent. Because of Wikimedia
-    Commons' strict enforcement of proper licensing, it was important that this module be
-    conservative:  false positives being much less acceptable than false negatives.</p>
-  <p>Development of a license-mining algorithm such as this is costly, and would tax the resources
-    of any project seeking to reuse PMC OA content. Even with this algorithm, the inconsistency and
-    number of errors that we found indicate that there are still a great number of articles that
-    could legitimately be uploaded to Wikimedia Commons, but that are not properly identified. This
-    does a disservice to those who released their material with reuse-friendly licenses, often in
-    the hopes of having it be used as widely as possible.</p>
-  <p>The lack of ability to reliably determine licensing information on a per-article basis
-    contributes to other problems as well. One such problem is that publishers sometimes erect
-    paywalls around open access content, counter to the express wishes of the authors. One way to
-    explain this could be that the sites are not flexible enough to handle per-issue or per-article
-    license information. Perhaps, if the tagging of this information in JATS XML documents were
-    consistent and reliable, it would facilitate systems that were more flexible, and able to serve
-    open content directly, which still presenting a paywall for closed content.</p>
-  <p>As another example, the Directory of Open Access Journals (DOAJ) already allows one to
-      <ext-link ext-link-type="uri" xlink:href="http://www.doaj.org/doaj?func=byLicense">list
-      journals by license</ext-link>, and plans are afoot to expand this functionality to the level
-    of individual articles. Again, this could be facilitated by consistent and reliable tagging of
-    JATS XML articles.</p>
+    </sec>
+    <sec>
+      <title>Impact of these problems beyond PMC</title>
+      <p>In the OAMI, these problems necessitated the development of a fairly sophisticated
+        text-mining module that examined both the machine-readable URI in the &lt;license&gt;
+        element, as well as the human-readable expressions, so as to determine the publisher's
+        intent. Because of Wikimedia Commons' strict enforcement of proper licensing, it was
+        important that this module be conservative:  false positives being much less acceptable than
+        false negatives.</p>
+      <p>Development of a license-mining algorithm such as this is costly, and would tax the
+        resources of any project seeking to reuse PMC OA content. Even with this algorithm, the
+        inconsistency and number of errors that we found indicate that there are still a great
+        number of articles that could legitimately be uploaded to Wikimedia Commons, but that are
+        not properly identified. This does a disservice to those who released their material with
+        reuse-friendly licenses, often in the hopes of having it be used as widely as possible.</p>
+      <p>The lack of ability to reliably determine licensing information on a per-article basis
+        contributes to other problems as well. One such problem is that publishers sometimes erect
+        paywalls around open access content, counter to the express wishes of the authors. One way
+        to explain this could be that the sites are not flexible enough to handle per-issue or
+        per-article license information. Perhaps, if the tagging of this information in JATS XML
+        documents were consistent and reliable, it would facilitate systems that were more flexible,
+        and able to serve open content directly, which still presenting a paywall for closed
+        content.</p>
+      <p>As another example, the Directory of Open Access Journals (DOAJ) already allows one to
+          <ext-link ext-link-type="uri" xlink:href="http://www.doaj.org/doaj?func=byLicense">list
+          journals by license</ext-link>, and plans are afoot to expand this functionality to the
+        level of individual articles. Again, this could be facilitated by consistent and reliable
+        tagging of JATS XML articles.</p>
 
 
-  </sec>
-<sec><title>Broader license issues</title>
-  <p>
-    <strong>
-      <em>Multiple licenses with different scope</em>
-    </strong>
-  </p>
-  <p>Recently, some journals have begun to make data and supplementary materials available under a
-    license that differs from the main article's license. For example, F1000Research is providing
-    articles with text content that is available under CC-BY, but with accompanying data available
-    in the public domain (CC0). Here is an example of the tagging of a recent article from their
-    website:</p>
-  <pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;permissions&gt;</span>
+    </sec>
+    <sec>
+      <title>Broader license issues</title>
+      <p>
+        <strong>
+          <em>Multiple licenses with different scope</em>
+        </strong>
+      </p>
+      <p>Recently, some journals have begun to make data and supplementary materials available under
+        a license that differs from the main article's license. For example, F1000Research is
+        providing articles with text content that is available under CC-BY, but with accompanying
+        data available in the public domain (CC0). Here is an example of the tagging of a recent
+        article from their website:</p>
+      <pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;permissions&gt;</span>
   <span class="kw">&lt;copyright-statement&gt;</span>Copyright: © 2013 Baird AH et al.<span class="kw">&lt;/copyright-statement&gt;</span>
   <span class="kw">&lt;copyright-year&gt;</span>2013<span class="kw">&lt;/copyright-year&gt;</span>
   <span class="kw">&lt;license</span><span class="ot"> license-type=</span><span class="st">&quot;open-access&quot;</span>
@@ -409,35 +427,36 @@
       domain dedication).<span class="kw">&lt;/license-p&gt;</span>
   <span class="kw">&lt;/license&gt;</span>
 <span class="kw">&lt;/permissions&gt;</span></code></pre>
-  <p>The scope and the intent of each of the two &lt;license&gt; elements is clear to a human
-    reader, but, unfortunately, there is no way for an automated bot to be able to unambiguously
-    identify the two different scopes.</p>
-  <p>If licensing information were available along with provenance on a per-file basis in a
-    machine-readable format, there would be potential for automated checks of licensing information.
-    Few scholars outside the field of copyright law are aware of all the implications of publishing
-    under certain licenses, which sometimes leads to content available under a particular license
-    being published (<ext-link ext-link-type="uri"
-      xlink:href="http://www.plosone.org/annotation/listThread.action?root=60001">Example
-      1</ext-link>) or re-published (<ext-link ext-link-type="uri"
-      xlink:href="http://www.plosbiology.org/annotation/listThread.action?root=53679">Example
-      2</ext-link>) in incompatibly licensed papers. In Example 1, the issue could be solved by the
-    copyright holder changing the licensing of the original file, whereas in Example 2, a video
-    displaying wrong license information was fixed and re-uploaded at the publisher's site but
-      <ext-link ext-link-type="uri"
-      xlink:href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3485268/bin/pone.0046962.s003.mp4">not
-      at PMC</ext-link>, despite the published correction.</p>
-  <p>There is no straightforward way to detect such cases algorithmically, and raising awareness for
-    these issues amongst authors, editors and reviewers can certainly not be automated either.</p>
-  <p>
-    <strong>
-      <em>Incremental licenses</em>
-    </strong>
-  </p>
-  <p>Often, articles are published with license terms that change over time. The following is an
-    example from <ext-link ext-link-type="uri"
-      xlink:href="http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.cgi?db=pmc&amp;id=3601365"
-      >PMC3601365</ext-link>.</p>
-  <pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;license</span><span class="ot"> license-type=</span><span class="st">&quot;openaccess&quot;</span><span class="kw">&gt;</span>
+      <p>The scope and the intent of each of the two &lt;license&gt; elements is clear to a human
+        reader, but, unfortunately, there is no way for an automated bot to be able to unambiguously
+        identify the two different scopes.</p>
+      <p>If licensing information were available along with provenance on a per-file basis in a
+        machine-readable format, there would be potential for automated checks of licensing
+        information. Few scholars outside the field of copyright law are aware of all the
+        implications of publishing under certain licenses, which sometimes leads to content
+        available under a particular license being published (<ext-link ext-link-type="uri"
+          xlink:href="http://www.plosone.org/annotation/listThread.action?root=60001">Example
+          1</ext-link>) or re-published (<ext-link ext-link-type="uri"
+          xlink:href="http://www.plosbiology.org/annotation/listThread.action?root=53679">Example
+          2</ext-link>) in incompatibly licensed papers. In Example 1, the issue could be solved by
+        the copyright holder changing the licensing of the original file, whereas in Example 2, a
+        video displaying wrong license information was fixed and re-uploaded at the publisher's site
+        but <ext-link ext-link-type="uri"
+          xlink:href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3485268/bin/pone.0046962.s003.mp4"
+          >not at PMC</ext-link>, despite the published correction.</p>
+      <p>There is no straightforward way to detect such cases algorithmically, and raising awareness
+        for these issues amongst authors, editors and reviewers can certainly not be automated
+        either.</p>
+      <p>
+        <strong>
+          <em>Incremental licenses</em>
+        </strong>
+      </p>
+      <p>Often, articles are published with license terms that change over time. The following is an
+        example from <ext-link ext-link-type="uri"
+          xlink:href="http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.cgi?db=pmc&amp;id=3601365"
+          >PMC3601365</ext-link>.</p>
+      <pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;license</span><span class="ot"> license-type=</span><span class="st">&quot;openaccess&quot;</span><span class="kw">&gt;</span>
   <span class="kw">&lt;license-p&gt;</span>
     This article is distributed under the terms of an Attribution–Noncommercial–Share
     Alike–No Mirror Sites license for the first six months after the publication date
@@ -450,219 +469,226 @@
     http://creativecommons.org/licenses/by-nc-sa/3.0/<span class="kw">&lt;/ext-link&gt;</span>).
   <span class="kw">&lt;/license-p&gt;</span>
 <span class="kw">&lt;/license&gt;</span></code></pre>
-  <p>One problem with this is that both licenses are given within a single &lt;license&gt; element,
-    which would complicate the data model for any program attempting to process these. Another is
-    that there is no machine-readable indication of the time period covered by each of the two
-    separate licenses.</p>
-  <p>We provide a recommendation of how this tagging could be improved (both for licenses with
-    different scope, and with different effective date ranges) in &quot;PMC license metadata&quot;,
-    below.</p>
+      <p>One problem with this is that both licenses are given within a single &lt;license&gt;
+        element, which would complicate the data model for any program attempting to process these.
+        Another is that there is no machine-readable indication of the time period covered by each
+        of the two separate licenses.</p>
+      <p>We provide a recommendation of how this tagging could be improved (both for licenses with
+        different scope, and with different effective date ranges) in &quot;PMC license
+        metadata&quot;, below.</p>
 
 
+    </sec>
+    <sec>
+      <title>Standardization efforts</title>
+      <p>There have been a number of efforts to standardize the expression of license metadata.
+        Among these are:</p>
+      <ul>
+        <li><ext-link ext-link-type="uri" xlink:href="http://creativecommons.org/ns">Creative
+            Commons Rights Expression Language</ext-link> (CC-REL)</li>
+        <li><ext-link ext-link-type="uri" xlink:href="http://www.editeur.org/21/ONIX-PL/">ONIX for
+            Publications Licenses</ext-link> (ONIX-PL)</li>
+        <li>Ongoing <ext-link ext-link-type="uri"
+            xlink:href="http://www.niso.org/news/pr/view?item_key=d2e5f409bc6af6b7f504a10edf0329203ffec6f9"
+            >NISO Initiative to Develop Standard for Open Access Metadata and
+          Indicators</ext-link></li>
+        <li>
+          <ext-link ext-link-type="uri"
+            xlink:href="https://en.wikipedia.org/wiki/Wikipedia:WikiProject_Open_Access/Signalling_OA-ness"
+            >Wikipedia: Signalling OA-ness</ext-link>
+        </li>
+      </ul>
+      <p>Many of these standards provide complex mechanisms for specifying or customizing the
+        particular terms of a license. We welcome these efforts, and look forward to the time when
+        the tags they define can be integrated with JATS. However, the simplest and most fundamental
+        way of robustly signalling a license will probably always be to unambiguously link to a URI
+        that's defined, controlled and perhaps versioned by an established organization such as
+        Creative Commons.</p>
+
+
+
+    </sec>
   </sec>
-<sec><title>Standardization efforts</title>
-  <p>There have been a number of efforts to standardize the expression of license metadata. Among
-    these are:</p>
-  <ul>
-    <li><ext-link ext-link-type="uri" xlink:href="http://creativecommons.org/ns">Creative Commons
-        Rights Expression Language</ext-link> (CC-REL)</li>
-    <li><ext-link ext-link-type="uri" xlink:href="http://www.editeur.org/21/ONIX-PL/">ONIX for
-        Publications Licenses</ext-link> (ONIX-PL)</li>
-    <li>Ongoing <ext-link ext-link-type="uri"
-        xlink:href="http://www.niso.org/news/pr/view?item_key=d2e5f409bc6af6b7f504a10edf0329203ffec6f9"
-        >NISO Initiative to Develop Standard for Open Access Metadata and Indicators</ext-link></li>
-    <li>
-      <ext-link ext-link-type="uri"
-        xlink:href="https://en.wikipedia.org/wiki/Wikipedia:WikiProject_Open_Access/Signalling_OA-ness"
-        >Wikipedia: Signalling OA-ness</ext-link>
-    </li>
-  </ul>
-  <p>Many of these standards provide complex mechanisms for specifying or customizing the particular
-    terms of a license. We welcome these efforts, and look forward to the time when the tags they
-    define can be integrated with JATS. However, the simplest and most fundamental way of robustly
-    signalling a license will probably always be to unambiguously link to a URI that's defined,
-    controlled and perhaps versioned by an established organization such as Creative Commons.</p>
-
-
-
-</sec>
-  </sec>
-  <sec><title>Media types</title>
-  <p>In addition to the problems with communicating the licensing terms, the media types of
-    supplementary materials are frequently not indicated properly, which reduces discoverability and
-    translates into extra efforts before any reuse becomes possible.</p>
-  <p>Media types (originally called &quot;MIME types&quot;) are two part identifiers that describe
-    the format of a multimedia file. Familiar examples are &quot;text/plain&quot;, and
-    &quot;application/xml&quot;. When serving these types of files, web servers provide the media
-    type in the HTTP &quot;Content-type&quot; header. This allows the client to determine how the
-    file should be processed. In the case of the OAMI, the processing is the conversion of the file
-    format, since Wikimedia Commons only accepts audio or video files encoded in open formats.</p>
-  <p>The JATS standard provides two attributes to allow for encoding the media types of files that
-    accompany journal articles:</p>
-  <ul>
-    <li>
-      <ext-link ext-link-type="uri"
-        xlink:href="http://jats.nlm.nih.gov/archiving/tag-library/1.0/?attr=mimetype"
-        >mimetype</ext-link>
-    </li>
-    <li>
-      <ext-link ext-link-type="uri"
-        xlink:href="http://jats.nlm.nih.gov/archiving/tag-library/1.0/?attr=mime-subtype"
-        >mime-subtype</ext-link>
-    </li>
-  </ul>
-  <p>These attributes are allowed on several elements that identify these types of files, including
-      <ext-link ext-link-type="uri"
-      xlink:href="http://jats.nlm.nih.gov/archiving/tag-library/1.0/?elem=supplementary-material"
-      >&lt;supplementary-material&gt;</ext-link> and <ext-link ext-link-type="uri"
-      xlink:href="http://jats.nlm.nih.gov/archiving/tag-library/1.0/?elem=media"
-      >&lt;media&gt;</ext-link>.</p>
-  <p>The JATS specification includes the following example of how to tag a media file in an
-    article's supplementary material (slightly elided):</p>
-  <pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;supplementary-material</span><span class="ot"> id=</span><span class="st">&quot;S1&quot;</span><span class="ot"> xlink:href=</span><span class="st">&quot;1471-2105-1-1-s1.pdf&quot;</span>
+  <sec>
+    <title>Media types</title>
+    <p>In addition to the problems with communicating the licensing terms, the media types of
+      supplementary materials are frequently not indicated properly, which reduces discoverability
+      and translates into extra efforts before any reuse becomes possible.</p>
+    <p>Media types (originally called &quot;MIME types&quot;) are two part identifiers that describe
+      the format of a multimedia file. Familiar examples are &quot;text/plain&quot;, and
+      &quot;application/xml&quot;. When serving these types of files, web servers provide the media
+      type in the HTTP &quot;Content-type&quot; header. This allows the client to determine how the
+      file should be processed. In the case of the OAMI, the processing is the conversion of the
+      file format, since Wikimedia Commons only accepts audio or video files encoded in open
+      formats.</p>
+    <p>The JATS standard provides two attributes to allow for encoding the media types of files that
+      accompany journal articles:</p>
+    <ul>
+      <li>
+        <ext-link ext-link-type="uri"
+          xlink:href="http://jats.nlm.nih.gov/archiving/tag-library/1.0/?attr=mimetype"
+          >mimetype</ext-link>
+      </li>
+      <li>
+        <ext-link ext-link-type="uri"
+          xlink:href="http://jats.nlm.nih.gov/archiving/tag-library/1.0/?attr=mime-subtype"
+          >mime-subtype</ext-link>
+      </li>
+    </ul>
+    <p>These attributes are allowed on several elements that identify these types of files,
+      including <ext-link ext-link-type="uri"
+        xlink:href="http://jats.nlm.nih.gov/archiving/tag-library/1.0/?elem=supplementary-material"
+        >&lt;supplementary-material&gt;</ext-link> and <ext-link ext-link-type="uri"
+        xlink:href="http://jats.nlm.nih.gov/archiving/tag-library/1.0/?elem=media"
+        >&lt;media&gt;</ext-link>.</p>
+    <p>The JATS specification includes the following example of how to tag a media file in an
+      article's supplementary material (slightly elided):</p>
+    <pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;supplementary-material</span><span class="ot"> id=</span><span class="st">&quot;S1&quot;</span><span class="ot"> xlink:href=</span><span class="st">&quot;1471-2105-1-1-s1.pdf&quot;</span>
 <span class="ot">                        mimetype=</span><span class="st">&quot;application/pdf&quot;</span><span class="kw">&gt;</span>
   <span class="kw">&lt;caption&gt;</span>
     <span class="kw">&lt;p&gt;</span>Supplementary PDF file supplied by authors.<span class="kw">&lt;/p&gt;</span>
   <span class="kw">&lt;/caption&gt;</span>
 <span class="kw">&lt;/supplementary-material&gt;</span></code></pre>
-  <p>Note:</p>
-  <ul>
-    <li>The <code>mimetype</code> attribute is used to store both parts of the media type, rather
-      than splitting out the &quot;subtype&quot; into the <code>mime-subtype</code> attribute</li>
-    <li>The information about the media file is given right on the &lt;supplementary-material&gt;
-      element, rather than, for example, a child &lt;media&gt; element.</li>
-  </ul>
-  <p>In contrast, the <ext-link ext-link-type="uri"
-      xlink:href="http://www.ncbi.nlm.nih.gov/pmc/pmcdoc/tagging-guidelines/article/tags.html#el-suppl"
-      >PMC Tagging Guidelines</ext-link> stipulate, for the &lt;supplementary-material&gt;
-    element:</p>
-  <blockquote>
-    <p>Should include &lt;media&gt; or &lt;graphic&gt; to identify the supplemental file. File
-      description in &lt;media&gt; or &lt;graphic&gt; must include the file name (including file
-      extension) in @xlink:href; &lt;media&gt; also requires @mime-type [sic], and
-      @mime-subtype.</p>
-  </blockquote>
-  <p>So, there is some ambiguity as to the best practice for tagging supplementary media files.</p>
+    <p>Note:</p>
+    <ul>
+      <li>The <code>mimetype</code> attribute is used to store both parts of the media type, rather
+        than splitting out the &quot;subtype&quot; into the <code>mime-subtype</code> attribute</li>
+      <li>The information about the media file is given right on the &lt;supplementary-material&gt;
+        element, rather than, for example, a child &lt;media&gt; element.</li>
+    </ul>
+    <p>In contrast, the <ext-link ext-link-type="uri"
+        xlink:href="http://www.ncbi.nlm.nih.gov/pmc/pmcdoc/tagging-guidelines/article/tags.html#el-suppl"
+        >PMC Tagging Guidelines</ext-link> stipulate, for the &lt;supplementary-material&gt;
+      element:</p>
+    <blockquote>
+      <p>Should include &lt;media&gt; or &lt;graphic&gt; to identify the supplemental file. File
+        description in &lt;media&gt; or &lt;graphic&gt; must include the file name (including file
+        extension) in @xlink:href; &lt;media&gt; also requires @mime-type [sic], and
+        @mime-subtype.</p>
+    </blockquote>
+    <p>So, there is some ambiguity as to the best practice for tagging supplementary media
+      files.</p>
 
 
-<sec><title>Media type and related problems</title>
-  <p>The following are some examples of the problems that we encountered that are related to media
-    types.</p>
-  <p>Foremost were those resulting from mismatches among:</p>
-  <ul>
-    <li>The declared media type in the @mimetype and @mime-subtype attributes of the source XML,
-      including mismatches between the XML available from the publisher and PMC,</li>
-    <li>The &quot;Content-type&quot; headers as seen from PMC, and</li>
-    <li>The actual media type of the file.</li>
-  </ul>
-  <p>
-    <strong>
-      <em>Mismatches between publisher XML, PMC XML, and Content-type</em>
-    </strong>
-  </p>
-  <p>The following figure suggests the scope of the problem of media type mismatches.</p>
-  <div class="figure">
-    <img src="http://chrismaloney.org/notes/mediatype-mismatches-by-publisher.png"
-      alt="Figure 3. Supplementary media files with the wrong media type, by DOI prefix, from a sample of articles indexed in the first week of May 2013. Unknown refers to MS Office files, between the different formats of which we did not distinguish." />
-    <p class="caption">Figure 3. Supplementary media files with the wrong media type, by DOI prefix,
-      from a sample of articles indexed in the first week of May 2013. Unknown refers to MS Office
-      files, between the different formats of which we did not distinguish.</p>
-  </div>
-  <p>For an example of such a mismatch, in the article <ext-link ext-link-type="uri"
-      xlink:href="http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&amp;id=PMC3162007/"
-      >PMC3162007</ext-link>, the <ext-link ext-link-type="uri"
-      xlink:href="http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&amp;id=PMC3162007/bin/pone.0023819.s009.rar"
-      >Models S1</ext-link> file under &quot;Supporting Information&quot; is actually of type
-    &quot;application/x-rar-compressed&quot;. The original <ext-link ext-link-type="uri"
-      xlink:href="http://www.plosone.org/article/fetchObjectAttachment.action?uri=info%3Adoi%2F10.1371%2Fjournal.pone.0023819&amp;representation=XML"
-      >publisher XML</ext-link> encodes this correctly:</p>
-  <pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;supplementary-material</span><span class="ot"> id=</span><span class="st">&quot;pone.0023819.s009&quot;</span><span class="ot"> mimetype=</span><span class="st">&quot;application/x-rar-compressed&quot;</span> <span class="er">...</span></code></pre>
-  <p>However, the <ext-link ext-link-type="uri"
-      xlink:href="http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&amp;id=PMC3162007"
-      >XML from PMC</ext-link> is wrong:</p>
-  <pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;supplementary-material</span><span class="ot"> content-type=</span><span class="st">&quot;local-data&quot;</span><span class="ot"> id=</span><span class="st">&quot;pone.0023819.s009&quot;</span><span class="kw">&gt;</span>
+    <sec>
+      <title>Media type and related problems</title>
+      <p>The following are some examples of the problems that we encountered that are related to
+        media types.</p>
+      <p>Foremost were those resulting from mismatches among:</p>
+      <ul>
+        <li>The declared media type in the @mimetype and @mime-subtype attributes of the source XML,
+          including mismatches between the XML available from the publisher and PMC,</li>
+        <li>The &quot;Content-type&quot; headers as seen from PMC, and</li>
+        <li>The actual media type of the file.</li>
+      </ul>
+      <p>
+        <strong>
+          <em>Mismatches between publisher XML, PMC XML, and Content-type</em>
+        </strong>
+      </p>
+      <p>The following figure suggests the scope of the problem of media type mismatches.</p>
+      <div class="figure">
+        <img src="http://chrismaloney.org/notes/mediatype-mismatches-by-publisher.png"
+          alt="Figure 3. Supplementary media files with the wrong media type, by DOI prefix, from a sample of articles indexed in the first week of May 2013. Unknown refers to MS Office files, between the different formats of which we did not distinguish." />
+        <p class="caption">Figure 3. Supplementary media files with the wrong media type, by DOI
+          prefix, from a sample of articles indexed in the first week of May 2013. Unknown refers to
+          MS Office files, between the different formats of which we did not distinguish.</p>
+      </div>
+      <p>For an example of such a mismatch, in the article <ext-link ext-link-type="uri"
+          xlink:href="http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&amp;id=PMC3162007/"
+          >PMC3162007</ext-link>, the <ext-link ext-link-type="uri"
+          xlink:href="http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&amp;id=PMC3162007/bin/pone.0023819.s009.rar"
+          >Models S1</ext-link> file under &quot;Supporting Information&quot; is actually of type
+        &quot;application/x-rar-compressed&quot;. The original <ext-link ext-link-type="uri"
+          xlink:href="http://www.plosone.org/article/fetchObjectAttachment.action?uri=info%3Adoi%2F10.1371%2Fjournal.pone.0023819&amp;representation=XML"
+          >publisher XML</ext-link> encodes this correctly:</p>
+      <pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;supplementary-material</span><span class="ot"> id=</span><span class="st">&quot;pone.0023819.s009&quot;</span><span class="ot"> mimetype=</span><span class="st">&quot;application/x-rar-compressed&quot;</span> <span class="er">...</span></code></pre>
+      <p>However, the <ext-link ext-link-type="uri"
+          xlink:href="http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&amp;id=PMC3162007"
+          >XML from PMC</ext-link> is wrong:</p>
+      <pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;supplementary-material</span><span class="ot"> content-type=</span><span class="st">&quot;local-data&quot;</span><span class="ot"> id=</span><span class="st">&quot;pone.0023819.s009&quot;</span><span class="kw">&gt;</span>
   ...
   <span class="kw">&lt;media</span><span class="ot"> xlink:href=</span><span class="st">&quot;pone.0023819.s009.rar&quot;</span><span class="ot"> mimetype=</span><span class="st">&quot;audio&quot;</span><span class="ot"> mime-subtype=</span><span class="st">&quot;x-realaudio&quot;</span><span class="kw">&gt;</span>
   ...</code></pre>
-  <p>Furthermore, PMC returns the (wrong) HTTP &quot;Content-Type&quot; header
-    &quot;application/octet-stream&quot;.</p>
-  <p>
-    <strong>
-      <em>Mismatches between filename extension and media type</em>
-    </strong>
-  </p>
-  <p>In the article <ext-link ext-link-type="uri"
-      xlink:href="http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&amp;id=PMC2386968/"
-      >PMC2386968</ext-link>, the URL to the <ext-link ext-link-type="uri"
-      xlink:href="http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&amp;id=PMC2386968/bin/pone.0002276.s002.doc"
-      >Movie S2</ext-link> ends with &quot;.doc&quot;, and PMC returns &quot;Content-Type:
-    application/msword&quot;. However, the file is actually a Microsoft ASF file, which should have
-    media type &quot;video/x-ms-wmv&quot;.</p>
-  <p>The <ext-link ext-link-type="uri"
-      xlink:href="http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&amp;id=PMC2386968"
-      >PMC XML</ext-link> is wrong:</p>
-  <pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;supplementary-material</span><span class="ot"> content-type=</span><span class="st">&quot;local-data&quot;</span><span class="ot"> id=</span><span class="st">&quot;pone.0002276.s002&quot;</span><span class="kw">&gt;</span>
+      <p>Furthermore, PMC returns the (wrong) HTTP &quot;Content-Type&quot; header
+        &quot;application/octet-stream&quot;.</p>
+      <p>
+        <strong>
+          <em>Mismatches between filename extension and media type</em>
+        </strong>
+      </p>
+      <p>In the article <ext-link ext-link-type="uri"
+          xlink:href="http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&amp;id=PMC2386968/"
+          >PMC2386968</ext-link>, the URL to the <ext-link ext-link-type="uri"
+          xlink:href="http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&amp;id=PMC2386968/bin/pone.0002276.s002.doc"
+          >Movie S2</ext-link> ends with &quot;.doc&quot;, and PMC returns &quot;Content-Type:
+        application/msword&quot;. However, the file is actually a Microsoft ASF file, which should
+        have media type &quot;video/x-ms-wmv&quot;.</p>
+      <p>The <ext-link ext-link-type="uri"
+          xlink:href="http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&amp;id=PMC2386968"
+          >PMC XML</ext-link> is wrong:</p>
+      <pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;supplementary-material</span><span class="ot"> content-type=</span><span class="st">&quot;local-data&quot;</span><span class="ot"> id=</span><span class="st">&quot;pone.0002276.s002&quot;</span><span class="kw">&gt;</span>
   ...
   <span class="kw">&lt;media</span><span class="ot"> xlink:href=</span><span class="st">&quot;pone.0002276.s002.doc&quot;</span><span class="ot"> mimetype=</span><span class="st">&quot;application&quot;</span><span class="ot"> mime-subtype=</span><span class="st">&quot;msword&quot;</span><span class="kw">&gt;</span>
   ...</code></pre>
-  <p>
-    <strong>
-      <em>Media type misidentified in publisher XML</em>
-    </strong>
-  </p>
-  <p>In the article <ext-link ext-link-type="uri"
-      xlink:href="http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&amp;id=PMC3619089/"
-      >PMC3619089</ext-link>, the additional data file is a <ext-link ext-link-type="uri"
-      xlink:href="http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&amp;id=PMC3619089/bin/Movie_1.MP4"
-      >video</ext-link> that has an actual media type of &quot;video/mp4&quot;, but this is tagged
-    incorrectly in the <ext-link ext-link-type="uri"
-      xlink:href="http://www.frontiersin.org/Journal/DownloadFile.ashx?xml=1&amp;FileId=15567&amp;articleId=41661&amp;Version=1&amp;ContentTypeId=22&amp;FileName=Finalxml.xml&amp;JournalAbbr=fnbot&amp;JournalSeqNo=00005&amp;JournalVolume=07"
-      >publisher’s XML</ext-link> (notice the misspelling):</p>
-  <pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;supplementary-material</span><span class="ot"> xlink:href=</span><span class="st">&quot;Movie_1.MP4&quot;</span><span class="ot"> id=</span><span class="st">&quot;SM1&quot;</span><span class="ot"> mimetype=</span><span class="st">&quot;applicationn/MP4&quot;</span> <span class="er">...</span></code></pre>
-  <p>The <ext-link ext-link-type="uri"
-      xlink:href="http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&amp;id=PMC3619089"
-      >PMC XML</ext-link> is wrong too, but in a different way:</p>
-  <pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;supplementary-material</span><span class="ot"> content-type=</span><span class="st">&quot;local-data&quot;</span><span class="ot"> id=</span><span class="st">&quot;SM1&quot;</span><span class="kw">&gt;</span>
+      <p>
+        <strong>
+          <em>Media type misidentified in publisher XML</em>
+        </strong>
+      </p>
+      <p>In the article <ext-link ext-link-type="uri"
+          xlink:href="http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&amp;id=PMC3619089/"
+          >PMC3619089</ext-link>, the additional data file is a <ext-link ext-link-type="uri"
+          xlink:href="http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&amp;id=PMC3619089/bin/Movie_1.MP4"
+          >video</ext-link> that has an actual media type of &quot;video/mp4&quot;, but this is
+        tagged incorrectly in the <ext-link ext-link-type="uri"
+          xlink:href="http://www.frontiersin.org/Journal/DownloadFile.ashx?xml=1&amp;FileId=15567&amp;articleId=41661&amp;Version=1&amp;ContentTypeId=22&amp;FileName=Finalxml.xml&amp;JournalAbbr=fnbot&amp;JournalSeqNo=00005&amp;JournalVolume=07"
+          >publisher’s XML</ext-link> (notice the misspelling):</p>
+      <pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;supplementary-material</span><span class="ot"> xlink:href=</span><span class="st">&quot;Movie_1.MP4&quot;</span><span class="ot"> id=</span><span class="st">&quot;SM1&quot;</span><span class="ot"> mimetype=</span><span class="st">&quot;applicationn/MP4&quot;</span> <span class="er">...</span></code></pre>
+      <p>The <ext-link ext-link-type="uri"
+          xlink:href="http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&amp;id=PMC3619089"
+          >PMC XML</ext-link> is wrong too, but in a different way:</p>
+      <pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;supplementary-material</span><span class="ot"> content-type=</span><span class="st">&quot;local-data&quot;</span><span class="ot"> id=</span><span class="st">&quot;SM1&quot;</span><span class="kw">&gt;</span>
   <span class="kw">&lt;media</span><span class="ot"> xlink:href=</span><span class="st">&quot;Movie_1.MP4&quot;</span><span class="ot"> mimetype=</span><span class="st">&quot;video&quot;</span><span class="ot"> mime-subtype=</span><span class="st">&quot;quicktime&quot;</span><span class="kw">&gt;</span>
   ...</code></pre>
-  <p>
-    <strong>
-      <em>Missing media type in XML</em>
-    </strong>
-  </p>
-  <p>Many articles lack any indication of the media type within their XML. For example, in the
-    article <ext-link ext-link-type="uri"
-      xlink:href="http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&amp;id=PMC3765204/"
-      >PMC3765204</ext-link>, there is no media type indicated for either Movie 1 or Movie 2. The
-    two videos in <ext-link ext-link-type="uri"
-      xlink:href="http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&amp;id=PMC3770602/"
-      >PMC3770602</ext-link> also lack any indication of media type.</p>
-  <p>The problem of missing @mimetype and @mime-subtype attributes is fairly common. For example, in
-    the article <ext-link ext-link-type="uri"
-      xlink:href="http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&amp;id=PMC3765681/"
-      >PMC3765681</ext-link>, the XML lacks any indication of the media type:</p>
-  <pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;media</span><span class="ot"> xlink:href=</span><span class="st">&quot;1556-276X-8-131-S1.tiff&quot;</span><span class="kw">&gt;</span>
+      <p>
+        <strong>
+          <em>Missing media type in XML</em>
+        </strong>
+      </p>
+      <p>Many articles lack any indication of the media type within their XML. For example, in the
+        article <ext-link ext-link-type="uri"
+          xlink:href="http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&amp;id=PMC3765204/"
+          >PMC3765204</ext-link>, there is no media type indicated for either Movie 1 or Movie 2.
+        The two videos in <ext-link ext-link-type="uri"
+          xlink:href="http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&amp;id=PMC3770602/"
+          >PMC3770602</ext-link> also lack any indication of media type.</p>
+      <p>The problem of missing @mimetype and @mime-subtype attributes is fairly common. For
+        example, in the article <ext-link ext-link-type="uri"
+          xlink:href="http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&amp;id=PMC3765681/"
+          >PMC3765681</ext-link>, the XML lacks any indication of the media type:</p>
+      <pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;media</span><span class="ot"> xlink:href=</span><span class="st">&quot;1556-276X-8-131-S1.tiff&quot;</span><span class="kw">&gt;</span>
   <span class="kw">&lt;caption&gt;</span>
     <span class="kw">&lt;p&gt;</span>Click here for file<span class="kw">&lt;/p&gt;</span>
   <span class="kw">&lt;/caption&gt;</span>
 <span class="kw">&lt;/media&gt;</span></code></pre>
-  <p>After September, 2013, when PMC stopped writing these attributes into source XML (see
-    &quot;Recent efforts at PMC&quot;, below) the frequency of this problem went up, but the
-    frequency of incorrect attribute values went down, as would be expected.</p>
-  <p>
-    <strong>
-      <em>Problems with &lt;label&gt;, &lt;caption&gt; and &lt;title&gt;</em>
-    </strong>
-  </p>
-  <p>In addition to problems involving the media types, there is also a lot of variability in the
-    way that the &lt;label&gt;, &lt;caption&gt; and &lt;title&gt; elements are used, and this causes
-    problems for automated tools.</p>
-  <p>For instance, in <ext-link ext-link-type="uri"
-      xlink:href="http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&amp;id=PMC3713652"
-      >PMC3713652</ext-link>, the caption for several supplementary files is given in the first
-    caption element, and there is no way to automate the process of determining which caption should
-    go with which file:</p>
-  <pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;supplementary-material</span><span class="ot"> content-type=</span><span class="st">&quot;local-data&quot;</span><span class="ot"> id=</span><span class="st">&quot;f1&quot;</span><span class="kw">&gt;</span>
+      <p>After September, 2013, when PMC stopped writing these attributes into source XML (see
+        &quot;Recent efforts at PMC&quot;, below) the frequency of this problem went up, but the
+        frequency of incorrect attribute values went down, as would be expected.</p>
+      <p>
+        <strong>
+          <em>Problems with &lt;label&gt;, &lt;caption&gt; and &lt;title&gt;</em>
+        </strong>
+      </p>
+      <p>In addition to problems involving the media types, there is also a lot of variability in
+        the way that the &lt;label&gt;, &lt;caption&gt; and &lt;title&gt; elements are used, and
+        this causes problems for automated tools.</p>
+      <p>For instance, in <ext-link ext-link-type="uri"
+          xlink:href="http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&amp;id=PMC3713652"
+          >PMC3713652</ext-link>, the caption for several supplementary files is given in the first
+        caption element, and there is no way to automate the process of determining which caption
+        should go with which file:</p>
+      <pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;supplementary-material</span><span class="ot"> content-type=</span><span class="st">&quot;local-data&quot;</span><span class="ot"> id=</span><span class="st">&quot;f1&quot;</span><span class="kw">&gt;</span>
   <span class="kw">&lt;caption&gt;</span>
     ...
     <span class="kw">&lt;p&gt;</span>Supplemental Figure 1. Micrographs illustrating ...<span class="kw">&lt;/p&gt;</span>
@@ -679,122 +705,130 @@
   <span class="kw">&lt;/media&gt;</span>
 <span class="kw">&lt;/supplementary-material&gt;</span>
 ...</code></pre>
-  <p>Other articles, for example, <ext-link ext-link-type="uri"
-      xlink:href="http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&amp;id=PMC3656359"
-      >PMC3656359</ext-link>, do not provide any content-related information in the captions:</p>
-  <pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;supplementary-material</span><span class="ot"> content-type=</span><span class="st">&quot;local-data&quot;</span><span class="ot"> id=</span><span class="st">&quot;SM1&quot;</span><span class="kw">&gt;</span>
+      <p>Other articles, for example, <ext-link ext-link-type="uri"
+          xlink:href="http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&amp;id=PMC3656359"
+          >PMC3656359</ext-link>, do not provide any content-related information in the
+        captions:</p>
+      <pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;supplementary-material</span><span class="ot"> content-type=</span><span class="st">&quot;local-data&quot;</span><span class="ot"> id=</span><span class="st">&quot;SM1&quot;</span><span class="kw">&gt;</span>
   <span class="kw">&lt;media</span><span class="ot"> xlink:href=</span><span class="st">&quot;43049_Jiang_Movie1.AVI&quot;</span><span class="ot"> mimetype=</span><span class="st">&quot;video&quot;</span><span class="ot"> mime-subtype=</span><span class="st">&quot;x-msvideo&quot;</span><span class="kw">&gt;</span>
     <span class="kw">&lt;caption&gt;</span>
       <span class="kw">&lt;p&gt;</span>Click here for additional data file.<span class="kw">&lt;/p&gt;</span>
     <span class="kw">&lt;/caption&gt;</span>
   <span class="kw">&lt;/media&gt;</span>
 <span class="kw">&lt;/supplementary-material&gt;</span></code></pre>
-  <p>
-    <strong>
-      <em>Missing references to supplementary materials</em>
-    </strong>
-  </p>
-  <p>In a few cases, the source XML of suitably licensed articles available from PMC do not have any
-    reference to the multimedia files whatsoever. For example <ext-link ext-link-type="uri"
-      xlink:href="http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&amp;id=3104346"
-      >PMC3104346</ext-link> has two supplemental videos, which can be viewed <ext-link
-      ext-link-type="uri"
-      xlink:href="http://rsif.royalsocietypublishing.org/content/8/59/787/suppl/DC1">on the
-      publisher's site</ext-link>, but are not referenced in the XML.</p>
-  <p>Another example of this is <ext-link ext-link-type="uri"
-      xlink:href="http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&amp;id=3423924"
-      >PMC3423924</ext-link>, which has a supplemental video that can be downloaded from the
-      <ext-link ext-link-type="uri"
-      xlink:href="http://www.hindawi.com/journals/ijad/2012/914947/sup/">publisher site</ext-link>,
-    but, again, no reference to that from the XML.</p>
+      <p>
+        <strong>
+          <em>Missing references to supplementary materials</em>
+        </strong>
+      </p>
+      <p>In a few cases, the source XML of suitably licensed articles available from PMC do not have
+        any reference to the multimedia files whatsoever. For example <ext-link ext-link-type="uri"
+          xlink:href="http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&amp;id=3104346"
+          >PMC3104346</ext-link> has two supplemental videos, which can be viewed <ext-link
+          ext-link-type="uri"
+          xlink:href="http://rsif.royalsocietypublishing.org/content/8/59/787/suppl/DC1">on the
+          publisher's site</ext-link>, but are not referenced in the XML.</p>
+      <p>Another example of this is <ext-link ext-link-type="uri"
+          xlink:href="http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&amp;id=3423924"
+          >PMC3423924</ext-link>, which has a supplemental video that can be downloaded from the
+          <ext-link ext-link-type="uri"
+          xlink:href="http://www.hindawi.com/journals/ijad/2012/914947/sup/">publisher
+          site</ext-link>, but, again, no reference to that from the XML.</p>
 
 
+    </sec>
+    <sec>
+      <title>Recent efforts at PMC</title>
+      <p>Many of the problems described above were due to PMC's incorrectly adding @mimetype and
+        @mime-subtype attributes to XML that it received, based on the assumption that the media
+        file's extension accurately reflects its media type. When it was recognized that the
+        filename extension was not a reliable indicator of the media type, and that it's better to
+        have no declared media type than to have it wrong, PMC has stopped executing this
+        function.</p>
+      <p>Also, in part because of the recognition that the values for @mimetype and @mime-subtype
+        being supplied by publishers was not reliable, PMC is in the process of changing the Tagging
+        Guidelines to make these attributes, when they appear on the &lt;media&gt; element,
+        optional.</p>
+      <p>Also, in response to some of these problems, PMC has implemented a new feature in its
+        rendering software to ensure the accuracy of the &quot;Content-type&quot; header it provides
+        in response to HTTP requests for the media files. This makes use of the standard Unix
+        library <ext-link ext-link-type="uri"
+          xlink:href="http://netbsd.gw.com/cgi-bin/man-cgi?libmagic+3+NetBSD-current"
+          >libmagic</ext-link>, which is also used by the OAMI and determines a file's type based on
+        patterns of data within its content. In this way, PMC can be sure that it is delivering
+        accurate metadata in the HTTP response, based on the actual file at the time it is
+        served.</p>
+      <p>There are no plans to retroactively fix the existing XML markup in the PMC database, or to
+        adjust the @mimetype or @mime-subtype attributes for any new articles received.</p>
+
+
+    </sec>
+    <sec>
+      <title>Standardization efforts</title>
+      <p>Over the past few years, the NISO/NFAIS Supplemental Journal Article Materials Working
+        Group has been working on standards for handling supplementary materials, and has published
+          <ext-link ext-link-type="uri" xlink:href="http://www.niso.org/publications/rp/rp-15-2013"
+          >NISO RP-15-2013, Recommended Practices for Online Supplemental Journal Article
+          Materials</ext-link> earlier this year.</p>
+      <p>This document lists &quot;recommended minimal and extended metadata&quot; (section B.2.2
+        Metadata Elements), and recommends open formats that can be rendered by free, open-source,
+        and ubiquitous application software (section B.4.2 Preservation Recommendations) and also
+        briefly touches upon licensing (section A.3.10 Rights Management). With respect to media
+        types, the group recommends – as part of a strategy to enable long-term preservation – that
+        publishers accept supplementary materials in formats defined in formal format registries,
+        such as the <ext-link ext-link-type="uri" xlink:href="http://www.udfr.org/">Unified Digital
+          Format Registry (UDFR)</ext-link> or <ext-link ext-link-type="uri"
+          xlink:href="http://www.nationalarchives.gov.uk/PRONOM">PRONOM</ext-link>. These formats
+        provide much more information than the simple media type.</p>
+      <p>The kind of media type issues reported here would be much less frequent in articles
+        properly tagged according to these NISO recommendations.</p>
+
+
+
+    </sec>
   </sec>
-<sec><title>Recent efforts at PMC</title>
-  <p>Many of the problems described above were due to PMC's incorrectly adding @mimetype and
-    @mime-subtype attributes to XML that it received, based on the assumption that the media file's
-    extension accurately reflects its media type. When it was recognized that the filename extension
-    was not a reliable indicator of the media type, and that it's better to have no declared media
-    type than to have it wrong, PMC has stopped executing this function.</p>
-  <p>Also, in part because of the recognition that the values for @mimetype and @mime-subtype being
-    supplied by publishers was not reliable, PMC is in the process of changing the Tagging
-    Guidelines to make these attributes, when they appear on the &lt;media&gt; element,
-    optional.</p>
-  <p>Also, in response to some of these problems, PMC has implemented a new feature in its rendering
-    software to ensure the accuracy of the &quot;Content-type&quot; header it provides in response
-    to HTTP requests for the media files. This makes use of the standard Unix library <ext-link
-      ext-link-type="uri"
-      xlink:href="http://netbsd.gw.com/cgi-bin/man-cgi?libmagic+3+NetBSD-current"
-      >libmagic</ext-link>, which is also used by the OAMI and determines a file's type based on
-    patterns of data within its content. In this way, PMC can be sure that it is delivering accurate
-    metadata in the HTTP response, based on the actual file at the time it is served.</p>
-  <p>There are no plans to retroactively fix the existing XML markup in the PMC database, or to
-    adjust the @mimetype or @mime-subtype attributes for any new articles received.</p>
+  <sec>
+    <title>Keywords</title>
+    <p>The OAMI, when it uploads files to Wikimedia Commons, assigns them to Wikimedia Commons
+      categories, so as to facilitate search and discovery by users. The OAMI attempts to determine
+      these categories based on keywords or subjects in the source XML, or MeSH terms supplied by
+      the journal, by PMC or by PubMed for the corresponding article. We found that articles within
+      the OA subset had very inconsistent tagging of keywords, and that caused many problems.</p>
+    <p>The NISO JATS specification provides recommendations in the <ext-link ext-link-type="uri"
+        xlink:href="http://jats.nlm.nih.gov/archiving/tag-library/0.4/n-pu72.html">Tagging
+        Keywords</ext-link> section of each of the three tag sets. It describe two main methods for
+      tagging keywords:</p>
+    <ol style="list-style-type: decimal">
+      <li>With any of a number of elements inside &lt;kwd-group&gt;: &lt;kwd&gt;,
+        &lt;compound-kwd&gt;, &lt;compound-kwd-part&gt;, &lt;nested-kwd&gt;, and
+        &lt;unstructured-kwd-group&gt;</li>
+      <li>With &lt;subject&gt; elements inside &lt;subj-group&gt;, inside
+        &lt;article-categories&gt;</li>
+    </ol>
 
 
-  </sec>
-<sec><title>Standardization efforts</title>
-  <p>Over the past few years, the NISO/NFAIS Supplemental Journal Article Materials Working Group
-    has been working on standards for handling supplementary materials, and has published <ext-link
-      ext-link-type="uri" xlink:href="http://www.niso.org/publications/rp/rp-15-2013">NISO
-      RP-15-2013, Recommended Practices for Online Supplemental Journal Article Materials</ext-link>
-    earlier this year.</p>
-  <p>This document lists &quot;recommended minimal and extended metadata&quot; (section B.2.2
-    Metadata Elements), and recommends open formats that can be rendered by free, open-source, and
-    ubiquitous application software (section B.4.2 Preservation Recommendations) and also briefly
-    touches upon licensing (section A.3.10 Rights Management). With respect to media types, the
-    group recommends – as part of a strategy to enable long-term preservation – that publishers
-    accept supplementary materials in formats defined in formal format registries, such as the
-      <ext-link ext-link-type="uri" xlink:href="http://www.udfr.org/">Unified Digital Format
-      Registry (UDFR)</ext-link> or <ext-link ext-link-type="uri"
-      xlink:href="http://www.nationalarchives.gov.uk/PRONOM">PRONOM</ext-link>. These formats
-    provide much more information than the simple media type.</p>
-  <p>The kind of media type issues reported here would be much less frequent in articles properly
-    tagged according to these NISO recommendations.</p>
-
-
-
-</sec>
-  </sec>
-  <sec><title>Keywords</title>
-  <p>The OAMI, when it uploads files to Wikimedia Commons, assigns them to Wikimedia Commons
-    categories, so as to facilitate search and discovery by users. The OAMI attempts to determine
-    these categories based on keywords or subjects in the source XML, or MeSH terms supplied by the
-    journal, by PMC or by PubMed for the corresponding article. We found that articles within the OA
-    subset had very inconsistent tagging of keywords, and that caused many problems.</p>
-  <p>The NISO JATS specification provides recommendations in the <ext-link ext-link-type="uri"
-      xlink:href="http://jats.nlm.nih.gov/archiving/tag-library/0.4/n-pu72.html">Tagging
-      Keywords</ext-link> section of each of the three tag sets. It describe two main methods for
-    tagging keywords:</p>
-  <ol style="list-style-type: decimal">
-    <li>With any of a number of elements inside &lt;kwd-group&gt;: &lt;kwd&gt;,
-      &lt;compound-kwd&gt;, &lt;compound-kwd-part&gt;, &lt;nested-kwd&gt;, and
-      &lt;unstructured-kwd-group&gt;</li>
-    <li>With &lt;subject&gt; elements inside &lt;subj-group&gt;, inside
-      &lt;article-categories&gt;</li>
-  </ol>
-
-
-<sec><title>Tagging with kwd-family elements</title>
-  <p>The &lt;kwd-group&gt; element is a container for other elements that specify the keywords
-    themselves. It takes an attribute, @kwd-group-type, that qualifies the type of keywords that
-    appear in the group. The JATS specification <ext-link ext-link-type="uri"
-      xlink:href="http://jats.nlm.nih.gov/archiving/tag-library/1.0/?attr=kwd-group-type">page for
-      this attribute</ext-link> indicates that it should be used for either of two purposes:
-    defining the authority of a controlled vocabulary from which the keywords come, or for
-    describing the type of the keywords as &quot;hierarchical&quot;, &quot;abbreviation&quot;, etc.
-    (This is an unfortunate conflation of two orthogonal concepts.)</p>
-  <p>The &lt;kwd-group&gt; element can appear within either article or section metadata.
-    Unfortunately, at present, it cannot be applied to individual media or data files. However,
-    there is a <ext-link ext-link-type="uri"
-      xlink:href="http://www.niso.org/apps/group_public/view_comment.php?comment_id=252">comment on
-      the NISO site</ext-link> requesting that this attribute be added to several other elements,
-    including &lt;media&gt; and &lt;supplementary-material&gt;, and we support this suggestion.</p>
-  <p>The following is an example of the typical usage of &lt;kwd-group&gt; and &lt;kwd&gt;, from
-      <ext-link ext-link-type="uri"
-      xlink:href="http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&amp;id=2630158"
-      >PMC2630158</ext-link>:</p>
-  <pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;kwd-group&gt;</span>
+    <sec>
+      <title>Tagging with kwd-family elements</title>
+      <p>The &lt;kwd-group&gt; element is a container for other elements that specify the keywords
+        themselves. It takes an attribute, @kwd-group-type, that qualifies the type of keywords that
+        appear in the group. The JATS specification <ext-link ext-link-type="uri"
+          xlink:href="http://jats.nlm.nih.gov/archiving/tag-library/1.0/?attr=kwd-group-type">page
+          for this attribute</ext-link> indicates that it should be used for either of two purposes:
+        defining the authority of a controlled vocabulary from which the keywords come, or for
+        describing the type of the keywords as &quot;hierarchical&quot;, &quot;abbreviation&quot;,
+        etc. (This is an unfortunate conflation of two orthogonal concepts.)</p>
+      <p>The &lt;kwd-group&gt; element can appear within either article or section metadata.
+        Unfortunately, at present, it cannot be applied to individual media or data files. However,
+        there is a <ext-link ext-link-type="uri"
+          xlink:href="http://www.niso.org/apps/group_public/view_comment.php?comment_id=252">comment
+          on the NISO site</ext-link> requesting that this attribute be added to several other
+        elements, including &lt;media&gt; and &lt;supplementary-material&gt;, and we support this
+        suggestion.</p>
+      <p>The following is an example of the typical usage of &lt;kwd-group&gt; and &lt;kwd&gt;, from
+          <ext-link ext-link-type="uri"
+          xlink:href="http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&amp;id=2630158"
+          >PMC2630158</ext-link>:</p>
+      <pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;kwd-group&gt;</span>
   <span class="kw">&lt;kwd&gt;</span>French pox<span class="kw">&lt;/kwd&gt;</span>
   <span class="kw">&lt;kwd&gt;</span>Augsburg<span class="kw">&lt;/kwd&gt;</span>
   <span class="kw">&lt;kwd&gt;</span>medical semiotics<span class="kw">&lt;/kwd&gt;</span>
@@ -803,15 +837,16 @@
 <span class="kw">&lt;/kwd-group&gt;</span></code></pre>
 
 
-  </sec>
-<sec><title>Tagging with &lt;subject&gt;</title>
-  <p>In many articles, keywords are tagged within &lt;subject&gt; elements, that are nested
-    hierarchically inside &lt;subj-group&gt; elements.</p>
-  <p>An example of reasonably good tagging is from <ext-link ext-link-type="uri"
-      xlink:href="http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&amp;id=PMC3708714"
-      >PMC3708714</ext-link>, where the keywords are specified in a clean hierarchical structure
-    inside &lt;subj-group&gt; and &lt;subject&gt; elements:</p>
-  <pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;subj-group</span><span class="ot"> subj-group-type=</span><span class="st">&quot;Discipline-v2&quot;</span><span class="kw">&gt;</span>
+    </sec>
+    <sec>
+      <title>Tagging with &lt;subject&gt;</title>
+      <p>In many articles, keywords are tagged within &lt;subject&gt; elements, that are nested
+        hierarchically inside &lt;subj-group&gt; elements.</p>
+      <p>An example of reasonably good tagging is from <ext-link ext-link-type="uri"
+          xlink:href="http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&amp;id=PMC3708714"
+          >PMC3708714</ext-link>, where the keywords are specified in a clean hierarchical structure
+        inside &lt;subj-group&gt; and &lt;subject&gt; elements:</p>
+      <pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;subj-group</span><span class="ot"> subj-group-type=</span><span class="st">&quot;Discipline-v2&quot;</span><span class="kw">&gt;</span>
   <span class="kw">&lt;subject&gt;</span>Biology<span class="kw">&lt;/subject&gt;</span>
   <span class="kw">&lt;subj-group&gt;</span>
     <span class="kw">&lt;subject&gt;</span>Biophysics<span class="kw">&lt;/subject&gt;</span>
@@ -838,144 +873,149 @@
 <span class="kw">&lt;/subj-group&gt;</span></code></pre>
 
 
-  </sec>
-<sec><title>Tagging problems</title>
-  <p>
-    <strong>
-      <em>Bad keywords</em>
-    </strong>
-  </p>
-  <p>Because the values for keywords are unconstrained, and typically not members of a controlled
-    vocabulary, there is no way to validate them. This, of course, leads to problems with typos,
-    misspellings, differences in case, and so forth, that make them difficult to process by
-    machine.</p>
-  <p>For example, we have noticed that in PLOS articles, a recurring typographical error is
-    encountered, in which a superfluous space is inserted into a keyword. When media files from
-    these articles are processed by the OAMI and uploaded to Wikimedia Commons, they are thus
-    assigned the Wikimedia Commons category &quot;<ext-link ext-link-type="uri"
-      xlink:href="https://commons.wikimedia.org/wiki/Category:Biophysic_al_simulations">Biophysic al
-      simulations</ext-link>&quot;. To work around this problem, we have inserted a permanent
-    redirect from that misspelled category to one with the proper spelling. The presence of files in
-    this redirected category then triggers another bot on Wikimedia Commons to fix the
-    categorization of affected files automatically.</p>
-  <p>
-    <strong>
-      <em>Inconsistent use of the @subj-group-type attribute</em>
-    </strong>
-  </p>
-  <p>Most of the time, the &lt;subj-group&gt; and &lt;subject&gt; elements are used to specify, not
-    keywords, but a subject heading that would appear in the Table of Contents for a journal issue;
-    and is often equivalent to the type of article, as &quot;Article&quot;, &quot;Letter to
-    Editor&quot;, &quot;Meeting Notice&quot;, etc. When used this way, the @subj-group-type
-    attribute normally has the value &quot;heading&quot;.</p>
-  <p>When using &lt;subj-group&gt; and &lt;subject&gt; elements to describe keywords, the JATS
-    specification suggests that the @subj-group-type attribute have a value of, for example,
-    &quot;keywords&quot;. However, we found the use of this attribute to be very inconsistent. Note
-    in the &quot;good&quot; example above, that the value &quot;Discipline-v2&quot; is used. In a
-    sample of articles from the OA subset, often we saw no value at all given for this attribute.
-    Among those that did supply a value, we found the following:</p>
-  <ul>
-    <li>Article Type</li>
-    <li>Article type</li>
-    <li>Primary</li>
-    <li>Secondary</li>
-    <li>hw-coll-titles</li>
-    <li>hwp-journal-coll</li>
-    <li>overline</li>
-    <li>search-keyword</li>
-    <li>section</li>
-    <li>topic</li>
-  </ul>
-  <p>As with the keyword values themselves, this proliferation of values, with no centralized way to
-    determine their semantics, makes them difficult to process by machine.</p>
-  <p>
-    <strong>
-      <em>No keywords or subject tags</em>
-    </strong>
-  </p>
-  <p>In many articles, no keywords or subject tags were given at all, other than the
-    &quot;heading&quot; subject, which is not useful for this purpose. For example, <ext-link
-      ext-link-type="uri"
-      xlink:href="http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&amp;id=PMC3425056"
-      >PMC3425056</ext-link> has only this markup:</p>
-  <pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;subj-group</span><span class="ot"> subj-group-type=</span><span class="st">&quot;heading&quot;</span><span class="kw">&gt;</span>
+    </sec>
+    <sec>
+      <title>Tagging problems</title>
+      <p>
+        <strong>
+          <em>Bad keywords</em>
+        </strong>
+      </p>
+      <p>Because the values for keywords are unconstrained, and typically not members of a
+        controlled vocabulary, there is no way to validate them. This, of course, leads to problems
+        with typos, misspellings, differences in case, and so forth, that make them difficult to
+        process by machine.</p>
+      <p>For example, we have noticed that in PLOS articles, a recurring typographical error is
+        encountered, in which a superfluous space is inserted into a keyword. When media files from
+        these articles are processed by the OAMI and uploaded to Wikimedia Commons, they are thus
+        assigned the Wikimedia Commons category &quot;<ext-link ext-link-type="uri"
+          xlink:href="https://commons.wikimedia.org/wiki/Category:Biophysic_al_simulations"
+          >Biophysic al simulations</ext-link>&quot;. To work around this problem, we have inserted
+        a permanent redirect from that misspelled category to one with the proper spelling. The
+        presence of files in this redirected category then triggers another bot on Wikimedia Commons
+        to fix the categorization of affected files automatically.</p>
+      <p>
+        <strong>
+          <em>Inconsistent use of the @subj-group-type attribute</em>
+        </strong>
+      </p>
+      <p>Most of the time, the &lt;subj-group&gt; and &lt;subject&gt; elements are used to specify,
+        not keywords, but a subject heading that would appear in the Table of Contents for a journal
+        issue; and is often equivalent to the type of article, as &quot;Article&quot;, &quot;Letter
+        to Editor&quot;, &quot;Meeting Notice&quot;, etc. When used this way, the @subj-group-type
+        attribute normally has the value &quot;heading&quot;.</p>
+      <p>When using &lt;subj-group&gt; and &lt;subject&gt; elements to describe keywords, the JATS
+        specification suggests that the @subj-group-type attribute have a value of, for example,
+        &quot;keywords&quot;. However, we found the use of this attribute to be very inconsistent.
+        Note in the &quot;good&quot; example above, that the value &quot;Discipline-v2&quot; is
+        used. In a sample of articles from the OA subset, often we saw no value at all given for
+        this attribute. Among those that did supply a value, we found the following:</p>
+      <ul>
+        <li>Article Type</li>
+        <li>Article type</li>
+        <li>Primary</li>
+        <li>Secondary</li>
+        <li>hw-coll-titles</li>
+        <li>hwp-journal-coll</li>
+        <li>overline</li>
+        <li>search-keyword</li>
+        <li>section</li>
+        <li>topic</li>
+      </ul>
+      <p>As with the keyword values themselves, this proliferation of values, with no centralized
+        way to determine their semantics, makes them difficult to process by machine.</p>
+      <p>
+        <strong>
+          <em>No keywords or subject tags</em>
+        </strong>
+      </p>
+      <p>In many articles, no keywords or subject tags were given at all, other than the
+        &quot;heading&quot; subject, which is not useful for this purpose. For example, <ext-link
+          ext-link-type="uri"
+          xlink:href="http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&amp;id=PMC3425056"
+          >PMC3425056</ext-link> has only this markup:</p>
+      <pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;subj-group</span><span class="ot"> subj-group-type=</span><span class="st">&quot;heading&quot;</span><span class="kw">&gt;</span>
   <span class="kw">&lt;subject&gt;</span>Case Report<span class="kw">&lt;/subject&gt;</span>
 <span class="kw">&lt;/subj-group&gt;</span></code></pre>
-  <p>
-    <strong>
-      <em>Inconsistent use of the @kwd-group-type attribute</em>
-    </strong>
-  </p>
-  <p>As with the @subj-group-type attribute described above (and most of the attributes defined in
-    JATS), there is no enumeration of, or constraint on, the values that this attribute can take.
-    Publishers each choose their own values, and this leads to incompatibilities.</p>
-  <p>The following are some of the values that we found:</p>
-  <ul>
-    <li>abbr</li>
-    <li>author</li>
-    <li>journal subjects</li>
-    <li>KEYWORDS</li>
-    <li>keywords</li>
-    <li>kwd</li>
-  </ul>
+      <p>
+        <strong>
+          <em>Inconsistent use of the @kwd-group-type attribute</em>
+        </strong>
+      </p>
+      <p>As with the @subj-group-type attribute described above (and most of the attributes defined
+        in JATS), there is no enumeration of, or constraint on, the values that this attribute can
+        take. Publishers each choose their own values, and this leads to incompatibilities.</p>
+      <p>The following are some of the values that we found:</p>
+      <ul>
+        <li>abbr</li>
+        <li>author</li>
+        <li>journal subjects</li>
+        <li>KEYWORDS</li>
+        <li>keywords</li>
+        <li>kwd</li>
+      </ul>
 
 
 
-</sec>
+    </sec>
   </sec>
-  <sec><title>Recommendations</title>
-  <p>We will thus end by discussing some more long-term prospects for enhancing the discoverability
-    of reuseable open-access content, combined with practical recommendations for how the current
-    situation might be improved. </p>
+  <sec>
+    <title>Recommendations</title>
+    <p>We will thus end by discussing some more long-term prospects for enhancing the
+      discoverability of reuseable open-access content, combined with practical recommendations for
+      how the current situation might be improved. </p>
 
 
-<sec><title>License tagging</title>
-  <p>We recommend that the PMC Tagging Guidelines and Style Checker be changed to require that, if a
-    license is defined by a URI (as are CC licenses), that the article <em>must</em> put this URL
-    into the @xlink:href on the &lt;license&gt; element. This should be the sole place that a
-    machine (or anyone) should need to look for the license URI. (This is in contrast to the current
-    guidelines, which state that it can be tagged on an @xlink:href on either the &lt;license&gt;
-    element, or on any &lt;ext-link&gt; descendent of &lt;license&gt;.)</p>
-  <p>If that were implemented, then it would no longer be necessary to do comparisons between that
-    URI and any other URI within the &lt;license-p&gt; elements, and this check should be dropped.
-    The rationale for this is that any content within the &lt;license-p&gt; elements is intended for
-    human, not machine, consumption, and might contain arbitrary hyperlinks, which cannot be
-    predicted, and should not be constrained.</p>
-  <p>The PMC Style Checker could be enhanced to dynamically check the validity of any
-    creativecommons.org URIs that appear in that attribute. Creative Commons provides a web service
-    for this purpose (see, for example, <ext-link ext-link-type="uri"
-      xlink:href="http://api.creativecommons.org/rest/dev/details?license-uri=http://creativecommons.org/licenses/by-nc-sa/2.5/ca/"
-      >this service call</ext-link>).</p>
+    <sec>
+      <title>License tagging</title>
+      <p>We recommend that the PMC Tagging Guidelines and Style Checker be changed to require that,
+        if a license is defined by a URI (as are CC licenses), that the article <em>must</em> put
+        this URL into the @xlink:href on the &lt;license&gt; element. This should be the sole place
+        that a machine (or anyone) should need to look for the license URI. (This is in contrast to
+        the current guidelines, which state that it can be tagged on an @xlink:href on either the
+        &lt;license&gt; element, or on any &lt;ext-link&gt; descendent of &lt;license&gt;.)</p>
+      <p>If that were implemented, then it would no longer be necessary to do comparisons between
+        that URI and any other URI within the &lt;license-p&gt; elements, and this check should be
+        dropped. The rationale for this is that any content within the &lt;license-p&gt; elements is
+        intended for human, not machine, consumption, and might contain arbitrary hyperlinks, which
+        cannot be predicted, and should not be constrained.</p>
+      <p>The PMC Style Checker could be enhanced to dynamically check the validity of any
+        creativecommons.org URIs that appear in that attribute. Creative Commons provides a web
+        service for this purpose (see, for example, <ext-link ext-link-type="uri"
+          xlink:href="http://api.creativecommons.org/rest/dev/details?license-uri=http://creativecommons.org/licenses/by-nc-sa/2.5/ca/"
+          >this service call</ext-link>).</p>
 
 
-  </sec>
-<sec><title>PMC license metadata</title>
-  <p>The license metadata for articles in the PMC archive, because it is based on the markup of the
-    source XML, is not reliable. One effect of this, as discussed above, is that it detracts from
-    the usefulness of the search-by-license feature.</p>
-  <p>PMC could improve the way this license data is derived, re-using some of the business rules by
-    which it determines which articles become part of the OA subset.</p>
-  <p>Also, as part of this project, we curated the license data for thousands of articles in the PMC
-    OA subset. It would be nice if PMC would incorporate that data back into their system, so that
-    future users would not have to duplicate our effort.</p>
-  <p>The license data that does reside in the PMC system should be better exposed. For example, we
-    recommend that it be added to the E-utilities esummary output for articles, for both PubMed and
-    PMC.</p>
-  <p>For articles that have multiple licenses, which either change over time, or apply to different
-    parts (for example, one license for the article proper, and another for data), we suggest that
-    there be one &lt;license&gt; element for each, and that the @specific-use attribute be used to
-    define the scope. The default scope would be &quot;article&quot;, but if, for example, there
-    were a different license for the data, then that would be marked up as follows.</p>
-  <pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;permissions&gt;</span>
+    </sec>
+    <sec>
+      <title>PMC license metadata</title>
+      <p>The license metadata for articles in the PMC archive, because it is based on the markup of
+        the source XML, is not reliable. One effect of this, as discussed above, is that it detracts
+        from the usefulness of the search-by-license feature.</p>
+      <p>PMC could improve the way this license data is derived, re-using some of the business rules
+        by which it determines which articles become part of the OA subset.</p>
+      <p>Also, as part of this project, we curated the license data for thousands of articles in the
+        PMC OA subset. It would be nice if PMC would incorporate that data back into their system,
+        so that future users would not have to duplicate our effort.</p>
+      <p>The license data that does reside in the PMC system should be better exposed. For example,
+        we recommend that it be added to the E-utilities esummary output for articles, for both
+        PubMed and PMC.</p>
+      <p>For articles that have multiple licenses, which either change over time, or apply to
+        different parts (for example, one license for the article proper, and another for data), we
+        suggest that there be one &lt;license&gt; element for each, and that the @specific-use
+        attribute be used to define the scope. The default scope would be &quot;article&quot;, but
+        if, for example, there were a different license for the data, then that would be marked up
+        as follows.</p>
+      <pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;permissions&gt;</span>
   <span class="kw">&lt;license</span><span class="ot"> license-type=</span><span class="st">&quot;open-access&quot;</span>
 <span class="ot">           xlink:href=</span><span class="st">&quot;http://creativecommons.org/licenses/by/3.0/&quot;</span><span class="kw">&gt;</span>...<span class="kw">&lt;/license&gt;</span>
   <span class="kw">&lt;license</span><span class="ot"> license-type=</span><span class="st">&quot;open-access&quot;</span>
 <span class="ot">           specific-use=</span><span class="st">&quot;scope: data&quot;</span>
 <span class="ot">           xlink:href=</span><span class="st">&quot;http://creativecommons.org/publicdomain/zero/1.0/&quot;</span><span class="kw">&gt;</span>...<span class="kw">&lt;/license&gt;</span>
 <span class="kw">&lt;/permissions&gt;</span></code></pre>
-  <p>If the article has a license that changes over time, then that could be marked up as follows
-    (this is meant to be suggestive, only).</p>
-  <pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;permissions&gt;</span>
+      <p>If the article has a license that changes over time, then that could be marked up as
+        follows (this is meant to be suggestive, only).</p>
+      <pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;permissions&gt;</span>
   <span class="kw">&lt;license</span><span class="ot"> license-type=</span><span class="st">&quot;open-access&quot;</span>
 <span class="ot">           specific-use=</span><span class="st">&quot;end-date: 2013-10-22&quot;</span>
 <span class="ot">           xlink:href=</span><span class="st">&quot;http://creativecommons.org/licenses/by/3.0/&quot;</span><span class="kw">&gt;</span>...<span class="kw">&lt;/license&gt;</span>
@@ -985,120 +1025,129 @@
 <span class="kw">&lt;/permissions&gt;</span></code></pre>
 
 
+    </sec>
+    <sec>
+      <title>Media types and format</title>
+      <p>The PMC Tagging Guidelines should be changed to require the media types to be in the
+        @mimetype attribute only, and deprecate @mime-subtype. The Style Checker should verify that
+        the @mimetype attribute is present, that it has a valid form, and that @mime-subtype is not
+        given.</p>
+      <p>PMC could develop a media type checking utility, using the same libmagic Unix library and
+        data files, to be applied to data and media files that accompany articles for ingest. The
+        system could fix the @mimetype attributes in the source XML to reflect the actual media
+        types as determined by this library. As mentioned above, PMC has fixed the HTTP
+        &quot;content-type&quot; headers, but if someone were to download the article and
+        accompanying media files, and share them outside of the PMC system, the mismatch in the
+        source XML could still be a problem.</p>
+      <p>Perhaps this utility could also function to validate the multimedia and other data files
+        that are received. Since these files form an integral part of the scientific record, just as
+        with the source XML, the validity of these files is important. Since the operation of the
+        OAMI began, we have found on the order of 100 video files which could not be processed,
+        because some essential information (for example, the frame rate, or intermediate I-frames)
+        is not given, or not in a proper way (<ext-link ext-link-type="uri"
+          xlink:href="http://www.plosone.org/annotation/listThread.action?root=65463"
+          >example</ext-link>).</p>
+      <p>Such a data validation system could start with a small set of file types, for which
+        consistency checks could be set up. The consistency checker could be made available as a web
+        service, and the Tagging Guidelines could recommend (but not require) that files be provided
+        in those formats, and link to the web service.</p>
+      <p>As mentioned above, <ext-link ext-link-type="uri"
+          xlink:href="http://www.niso.org/apps/group_public/download.php/10055/RP-15-2013_Supplemental_Materials.pdf"
+          >NISO RP-15-2013</ext-link> has recently been published, and we encourage publishers to
+        adopt these recommendations. We note that there is another paper within these conference
+        proceedings, &quot;<ext-link ext-link-type="uri"
+          xlink:href="http://jats.nlm.nih.gov/jats-con/2013/schedule2013a.html#2-900">Extending JATS
+          to include the NISO/NFAIS Recommended Practices for Online Supplemental Journal Article
+          Materials</ext-link>&quot;, which might prove useful in this regard.</p>
+      <p>However, we would also like to note that we have concerns about these recommendations, that
+        mirror some of the concerns that we have expressed about JATS in general. Specifically, we
+        feel that the recommendations are, in many cases, not conducive to producing consistent,
+        robust, and machine readable metadata.</p>
+      <p>For example, in the description of the <ext-link ext-link-type="uri"
+          xlink:href="http://supplemental.niso.org/tag-library/index.html?elem=license"
+          >&lt;license&gt;</ext-link> element, they say, &quot;The &lt;ext-link&gt; can be used to
+        link to licenses that are already defined, such as a Creative Commons license.&quot; This
+        should not be discretionary. The specification should be explicit that when a URI exists
+        that identifies a license, that it must be included, and in a well-defined place. Note that
+        this schema allows multiple &lt;ext-link&gt; elements under &lt;license&gt;, so the
+        ambiguities that exist in JATS, that have led to such wide variation in tagging of this
+        metadata, are continued in this new recommendation.</p>
+
+
+    </sec>
+    <sec>
+      <title>Keywords</title>
+      <p>As mentioned above, we support the suggestion on the <ext-link ext-link-type="uri"
+          xlink:href="http://www.niso.org/apps/group_public/view_comment.php?comment_id=252">NISO
+          JATS document page</ext-link> requesting that the &lt;kwd-group&gt; element be added to
+        the content model of several new elements, including &lt;media&gt; and
+        &lt;supplementary-material&gt;.</p>
+
+
+    </sec>
+    <sec>
+      <title>Public versioning of PMC/OA XML files</title>
+      <p>Many of the issues discussed here could in principle be fixed by running some dedicated
+        scripts over the affected XML files. However, even if such scripts were functional and
+        readily available, there is currently no mechanism that would allow such fixes to be fed
+        back systematically and automatically to the respective sources of these XML files, or to
+        third-party copies thereof. One step in this direction would be to make the XML files
+        available in an updatable environment with public versioning. This would be possible for
+        articles in the Open Access Subset. Indeed, <ext-link ext-link-type="uri"
+          xlink:href="https://github.com/elifesciences/elife-xml">eLife</ext-link> and <ext-link
+          ext-link-type="uri" xlink:href="https://github.com/pensoft">Pensoft</ext-link> have demoed
+        this on GitHub, and a tool for <ext-link ext-link-type="uri"
+          xlink:href="https://github.com/konrad/JATS-to-Mediawiki">porting JATS XML to MediaWiki
+          environments</ext-link> exists as well.</p>
+      <p>Various kinds of modifications to existing XML are theoretically plausible that would merit
+        adoption of such a system. These include – but are not limited to – typos, corrigenda and
+        retractions, but also license changes (e.g. when copyright owner changes licensing
+        backwards, or when copyright expires), media type mismatches, missing or mixed up files,
+        captions or unique identifiers, or &quot;in press&quot; references.</p>
+
+
+    </sec>
+    <sec>
+      <title>Use cases</title>
+      <p>So far, JATS has mainly been used to exchange information between publishers and archives.
+        Under traditional notions of copyright, large-scale reuse of such information by third
+        parties is very limited but PMC's Open Access Subset – particularly the Wikimedia-compatibly
+        licensed portions thereof – opens the door for experimentation on this front. We see value
+        here in introducing the concept of use cases and collaborating with suitable use case
+        partners in further developing JATS as well as the corresponding guidelines and style
+        checkers. The OAMI bot could serve as one such use case. <ext-link ext-link-type="uri"
+          xlink:href="http://dx.doi.org/10.1186/1471-2105-11-85">Species disambiguation</ext-link>,
+          <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1002/asi.20707">citation
+          analyses</ext-link> or <ext-link ext-link-type="uri"
+          xlink:href="hdl.handle.net/10101/npre.2010.4267.2">automated query formulation</ext-link>
+        could be others.</p>
+
+
+
+
+
+    </sec>
   </sec>
-<sec><title>Media types and format</title>
-  <p>The PMC Tagging Guidelines should be changed to require the media types to be in the @mimetype
-    attribute only, and deprecate @mime-subtype. The Style Checker should verify that the @mimetype
-    attribute is present, that it has a valid form, and that @mime-subtype is not given.</p>
-  <p>PMC could develop a media type checking utility, using the same libmagic Unix library and data
-    files, to be applied to data and media files that accompany articles for ingest. The system
-    could fix the @mimetype attributes in the source XML to reflect the actual media types as
-    determined by this library. As mentioned above, PMC has fixed the HTTP &quot;content-type&quot;
-    headers, but if someone were to download the article and accompanying media files, and share
-    them outside of the PMC system, the mismatch in the source XML could still be a problem.</p>
-  <p>Perhaps this utility could also function to validate the multimedia and other data files that
-    are received. Since these files form an integral part of the scientific record, just as with the
-    source XML, the validity of these files is important. Since the operation of the OAMI began, we
-    have found on the order of 100 video files which could not be processed, because some essential
-    information (for example, the frame rate, or intermediate I-frames) is not given, or not in a
-    proper way (<ext-link ext-link-type="uri"
-      xlink:href="http://www.plosone.org/annotation/listThread.action?root=65463"
-    >example</ext-link>).</p>
-  <p>Such a data validation system could start with a small set of file types, for which consistency
-    checks could be set up. The consistency checker could be made available as a web service, and
-    the Tagging Guidelines could recommend (but not require) that files be provided in those
-    formats, and link to the web service.</p>
-  <p>As mentioned above, <ext-link ext-link-type="uri"
-      xlink:href="http://www.niso.org/apps/group_public/download.php/10055/RP-15-2013_Supplemental_Materials.pdf"
-      >NISO RP-15-2013</ext-link> has recently been published, and we encourage publishers to adopt
-    these recommendations. We note that there is another paper within these conference proceedings,
-      &quot;<ext-link ext-link-type="uri"
-      xlink:href="http://jats.nlm.nih.gov/jats-con/2013/schedule2013a.html#2-900">Extending JATS to
-      include the NISO/NFAIS Recommended Practices for Online Supplemental Journal Article
-      Materials</ext-link>&quot;, which might prove useful in this regard.</p>
-  <p>However, we would also like to note that we have concerns about these recommendations, that
-    mirror some of the concerns that we have expressed about JATS in general. Specifically, we feel
-    that the recommendations are, in many cases, not conducive to producing consistent, robust, and
-    machine readable metadata.</p>
-  <p>For example, in the description of the <ext-link ext-link-type="uri"
-      xlink:href="http://supplemental.niso.org/tag-library/index.html?elem=license"
-      >&lt;license&gt;</ext-link> element, they say, &quot;The &lt;ext-link&gt; can be used to link
-    to licenses that are already defined, such as a Creative Commons license.&quot; This should not
-    be discretionary. The specification should be explicit that when a URI exists that identifies a
-    license, that it must be included, and in a well-defined place. Note that this schema allows
-    multiple &lt;ext-link&gt; elements under &lt;license&gt;, so the ambiguities that exist in JATS,
-    that have led to such wide variation in tagging of this metadata, are continued in this new
-    recommendation.</p>
+  <sec>
+    <title>References</title>
 
 
-  </sec>
-<sec><title>Keywords</title>
-  <p>As mentioned above, we support the suggestion on the <ext-link ext-link-type="uri"
-      xlink:href="http://www.niso.org/apps/group_public/view_comment.php?comment_id=252">NISO JATS
-      document page</ext-link> requesting that the &lt;kwd-group&gt; element be added to the content
-    model of several new elements, including &lt;media&gt; and &lt;supplementary-material&gt;.</p>
-
-
-  </sec>
-<sec><title>Public versioning of PMC/OA XML files</title>
-  <p>Many of the issues discussed here could in principle be fixed by running some dedicated scripts
-    over the affected XML files. However, even if such scripts were functional and readily
-    available, there is currently no mechanism that would allow such fixes to be fed back
-    systematically and automatically to the respective sources of these XML files, or to third-party
-    copies thereof. One step in this direction would be to make the XML files available in an
-    updatable environment with public versioning. This would be possible for articles in the Open
-    Access Subset. Indeed, <ext-link ext-link-type="uri"
-      xlink:href="https://github.com/elifesciences/elife-xml">eLife</ext-link> and <ext-link
-      ext-link-type="uri" xlink:href="https://github.com/pensoft">Pensoft</ext-link> have demoed
-    this on GitHub, and a tool for <ext-link ext-link-type="uri"
-      xlink:href="https://github.com/konrad/JATS-to-Mediawiki">porting JATS XML to MediaWiki
-      environments</ext-link> exists as well.</p>
-  <p>Various kinds of modifications to existing XML are theoretically plausible that would merit
-    adoption of such a system. These include – but are not limited to – typos, corrigenda and
-    retractions, but also license changes (e.g. when copyright owner changes licensing backwards, or
-    when copyright expires), media type mismatches, missing or mixed up files, captions or unique
-    identifiers, or &quot;in press&quot; references.</p>
-
-
-  </sec>
-<sec><title>Use cases</title>
-  <p>So far, JATS has mainly been used to exchange information between publishers and archives.
-    Under traditional notions of copyright, large-scale reuse of such information by third parties
-    is very limited but PMC's Open Access Subset – particularly the Wikimedia-compatibly licensed
-    portions thereof – opens the door for experimentation on this front. We see value here in
-    introducing the concept of use cases and collaborating with suitable use case partners in
-    further developing JATS as well as the corresponding guidelines and style checkers. The OAMI bot
-    could serve as one such use case. <ext-link ext-link-type="uri"
-      xlink:href="http://dx.doi.org/10.1186/1471-2105-11-85">Species disambiguation</ext-link>,
-      <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1002/asi.20707">citation
-      analyses</ext-link> or <ext-link ext-link-type="uri"
-      xlink:href="hdl.handle.net/10101/npre.2010.4267.2">automated query formulation</ext-link>
-    could be others.</p>
-
-
-
-
-
-</sec>
-  </sec>
-  <sec><title>References</title>
-
-
-  <ul>
-    <li>
-      <ext-link ext-link-type="uri"
-        xlink:href="http://www.niso.org/apps/group_public/download.php/10055/RP-15-2013_Supplemental_Materials.pdf"
-        >NISO RP-15-2013 Recommended Practices for Online Supplemental Journal Article
-        Materials</ext-link>
-    </li>
-  </ul>
-  <blockquote>
     <ul>
-      <li>Perhaps a ref for &quot;The Semantic Web and related technologies provide well-established
-        standards for identifying these vocabularies in machine-readable form.&quot;</li>
+      <li>
+        <ext-link ext-link-type="uri"
+          xlink:href="http://www.niso.org/apps/group_public/download.php/10055/RP-15-2013_Supplemental_Materials.pdf"
+          >NISO RP-15-2013 Recommended Practices for Online Supplemental Journal Article
+          Materials</ext-link>
+      </li>
     </ul>
-  </blockquote>
+    <blockquote>
+      <ul>
+        <li>Perhaps a ref for &quot;The Semantic Web and related technologies provide
+          well-established standards for identifying these vocabularies in machine-readable
+          form.&quot;</li>
+      </ul>
+    </blockquote>
   </sec>
-  
+
 
 </html>
