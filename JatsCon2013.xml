@@ -82,11 +82,10 @@
           ensure that it is both compatible with existing standards, and consistent and
           machine-readable.</p>
       </abstract>
-
     </article-meta>
   </front>
-  <body>
 
+  <body>
     <sec>
       <title>Introduction</title>
       <sec>
@@ -104,10 +103,8 @@
           recommendations that would have facilitated the implementation of our reuse project and
           that could serve as the basis for a discussion on how to facilitate reuse more
           generally.</p>
-
-
-
       </sec>
+      
       <sec>
         <title>The Open Access Media Importer</title>
         <p>The <ext-link ext-link-type="uri"
@@ -141,11 +138,9 @@
           <p class="caption">Figure 1. Daily uploads by the Open Access Media Importer to Wikimedia
             Commons between July 2012 and September 2013.</p>
         </div>
-
-
-
       </sec>
     </sec>
+    
     <sec>
       <title>License tagging</title>
       <p>As mentioned above, an important function of the OAMI is to determine, for each media file,
@@ -177,29 +172,29 @@
         articles.</p>
       <p>In JATS 1.0, there are several XML elements and attributes that are used to specify license
         information for an article and its accompanying multimedia files.</p>
-      <ul>
-        <li><ext-link ext-link-type="uri"
+      <list list-type="bullet">
+        <list-item><ext-link ext-link-type="uri"
             xlink:href="http://jats.nlm.nih.gov/archiving/tag-library/1.0/?elem=permissions"
             >&lt;permissions&gt;</ext-link> - this is a container element, within which all
-          copyright and license metadata should appear</li>
-        <li>
+          copyright and license metadata should appear</list-item>
+        <list-item>
           <p><ext-link ext-link-type="uri"
               xlink:href="http://jats.nlm.nih.gov/archiving/tag-library/1.0/?elem=license"
               >&lt;license&gt;</ext-link> - this is the main element for specifying license
             information. Among the attributes allowed on this element, the following are
             relevant:</p>
-          <ul>
-            <li><ext-link ext-link-type="uri"
+          <list list-type="bullet">
+            <list-item><ext-link ext-link-type="uri"
                 xlink:href="http://jats.nlm.nih.gov/archiving/tag-library/1.0/?attr=license-type"
                 >@license-type</ext-link> - the value is not constrained; &quot;open-access&quot; is
-              one suggested value.</li>
-            <li><ext-link ext-link-type="uri"
+              one suggested value.</list-item>
+            <list-item><ext-link ext-link-type="uri"
                 xlink:href="http://jats.nlm.nih.gov/archiving/tag-library/1.0/?attr=xlink:href"
                 >@xlink:href</ext-link> - takes an external URL; often the URL identifying the
-              specific Creative Commons license.</li>
-          </ul>
-        </li>
-        <li>
+              specific Creative Commons license.</list-item>
+          </list>
+        </list-item>
+        <list-item>
           <p><ext-link ext-link-type="uri"
               xlink:href="http://jats.nlm.nih.gov/archiving/tag-library/1.0/?elem=license-p"
               >&lt;license-p&gt;</ext-link> - paragraph of text within a &lt;license&gt; element.
@@ -209,15 +204,15 @@
               xlink:href="http://jats.nlm.nih.gov/archiving/tag-library/1.0/?elem=price"
               >&lt;price&gt;</ext-link> to the content model. (Prior to the NLM Tag Set version 3.0,
             the &lt;p&gt; element was used here.)</p>
-        </li>
-        <li>
+        </list-item>
+        <list-item>
           <p><ext-link ext-link-type="uri"
               xlink:href="http://jats.nlm.nih.gov/archiving/tag-library/1.0/?elem=ext-link"
               >&lt;ext-link&gt;</ext-link> - can appear within the &lt;license-p&gt; element, and
             provides a link to an external resource. This also takes an optional
               <code>xlink:href</code> attribute.</p>
-        </li>
-      </ul>
+        </list-item>
+      </list>
       <p>An example of good license tagging, from the <ext-link ext-link-type="uri"
           xlink:href="http://jats.nlm.nih.gov/archiving/tag-library/1.0/?elem=license">JATS 1.0 Tag
           Library documentation</ext-link>, is the following.</p>
@@ -555,21 +550,21 @@
         <title>Standardization efforts</title>
         <p>There have been a number of efforts to standardize the expression of license metadata.
           Among these are:</p>
-        <ul>
-          <li><ext-link ext-link-type="uri" xlink:href="http://creativecommons.org/ns">Creative
-              Commons Rights Expression Language</ext-link> (CC-REL)</li>
-          <li><ext-link ext-link-type="uri" xlink:href="http://www.editeur.org/21/ONIX-PL/">ONIX for
-              Publications Licenses</ext-link> (ONIX-PL)</li>
-          <li>Ongoing <ext-link ext-link-type="uri"
+        <list list-type="bullet">
+          <list-item><ext-link ext-link-type="uri" xlink:href="http://creativecommons.org/ns">Creative
+              Commons Rights Expression Language</ext-link> (CC-REL)</list-item>
+          <list-item><ext-link ext-link-type="uri" xlink:href="http://www.editeur.org/21/ONIX-PL/">ONIX for
+              Publications Licenses</ext-link> (ONIX-PL)</list-item>
+          <list-item>Ongoing <ext-link ext-link-type="uri"
               xlink:href="http://www.niso.org/news/pr/view?item_key=d2e5f409bc6af6b7f504a10edf0329203ffec6f9"
               >NISO Initiative to Develop Standard for Open Access Metadata and
-              Indicators</ext-link></li>
-          <li>
+              Indicators</ext-link></list-item>
+          <list-item>
             <ext-link ext-link-type="uri"
               xlink:href="https://en.wikipedia.org/wiki/Wikipedia:WikiProject_Open_Access/Signalling_OA-ness"
               >Wikipedia: Signalling OA-ness</ext-link>
-          </li>
-        </ul>
+          </list-item>
+        </list>
         <p>Many of these standards provide complex mechanisms for specifying or customizing the
           particular terms of a license. We welcome these efforts, and look forward to the time when
           the tags they define can be integrated with JATS. However, the simplest and most
@@ -595,18 +590,18 @@
         open formats.</p>
       <p>The JATS standard provides two attributes to allow for encoding the media types of files
         that accompany journal articles:</p>
-      <ul>
-        <li>
+      <list list-type="bullet">
+        <list-item>
           <ext-link ext-link-type="uri"
             xlink:href="http://jats.nlm.nih.gov/archiving/tag-library/1.0/?attr=mimetype"
             >mimetype</ext-link>
-        </li>
-        <li>
+        </list-item>
+        <list-item>
           <ext-link ext-link-type="uri"
             xlink:href="http://jats.nlm.nih.gov/archiving/tag-library/1.0/?attr=mime-subtype"
             >mime-subtype</ext-link>
-        </li>
-      </ul>
+        </list-item>
+      </list>
       <p>These attributes are allowed on several elements that identify these types of files,
         including <ext-link ext-link-type="uri"
           xlink:href="http://jats.nlm.nih.gov/archiving/tag-library/1.0/?elem=supplementary-material"
@@ -622,14 +617,14 @@
   <span class="kw">&lt;/caption&gt;</span>
 <span class="kw">&lt;/supplementary-material&gt;</span></code></pre>
       <p>Note:</p>
-      <ul>
-        <li>The <code>mimetype</code> attribute is used to store both parts of the media type,
+      <list list-type="bullet">
+        <list-item>The <code>mimetype</code> attribute is used to store both parts of the media type,
           rather than splitting out the &quot;subtype&quot; into the <code>mime-subtype</code>
-          attribute</li>
-        <li>The information about the media file is given right on the
+          attribute</list-item>
+        <list-item>The information about the media file is given right on the
           &lt;supplementary-material&gt; element, rather than, for example, a child &lt;media&gt;
-          element.</li>
-      </ul>
+          element.</list-item>
+      </list>
       <p>In contrast, the <ext-link ext-link-type="uri"
           xlink:href="http://www.ncbi.nlm.nih.gov/pmc/pmcdoc/tagging-guidelines/article/tags.html#el-suppl"
           >PMC Tagging Guidelines</ext-link> stipulate, for the &lt;supplementary-material&gt;
@@ -649,12 +644,12 @@
         <p>The following are some examples of the problems that we encountered that are related to
           media types.</p>
         <p>Foremost were those resulting from mismatches among:</p>
-        <ul>
-          <li>The declared media type in the @mimetype and @mime-subtype attributes of the source
-            XML, including mismatches between the XML available from the publisher and PMC,</li>
-          <li>The &quot;Content-type&quot; headers as seen from PMC, and</li>
-          <li>The actual media type of the file.</li>
-        </ul>
+        <list list-type="bullet">
+          <list-item>The declared media type in the @mimetype and @mime-subtype attributes of the source
+            XML, including mismatches between the XML available from the publisher and PMC,</list-item>
+          <list-item>The &quot;Content-type&quot; headers as seen from PMC, and</list-item>
+          <list-item>The actual media type of the file.</list-item>
+        </list>
         <p>
           <strong>
             <em>Mismatches between publisher XML, PMC XML, and Content-type</em>
@@ -876,11 +871,11 @@
           Keywords</ext-link> section of each of the three tag sets. It describe two main methods
         for tagging keywords:</p>
       <ol style="list-style-type: decimal">
-        <li>With any of a number of elements inside &lt;kwd-group&gt;: &lt;kwd&gt;,
+        <list-item>With any of a number of elements inside &lt;kwd-group&gt;: &lt;kwd&gt;,
           &lt;compound-kwd&gt;, &lt;compound-kwd-part&gt;, &lt;nested-kwd&gt;, and
-          &lt;unstructured-kwd-group&gt;</li>
-        <li>With &lt;subject&gt; elements inside &lt;subj-group&gt;, inside
-          &lt;article-categories&gt;</li>
+          &lt;unstructured-kwd-group&gt;</list-item>
+        <list-item>With &lt;subject&gt; elements inside &lt;subj-group&gt;, inside
+          &lt;article-categories&gt;</list-item>
       </ol>
 
 
@@ -989,18 +984,18 @@
           Note in the &quot;good&quot; example above, that the value &quot;Discipline-v2&quot; is
           used. In a sample of articles from the OA subset, often we saw no value at all given for
           this attribute. Among those that did supply a value, we found the following:</p>
-        <ul>
-          <li>Article Type</li>
-          <li>Article type</li>
-          <li>Primary</li>
-          <li>Secondary</li>
-          <li>hw-coll-titles</li>
-          <li>hwp-journal-coll</li>
-          <li>overline</li>
-          <li>search-keyword</li>
-          <li>section</li>
-          <li>topic</li>
-        </ul>
+        <list list-type="bullet">
+          <list-item>Article Type</list-item>
+          <list-item>Article type</list-item>
+          <list-item>Primary</list-item>
+          <list-item>Secondary</list-item>
+          <list-item>hw-coll-titles</list-item>
+          <list-item>hwp-journal-coll</list-item>
+          <list-item>overline</list-item>
+          <list-item>search-keyword</list-item>
+          <list-item>section</list-item>
+          <list-item>topic</list-item>
+        </list>
         <p>As with the keyword values themselves, this proliferation of values, with no centralized
           way to determine their semantics, makes them difficult to process by machine.</p>
         <p>
@@ -1026,14 +1021,14 @@
           attribute can take. Publishers each choose their own values, and this leads to
           incompatibilities.</p>
         <p>The following are some of the values that we found:</p>
-        <ul>
-          <li>abbr</li>
-          <li>author</li>
-          <li>journal subjects</li>
-          <li>KEYWORDS</li>
-          <li>keywords</li>
-          <li>kwd</li>
-        </ul>
+        <list list-type="bullet">
+          <list-item>abbr</list-item>
+          <list-item>author</list-item>
+          <list-item>journal subjects</list-item>
+          <list-item>KEYWORDS</list-item>
+          <list-item>keywords</list-item>
+          <list-item>kwd</list-item>
+        </list>
 
 
 
@@ -1202,31 +1197,25 @@
             xlink:href="http://dx.doi.org/10.1002/asi.20707">citation analyses</ext-link> or
             <ext-link ext-link-type="uri" xlink:href="hdl.handle.net/10101/npre.2010.4267.2"
             >automated query formulation</ext-link> could be others.</p>
-
-
-
-
-
       </sec>
     </sec>
+    
     <sec>
       <title>References</title>
-
-
-      <ul>
-        <li>
+      <list list-type="bullet">
+        <list-item>
           <ext-link ext-link-type="uri"
             xlink:href="http://www.niso.org/apps/group_public/download.php/10055/RP-15-2013_Supplemental_Materials.pdf"
             >NISO RP-15-2013 Recommended Practices for Online Supplemental Journal Article
             Materials</ext-link>
-        </li>
-      </ul>
+        </list-item>
+      </list>
       <blockquote>
-        <ul>
-          <li>Perhaps a ref for &quot;The Semantic Web and related technologies provide
+        <list list-type="bullet">
+          <list-item>Perhaps a ref for &quot;The Semantic Web and related technologies provide
             well-established standards for identifying these vocabularies in machine-readable
-            form.&quot;</li>
-        </ul>
+            form.&quot;</list-item>
+        </list>
       </blockquote>
     </sec>
 
