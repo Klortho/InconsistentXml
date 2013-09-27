@@ -131,12 +131,11 @@
             >over 13,000 multimedia files</ext-link> had been processed this way. Figure 1
           illustrates the timeline of uploads per day from the OAMI to Wikimedia Commons, from its
           inception up to the present time.</p>
-        <fig id="">
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Uploads_by_the_Open_Access_Media_Importer_to_Wikimedia_Commons_between_July_2012_and_September_2013.png/1280px-Uploads_by_the_Open_Access_Media_Importer_to_Wikimedia_Commons_between_July_2012_and_September_2013.png"
-            alt="Figure 1. Daily uploads by the Open Access Media Importer to Wikimedia Commons between July 2012 and September 2013."/>
-          <p class="caption">Figure 1. Daily uploads by the Open Access Media Importer to Wikimedia
-            Commons between July 2012 and September 2013.</p>
+        <fig id="fig1">
+          <caption>
+            <title>Figure 1. Daily uploads by the Open Access Media Importer to Wikimedia Commons between July 2012 and September 2013.</title>
+          </caption>
+          <graphic xlink:href="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Uploads_by_the_Open_Access_Media_Importer_to_Wikimedia_Commons_between_July_2012_and_September_2013.png/1280px-Uploads_by_the_Open_Access_Media_Importer_to_Wikimedia_Commons_between_July_2012_and_September_2013.png"/>
         </fig>
       </sec>
     </sec>
@@ -160,11 +159,12 @@
           xlink:href="http://freedomdefined.org/">Definition of Free Cultural Works</ext-link> and
         the <ext-link ext-link-type="uri" xlink:href="http://opendefinition.org/">Open
           Definition</ext-link>.</p>
-      <fig id="">
-        <img src="http://daten.dieweltistgarnichtso.net/tmp/pics/licenses.png"
-          alt="Figure 2. Licenses of supplementary materials in the PMC OA subset, by license URI, for the first week of May 2013"/>
-        <p class="caption">Figure 2. Licenses of supplementary materials in the PMC OA subset, by
-          license URI, for the first week of May 2013</p>
+      <fig id="fig2">
+        <caption>
+          <title>Figure 2. Licenses of supplementary materials in the PMC OA subset, by
+            license URI, for the first week of May 2013.</title>
+        </caption>
+        <graphic xlink:href="http://daten.dieweltistgarnichtso.net/tmp/pics/licenses.png"/>
       </fig>
       <p>This information is tagged in the source XML for each article. In the rest of this section,
         we will review the JATS elements and attributes related to license data, and then describe
@@ -656,12 +656,13 @@
           </strong>
         </p>
         <p>The following figure suggests the scope of the problem of media type mismatches.</p>
-        <fig id="">
-          <img src="http://chrismaloney.org/notes/mediatype-mismatches-by-publisher.png"
-            alt="Figure 3. Supplementary media files with the wrong media type, by DOI prefix, from a sample of articles indexed in the first week of May 2013. Unknown refers to MS Office files, between the different formats of which we did not distinguish."/>
-          <p class="caption">Figure 3. Supplementary media files with the wrong media type, by DOI
-            prefix, from a sample of articles indexed in the first week of May 2013. Unknown refers
-            to MS Office files, between the different formats of which we did not distinguish.</p>
+        <fig id="fig3">
+          <caption>
+            <title>Figure 3. Supplementary media files with the wrong media type, by DOI
+              prefix, from a sample of articles indexed in the first week of May 2013. Unknown refers
+              to MS Office files, between the different formats of which we did not distinguish.</title>
+          </caption>
+          <graphic xlink:href="http://chrismaloney.org/notes/mediatype-mismatches-by-publisher.png"/>
         </fig>
         <p>For an example of such a mismatch, in the article <ext-link ext-link-type="uri"
             xlink:href="http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&amp;id=PMC3162007/"
@@ -1371,12 +1372,6 @@
         The design for Sad consists of four independent components: highly-available theory,
         heterogeneous technology, the memory bus, and compilers. We use our previously refined
         results as a basis for all of these assumptions. This seems to hold in most cases.</p>
-      <fig id="f1">
-        <caption>
-          <title>Sad's unstable construction.</title>
-        </caption>
-        <graphic xlink:href="sample-f1.jpg"/>
-      </fig>
       <p>Suppose that there exists wearable archetypes such that we can easily construct
         evolutionary programming <xref ref-type="bibr" rid="b27"/>. Rather than locating e-commerce,
         Sad chooses to control empathic epistemologies. Clearly, the framework that Sad uses is
@@ -1394,149 +1389,6 @@
         in reality. Despite the results by Sato et al., we can verify that courseware can be made
         ambimorphic, collaborative, and linear-time. Though leading analysts always hypothesize the
         exact opposite, Sad depends on this property for correct behavior.</p>
-      <disp-formula id="fd1">
-        <mml:math id="m1">
-          <mml:mstyle displaystyle="true">
-            <mml:mrow>
-              <mml:msub>
-                <mml:mrow>
-                  <mml:mi>P</mml:mi>
-                </mml:mrow>
-                <mml:mrow>
-                  <mml:mi>nc</mml:mi>
-                </mml:mrow>
-              </mml:msub>
-              <mml:mo>=</mml:mo>
-              <mml:mo>-</mml:mo>
-              <mml:mn>2</mml:mn>
-              <mml:msub>
-                <mml:mrow>
-                  <mml:mi>&#x3c1;</mml:mi>
-                </mml:mrow>
-                <mml:mrow>
-                  <mml:mi>f</mml:mi>
-                </mml:mrow>
-              </mml:msub>
-              <mml:mo stretchy="false">(</mml:mo>
-              <mml:msub>
-                <mml:mrow>
-                  <mml:mo>&#x2202;</mml:mo>
-                </mml:mrow>
-                <mml:mrow>
-                  <mml:mi>t</mml:mi>
-                </mml:mrow>
-              </mml:msub>
-              <mml:msub>
-                <mml:mrow>
-                  <mml:mi>&#x278;</mml:mi>
-                </mml:mrow>
-                <mml:mrow>
-                  <mml:mi>nc</mml:mi>
-                </mml:mrow>
-              </mml:msub>
-              <mml:mo>+</mml:mo>
-              <mml:mi>U</mml:mi>
-              <mml:msub>
-                <mml:mrow>
-                  <mml:mo>&#x2202;</mml:mo>
-                </mml:mrow>
-                <mml:mrow>
-                  <mml:mi>x</mml:mi>
-                </mml:mrow>
-              </mml:msub>
-              <mml:msub>
-                <mml:mrow>
-                  <mml:mi>&#x278;</mml:mi>
-                </mml:mrow>
-                <mml:mrow>
-                  <mml:mi>nc</mml:mi>
-                </mml:mrow>
-              </mml:msub>
-              <mml:mo stretchy="false">)</mml:mo>
-              <mml:mo>=</mml:mo>
-              <mml:mfrac>
-                <mml:mrow>
-                  <mml:msub>
-                    <mml:mrow>
-                      <mml:mi>&#x3c1;</mml:mi>
-                    </mml:mrow>
-                    <mml:mrow>
-                      <mml:mi>f</mml:mi>
-                    </mml:mrow>
-                  </mml:msub>
-                  <mml:mi>U</mml:mi>
-                  <mml:mo stretchy="false">(</mml:mo>
-                  <mml:mn>2</mml:mn>
-                  <mml:mi>x</mml:mi>
-                  <mml:mo>-</mml:mo>
-                  <mml:mi>L</mml:mi>
-                  <mml:mo stretchy="false">)</mml:mo>
-                </mml:mrow>
-                <mml:mrow>
-                  <mml:msqrt>
-                    <mml:mrow>
-                      <mml:mi>x</mml:mi>
-                      <mml:mo stretchy="false">(</mml:mo>
-                      <mml:mi>L</mml:mi>
-                      <mml:mo>-</mml:mo>
-                      <mml:mi>x</mml:mi>
-                      <mml:mo stretchy="false">)</mml:mo>
-                    </mml:mrow>
-                  </mml:msqrt>
-                </mml:mrow>
-              </mml:mfrac>
-              <mml:mo stretchy="false">(</mml:mo>
-              <mml:msub>
-                <mml:mrow>
-                  <mml:mi>Y</mml:mi>
-                </mml:mrow>
-                <mml:mrow>
-                  <mml:mi>t</mml:mi>
-                </mml:mrow>
-              </mml:msub>
-              <mml:mo>+</mml:mo>
-              <mml:msub>
-                <mml:mrow>
-                  <mml:mi>UY</mml:mi>
-                </mml:mrow>
-                <mml:mrow>
-                  <mml:mi>x</mml:mi>
-                </mml:mrow>
-              </mml:msub>
-              <mml:mo stretchy="false">)</mml:mo>
-              <mml:mo>-</mml:mo>
-              <mml:mn>2</mml:mn>
-              <mml:msqrt>
-                <mml:mrow>
-                  <mml:mi>x</mml:mi>
-                  <mml:mo stretchy="false">(</mml:mo>
-                  <mml:mi>L</mml:mi>
-                  <mml:mo>-</mml:mo>
-                  <mml:mi>x</mml:mi>
-                  <mml:mo stretchy="false">)</mml:mo>
-                </mml:mrow>
-              </mml:msqrt>
-              <mml:msub>
-                <mml:mrow>
-                  <mml:mi>&#x3c1;</mml:mi>
-                </mml:mrow>
-                <mml:mrow>
-                  <mml:mi>f</mml:mi>
-                </mml:mrow>
-              </mml:msub>
-              <mml:msub>
-                <mml:mrow>
-                  <mml:mi>Y</mml:mi>
-                </mml:mrow>
-                <mml:mrow>
-                  <mml:mi>tt</mml:mi>
-                </mml:mrow>
-              </mml:msub>
-              <mml:mo>.</mml:mo>
-            </mml:mrow>
-          </mml:mstyle>
-        </mml:math>
-      </disp-formula>
     </sec>
     <sec>
       <title>Implementation</title>
@@ -1548,124 +1400,6 @@
         virtual machine monitor contains about 9591 instructions of Perl. While such a hypothesis
         might seem unexpected, it fell in line with our expectations. Overall, our heuristic adds
         only modest overhead and complexity to existing symbiotic frameworks.</p>
-    </sec>
-    <sec>
-      <title>Experimental Evaluation</title>
-      <p>Our evaluation represents a valuable research contribution in and of itself. Our overall
-        evaluation method seeks to prove three hypotheses: <list list-type="order">
-          <list-item>
-            <p>that the LISP machine of yesteryear actually exhibits better average latency than
-              today's hardware;</p>
-          </list-item>
-          <list-item>
-            <p>that signal-to-noise ratio is a good way to measure expected latency; and finally</p>
-          </list-item>
-          <list-item>
-            <p>that median response time is not as important as USB key speed when maximizing
-              expected throughput.</p>
-          </list-item>
-        </list> The reason for this is that studies have shown that effective hit ratio is roughly
-        00% higher than we might expect <xref ref-type="bibr" rid="b28"/>. Furthermore, we are
-        grateful for DoS-ed, wired systems; without them, we could not optimize for security
-        simultaneously with simplicity. Our evaluation strives to make these points clear.</p>
-      <sec>
-        <title>Hardware and Software Configuration</title>
-        <fig id="f2">
-          <caption>
-            <title>The average signal-to-noise ratio of Sad, as a function of instruction
-              rate.</title>
-          </caption>
-          <graphic xlink:href="sample-f2.jpg"/>
-        </fig>
-        <p>Our detailed evaluation methodology required many hardware modifications. We performed a
-          simulation on UC Berkeley's XBox network to prove peer-to-peer algorithms's lack of
-          influence on the paradox of programming languages. We removed a 200kB USB key from MIT's
-          decommissioned LISP machines. On a similar note, we halved the signal-to-noise ratio of
-          our system to investigate algorithms. Had we emulated our XBox network, as opposed to
-          emulating it in courseware, we would have seen muted results. Third, we added more CISC
-          processors to MIT's knowledge-based overlay network. The Ethernet cards described here
-          explain our conventional results. Next, we added some 10GHz Intel 386s to our interactive
-          overlay network. With this change, we noted degraded latency degredation. Finally, Soviet
-          physicists added more RAM to our network.</p>
-        <fig id="f3">
-          <caption>
-            <title>The effective work factor of Sad, compared with the other heuristics.</title>
-          </caption>
-          <graphic xlink:href="sample-f3.jpg"/>
-        </fig>
-        <p>Sad does not run on a commodity operating system but instead requires a lazily
-          reprogrammed version of EthOS Version 6.7.5. all software components were hand assembled
-          using AT&amp;T System V's compiler with the help of Douglas Engelbart's libraries for
-          collectively emulating DHTs. We implemented our consistent hashing server in Scheme,
-          augmented with provably independent extensions. This might seem perverse but is supported
-          by prior work in the field. Along these same lines, Third, all software components were
-          hand assembled using AT&amp;T System V's compiler with the help of S. Wilson's libraries
-          for computationally emulating parallel SMPs. This concludes our discussion of software
-          modifications.</p>
-        <fig id="f4">
-          <caption>
-            <p>Note that seek time grows as seek time decreases&#x2014;a phenomenon worth simulating
-              in its own right.</p>
-          </caption>
-          <graphic xlink:href="sample-f4.jpg"/>
-        </fig>
-      </sec>
-      <sec>
-        <title>Experimental Results</title>
-        <fig id="f5">
-          <caption>
-            <p>Note that clock speed grows as seek time decreases&#x0414;a phenomenon worth
-              emulating in its own right.</p>
-          </caption>
-          <graphic xlink:href="sample-f5.jpg"/>
-        </fig>
-        <p>Is it possible to justify the great pains we took in our implementation? Yes, but with
-          low probability. Seizing upon this ideal configuration, we ran four novel experiments: (1)
-          we deployed 58 Apple Newtons across the underwater network, and tested our linked lists
-          accordingly; (2) we measured hard disk speed as a function of optical drive throughput on
-          an Apple ][e; (3) we ran von Neumann machines on 91 nodes spread throughout the 2-node
-          network, and compared them against RPCs running locally; and (4) we asked (and answered)
-          what would happen if topologically noisy interrupts were used instead of 128 bit
-          architectures <xref ref-type="bibr" rid="b14"/>. All of these experiments completed
-          without access-link congestion or paging.</p>
-        <p>Now for the climactic analysis of experiments (1) and (3) enumerated above. Error bars
-          have been elided, since most of our data points fell outside of 87 standard deviations
-          from observed means. These signal-to-noise ratio observations contrast to those seen in
-          earlier work <xref ref-type="bibr" rid="b29"/>, such as Maurice V. Wilkes's seminal
-          treatise on semaphores and observed RAM space <xref ref-type="bibr" rid="b9"/>. Third,
-          note how deploying sensor networks rather than simulating them in bioware produce less
-          discretized, more reproducible results.</p>
-        <p>We next turn to experiments (3) and (4) enumerated above, shown in <xref ref-type="fig"
-            rid="f5">Figure 5</xref>. These popularity of XML observations contrast to those seen in
-          earlier work <xref ref-type="bibr" rid="b12"/>, such as V. Shastri's seminal treatise on
-          spreadsheets and observed effective floppy disk space. Further, note that <xref
-            ref-type="fig" rid="f5">Figure 5</xref> shows the <italic>10th-percentile</italic> and
-          not <italic>expected</italic> wired effective USB key speed. Such a hypothesis is
-          regularly a technical mission but always conflicts with the need to provide massive
-          multiplayer online role-playing games to leading analysts. Along these same lines, note
-          how deploying semaphores rather than simulating them in courseware produce smoother, more
-          reproducible results.</p>
-        <p>Lastly, we discuss experiments (1) and (3) enumerated above <xref ref-type="bibr"
-            rid="b30"/>. The data in <xref ref-type="fig" rid="f2">Figure 2</xref>, in particular,
-          proves that four years of hard work were wasted on this project. Operator error alone
-          cannot account for these results. Third, note how simulating massive multiplayer online
-          role-playing games rather than emulating them in courseware produce less jagged, more
-          reproducible results <xref ref-type="bibr" rid="b31"/>.</p>
-      </sec>
-    </sec>
-    <sec>
-      <title>Conclusion</title>
-      <p>In conclusion, our experiences with Sad and IPv6 disprove that Markov models and Smalltalk
-        can interact to solve this obstacle. Sad is able to successfully harness many systems at
-        once. We also introduced an analysis of suffix trees. We expect to see many analysts move to
-        emulating Sad in the very near future.</p>
-      <p>We disproved in this work that the famous ubiquitous algorithm for the improvement of
-        neural networks by Gupta et al. runs in &#x39a;(2<sup><italic>n</italic></sup>) time, and
-        Sad is no exception to that rule. Sad can successfully improve many information retrieval
-        systems at once. It is often an important mission but fell in line with our expectations. We
-        proved that usability in our framework is not a riddle. Sad has set a precedent for optimal
-        technology, and we expect that security experts will analyze our heuristic for years to
-        come. We see no reason not to use our heuristic for studying game-theoretic symmetries.</p>
     </sec>
   </body>
   <back>
