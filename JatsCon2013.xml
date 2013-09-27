@@ -104,7 +104,7 @@
           that could serve as the basis for a discussion on how to facilitate reuse more
           generally.</p>
       </sec>
-      
+
       <sec>
         <title>The Open Access Media Importer</title>
         <p>The <ext-link ext-link-type="uri"
@@ -133,13 +133,16 @@
           inception up to the present time.</p>
         <fig id="fig1">
           <caption>
-            <title>Figure 1. Daily uploads by the Open Access Media Importer to Wikimedia Commons between July 2012 and September 2013.</title>
+            <title>Figure 1. Daily uploads by the Open Access Media Importer to Wikimedia Commons
+              between July 2012 and September 2013.</title>
           </caption>
-          <graphic xlink:href="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Uploads_by_the_Open_Access_Media_Importer_to_Wikimedia_Commons_between_July_2012_and_September_2013.png/1280px-Uploads_by_the_Open_Access_Media_Importer_to_Wikimedia_Commons_between_July_2012_and_September_2013.png"/>
+          <graphic
+            xlink:href="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Uploads_by_the_Open_Access_Media_Importer_to_Wikimedia_Commons_between_July_2012_and_September_2013.png/1280px-Uploads_by_the_Open_Access_Media_Importer_to_Wikimedia_Commons_between_July_2012_and_September_2013.png"
+          />
         </fig>
       </sec>
     </sec>
-    
+
     <sec>
       <title>License tagging</title>
       <p>As mentioned above, an important function of the OAMI is to determine, for each media file,
@@ -161,8 +164,8 @@
           Definition</ext-link>.</p>
       <fig id="fig2">
         <caption>
-          <title>Figure 2. Licenses of supplementary materials in the PMC OA subset, by
-            license URI, for the first week of May 2013.</title>
+          <title>Figure 2. Licenses of supplementary materials in the PMC OA subset, by license URI,
+            for the first week of May 2013.</title>
         </caption>
         <graphic xlink:href="http://daten.dieweltistgarnichtso.net/tmp/pics/licenses.png"/>
       </fig>
@@ -173,24 +176,31 @@
       <p>In JATS 1.0, there are several XML elements and attributes that are used to specify license
         information for an article and its accompanying multimedia files.</p>
       <list list-type="bullet">
-        <list-item><p><ext-link ext-link-type="uri"
-            xlink:href="http://jats.nlm.nih.gov/archiving/tag-library/1.0/?elem=permissions"
-            >&lt;permissions&gt;</ext-link> - this is a container element, within which all
-          copyright and license metadata should appear</p></list-item>
+        <list-item>
+          <p><ext-link ext-link-type="uri"
+              xlink:href="http://jats.nlm.nih.gov/archiving/tag-library/1.0/?elem=permissions"
+              >&lt;permissions&gt;</ext-link> - this is a container element, within which all
+            copyright and license metadata should appear</p>
+        </list-item>
         <list-item>
           <p><ext-link ext-link-type="uri"
               xlink:href="http://jats.nlm.nih.gov/archiving/tag-library/1.0/?elem=license"
               >&lt;license&gt;</ext-link> - this is the main element for specifying license
             information. Among the attributes allowed on this element, the following are
-            relevant:</p></list-item>
-            <list-item><p><ext-link ext-link-type="uri"
-                xlink:href="http://jats.nlm.nih.gov/archiving/tag-library/1.0/?attr=license-type"
-                >@license-type</ext-link> - the value is not constrained; &quot;open-access&quot; is
-              one suggested value.</p></list-item>
-            <list-item><p><ext-link ext-link-type="uri"
-                xlink:href="http://jats.nlm.nih.gov/archiving/tag-library/1.0/?attr=xlink:href"
-                >@xlink:href</ext-link> - takes an external URL; often the URL identifying the
-              specific Creative Commons license.</p></list-item>
+            relevant:</p>
+        </list-item>
+        <list-item>
+          <p><ext-link ext-link-type="uri"
+              xlink:href="http://jats.nlm.nih.gov/archiving/tag-library/1.0/?attr=license-type"
+              >@license-type</ext-link> - the value is not constrained; &quot;open-access&quot; is
+            one suggested value.</p>
+        </list-item>
+        <list-item>
+          <p><ext-link ext-link-type="uri"
+              xlink:href="http://jats.nlm.nih.gov/archiving/tag-library/1.0/?attr=xlink:href"
+              >@xlink:href</ext-link> - takes an external URL; often the URL identifying the
+            specific Creative Commons license.</p>
+        </list-item>
         <list-item>
           <p><ext-link ext-link-type="uri"
               xlink:href="http://jats.nlm.nih.gov/archiving/tag-library/1.0/?elem=license-p"
@@ -206,8 +216,8 @@
           <p><ext-link ext-link-type="uri"
               xlink:href="http://jats.nlm.nih.gov/archiving/tag-library/1.0/?elem=ext-link"
               >&lt;ext-link&gt;</ext-link> - can appear within the &lt;license-p&gt; element, and
-            provides a link to an external resource. This also takes an optional
-              xlink:href attribute.</p>
+            provides a link to an external resource. This also takes an optional xlink:href
+            attribute.</p>
         </list-item>
       </list>
       <p>An example of good license tagging, from the <ext-link ext-link-type="uri"
@@ -252,9 +262,9 @@
       <p>Complementing that, the <ext-link ext-link-type="uri"
           xlink:href="http://www.ncbi.nlm.nih.gov/pmc/tools/stylechecker/">Style Checker</ext-link>
         now has additional checks to help ensure the consistency of the license information. In
-        particular, it will generate an error if there is an xlink:href attribute on
-        the &lt;license&gt; element, and one on a descendent &lt;ext-link&gt; element, and the URIs
-        do not match.</p>
+        particular, it will generate an error if there is an xlink:href attribute on the
+        &lt;license&gt; element, and one on a descendent &lt;ext-link&gt; element, and the URIs do
+        not match.</p>
       <p>Unfortunately, these recent changes do little to address most of the problems described in
         this paper. We provide some recommendations for how these resources could be further
         improved, in the <italic>Recommendations</italic> section, below.</p>
@@ -328,8 +338,8 @@
             xlink:href="http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&amp;id=PMC3143982PMC3605902/"
             >PMC3605902</ext-link>) or may not (<ext-link ext-link-type="uri"
             xlink:href="http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&amp;id=PMC3143982PMC3589467/"
-            >PMC3589467</ext-link>) contain an xlink:href attribute, even within
-          otherwise identical license text.</p>
+            >PMC3589467</ext-link>) contain an xlink:href attribute, even within otherwise identical
+          license text.</p>
         <p>At the time of this writing, PMC has <ext-link ext-link-type="uri"
             xlink:href="http://www.ncbi.nlm.nih.gov/pmc/?term=%22author+manuscript%22%5Bfilter%5D"
             >281,148 author manuscripts</ext-link>, of which <ext-link ext-link-type="uri"
@@ -354,8 +364,8 @@
         <p>This effectively makes it undiscoverable, because any automatic process attempting to
           determine the license of an article would have to exclude things outside of the
           &lt;permissions&gt; element, otherwise there would be the possibility of false positives
-          resulting from articles that <italic>discuss</italic> and <italic>quote</italic> licenses and license text
-          within the article body.</p>
+          resulting from articles that <italic>discuss</italic> and <italic>quote</italic> licenses
+          and license text within the article body.</p>
         <p>
           <bold>
             <italic>Contradictory URIs</italic>
@@ -549,18 +559,25 @@
         <p>There have been a number of efforts to standardize the expression of license metadata.
           Among these are:</p>
         <list list-type="bullet">
-          <list-item><p><ext-link ext-link-type="uri" xlink:href="http://creativecommons.org/ns">Creative
-              Commons Rights Expression Language</ext-link> (CC-REL)</p></list-item>
-          <list-item><p><ext-link ext-link-type="uri" xlink:href="http://www.editeur.org/21/ONIX-PL/">ONIX for
-            Publications Licenses</ext-link> (ONIX-PL)</p></list-item>
-          <list-item><p>Ongoing <ext-link ext-link-type="uri"
-              xlink:href="http://www.niso.org/news/pr/view?item_key=d2e5f409bc6af6b7f504a10edf0329203ffec6f9"
-              >NISO Initiative to Develop Standard for Open Access Metadata and
-            Indicators</ext-link></p></list-item>
-          <list-item><p>
-            <ext-link ext-link-type="uri"
-              xlink:href="https://en.wikipedia.org/wiki/Wikipedia:WikiProject_Open_Access/Signalling_OA-ness"
-              >Wikipedia: Signalling OA-ness</ext-link></p>
+          <list-item>
+            <p><ext-link ext-link-type="uri" xlink:href="http://creativecommons.org/ns">Creative
+                Commons Rights Expression Language</ext-link> (CC-REL)</p>
+          </list-item>
+          <list-item>
+            <p><ext-link ext-link-type="uri" xlink:href="http://www.editeur.org/21/ONIX-PL/">ONIX
+                for Publications Licenses</ext-link> (ONIX-PL)</p>
+          </list-item>
+          <list-item>
+            <p>Ongoing <ext-link ext-link-type="uri"
+                xlink:href="http://www.niso.org/news/pr/view?item_key=d2e5f409bc6af6b7f504a10edf0329203ffec6f9"
+                >NISO Initiative to Develop Standard for Open Access Metadata and
+                Indicators</ext-link></p>
+          </list-item>
+          <list-item>
+            <p>
+              <ext-link ext-link-type="uri"
+                xlink:href="https://en.wikipedia.org/wiki/Wikipedia:WikiProject_Open_Access/Signalling_OA-ness"
+                >Wikipedia: Signalling OA-ness</ext-link></p>
           </list-item>
         </list>
         <p>Many of these standards provide complex mechanisms for specifying or customizing the
@@ -589,15 +606,17 @@
       <p>The JATS standard provides two attributes to allow for encoding the media types of files
         that accompany journal articles:</p>
       <list list-type="bullet">
-        <list-item><p>
-          <ext-link ext-link-type="uri"
-            xlink:href="http://jats.nlm.nih.gov/archiving/tag-library/1.0/?attr=mimetype"
-            >mimetype</ext-link></p>
+        <list-item>
+          <p>
+            <ext-link ext-link-type="uri"
+              xlink:href="http://jats.nlm.nih.gov/archiving/tag-library/1.0/?attr=mimetype"
+              >mimetype</ext-link></p>
         </list-item>
-        <list-item><p>
-          <ext-link ext-link-type="uri"
-            xlink:href="http://jats.nlm.nih.gov/archiving/tag-library/1.0/?attr=mime-subtype"
-            >mime-subtype</ext-link></p>
+        <list-item>
+          <p>
+            <ext-link ext-link-type="uri"
+              xlink:href="http://jats.nlm.nih.gov/archiving/tag-library/1.0/?attr=mime-subtype"
+              >mime-subtype</ext-link></p>
         </list-item>
       </list>
       <p>These attributes are allowed on several elements that identify these types of files,
@@ -616,12 +635,15 @@
 &lt;/supplementary-material&gt;</preformat>
       <p>Note:</p>
       <list list-type="bullet">
-        <list-item><p>The mimetype attribute is used to store both parts of the media type,
-          rather than splitting out the &quot;subtype&quot; into the mime-subtype
-          attribute</p></list-item>
-        <list-item><p>The information about the media file is given right on the
-          &lt;supplementary-material&gt; element, rather than, for example, a child &lt;media&gt;
-          element.</p></list-item>
+        <list-item>
+          <p>The mimetype attribute is used to store both parts of the media type, rather than
+            splitting out the &quot;subtype&quot; into the mime-subtype attribute</p>
+        </list-item>
+        <list-item>
+          <p>The information about the media file is given right on the
+            &lt;supplementary-material&gt; element, rather than, for example, a child &lt;media&gt;
+            element.</p>
+        </list-item>
       </list>
       <p>In contrast, the <ext-link ext-link-type="uri"
           xlink:href="http://www.ncbi.nlm.nih.gov/pmc/pmcdoc/tagging-guidelines/article/tags.html#el-suppl"
@@ -643,10 +665,16 @@
           media types.</p>
         <p>Foremost were those resulting from mismatches among:</p>
         <list list-type="bullet">
-          <list-item><p>The declared media type in the @mimetype and @mime-subtype attributes of the source
-            XML, including mismatches between the XML available from the publisher and PMC,</p></list-item>
-          <list-item><p>The &quot;Content-type&quot; headers as seen from PMC, and</p></list-item>
-          <list-item><p>The actual media type of the file.</p></list-item>
+          <list-item>
+            <p>The declared media type in the @mimetype and @mime-subtype attributes of the source
+              XML, including mismatches between the XML available from the publisher and PMC,</p>
+          </list-item>
+          <list-item>
+            <p>The &quot;Content-type&quot; headers as seen from PMC, and</p>
+          </list-item>
+          <list-item>
+            <p>The actual media type of the file.</p>
+          </list-item>
         </list>
         <p>
           <bold>
@@ -656,11 +684,12 @@
         <p>The following figure suggests the scope of the problem of media type mismatches.</p>
         <fig id="fig3">
           <caption>
-            <title>Figure 3. Supplementary media files with the wrong media type, by DOI
-              prefix, from a sample of articles indexed in the first week of May 2013. Unknown refers
-              to MS Office files, between the different formats of which we did not distinguish.</title>
+            <title>Figure 3. Supplementary media files with the wrong media type, by DOI prefix,
+              from a sample of articles indexed in the first week of May 2013. Unknown refers to MS
+              Office files, between the different formats of which we did not distinguish.</title>
           </caption>
-          <graphic xlink:href="http://chrismaloney.org/notes/mediatype-mismatches-by-publisher.png"/>
+          <graphic xlink:href="http://chrismaloney.org/notes/mediatype-mismatches-by-publisher.png"
+          />
         </fig>
         <p>For an example of such a mismatch, in the article <ext-link ext-link-type="uri"
             xlink:href="http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&amp;id=PMC3162007/"
@@ -870,11 +899,15 @@
           Keywords</ext-link> section of each of the three tag sets. It describe two main methods
         for tagging keywords:</p>
       <list list-type="order">
-        <list-item><p>With any of a number of elements inside &lt;kwd-group&gt;: &lt;kwd&gt;,
-          &lt;compound-kwd&gt;, &lt;compound-kwd-part&gt;, &lt;nested-kwd&gt;, and
-          &lt;unstructured-kwd-group&gt;</p></list-item>
-        <list-item><p>With &lt;subject&gt; elements inside &lt;subj-group&gt;, inside
-          &lt;article-categories&gt;</p></list-item>
+        <list-item>
+          <p>With any of a number of elements inside &lt;kwd-group&gt;: &lt;kwd&gt;,
+            &lt;compound-kwd&gt;, &lt;compound-kwd-part&gt;, &lt;nested-kwd&gt;, and
+            &lt;unstructured-kwd-group&gt;</p>
+        </list-item>
+        <list-item>
+          <p>With &lt;subject&gt; elements inside &lt;subj-group&gt;, inside
+            &lt;article-categories&gt;</p>
+        </list-item>
       </list>
 
 
@@ -984,16 +1017,36 @@
           used. In a sample of articles from the OA subset, often we saw no value at all given for
           this attribute. Among those that did supply a value, we found the following:</p>
         <list list-type="bullet">
-          <list-item><p>Article Type</p></list-item>
-          <list-item><p>Article type</p></list-item>
-          <list-item><p>Primary</p></list-item>
-          <list-item><p>Secondary</p></list-item>
-          <list-item><p>hw-coll-titles</p></list-item>
-          <list-item><p>hwp-journal-coll</p></list-item>
-          <list-item><p>overline</p></list-item>
-          <list-item><p>search-keyword</p></list-item>
-          <list-item><p>section</p></list-item>
-          <list-item><p>topic</p></list-item>
+          <list-item>
+            <p>Article Type</p>
+          </list-item>
+          <list-item>
+            <p>Article type</p>
+          </list-item>
+          <list-item>
+            <p>Primary</p>
+          </list-item>
+          <list-item>
+            <p>Secondary</p>
+          </list-item>
+          <list-item>
+            <p>hw-coll-titles</p>
+          </list-item>
+          <list-item>
+            <p>hwp-journal-coll</p>
+          </list-item>
+          <list-item>
+            <p>overline</p>
+          </list-item>
+          <list-item>
+            <p>search-keyword</p>
+          </list-item>
+          <list-item>
+            <p>section</p>
+          </list-item>
+          <list-item>
+            <p>topic</p>
+          </list-item>
         </list>
         <p>As with the keyword values themselves, this proliferation of values, with no centralized
           way to determine their semantics, makes them difficult to process by machine.</p>
@@ -1021,12 +1074,24 @@
           incompatibilities.</p>
         <p>The following are some of the values that we found:</p>
         <list list-type="bullet">
-          <list-item><p>abbr</p></list-item>
-          <list-item><p>author</p></list-item>
-          <list-item><p>journal subjects</p></list-item>
-          <list-item><p>KEYWORDS</p></list-item>
-          <list-item><p>keywords</p></list-item>
-          <list-item><p>kwd</p></list-item>
+          <list-item>
+            <p>abbr</p>
+          </list-item>
+          <list-item>
+            <p>author</p>
+          </list-item>
+          <list-item>
+            <p>journal subjects</p>
+          </list-item>
+          <list-item>
+            <p>KEYWORDS</p>
+          </list-item>
+          <list-item>
+            <p>keywords</p>
+          </list-item>
+          <list-item>
+            <p>kwd</p>
+          </list-item>
         </list>
 
 
@@ -1044,10 +1109,10 @@
         <title>License tagging</title>
         <p>We recommend that the PMC Tagging Guidelines and Style Checker be changed to require
           that, if a license is defined by a URI (as are CC licenses), that the article
-            <italic>must</italic> put this URL into the @xlink:href on the &lt;license&gt; element. This
-          should be the sole place that a machine (or anyone) should need to look for the license
-          URI. (This is in contrast to the current guidelines, which state that it can be tagged on
-          an @xlink:href on either the &lt;license&gt; element, or on any &lt;ext-link&gt;
+            <italic>must</italic> put this URL into the @xlink:href on the &lt;license&gt; element.
+          This should be the sole place that a machine (or anyone) should need to look for the
+          license URI. (This is in contrast to the current guidelines, which state that it can be
+          tagged on an @xlink:href on either the &lt;license&gt; element, or on any &lt;ext-link&gt;
           descendent of &lt;license&gt;.)</p>
         <p>If that were implemented, then it would no longer be necessary to do comparisons between
           that URI and any other URI within the &lt;license-p&gt; elements, and this check should be
@@ -1099,7 +1164,7 @@
            xlink:href=&quot;http://creativecommons.org/publicdomain/zero/1.0/&quot;&gt;...&lt;/license&gt;
 &lt;/permissions&gt;</preformat>
       </sec>
-      
+
       <sec>
         <title>Media types and format</title>
         <p>The PMC Tagging Guidelines should be changed to require the media types to be in the
@@ -1147,7 +1212,7 @@
           ambiguities that exist in JATS, that have led to such wide variation in tagging of this
           metadata, are continued in this new recommendation.</p>
       </sec>
-      
+
       <sec>
         <title>Keywords</title>
         <p>As mentioned above, we support the suggestion on the <ext-link ext-link-type="uri"
@@ -1156,7 +1221,7 @@
           the content model of several new elements, including &lt;media&gt; and
           &lt;supplementary-material&gt;.</p>
       </sec>
-      
+
       <sec>
         <title>Public versioning of PMC/OA XML files</title>
         <p>Many of the issues discussed here could in principle be fixed by running some dedicated
@@ -1177,7 +1242,7 @@
           licensing backwards, or when copyright expires), media type mismatches, missing or mixed
           up files, captions or unique identifiers, or &quot;in press&quot; references.</p>
       </sec>
-      
+
       <sec>
         <title>Use cases</title>
         <p>So far, JATS has mainly been used to exchange information between publishers and
@@ -1194,43 +1259,18 @@
             >automated query formulation</ext-link> could be others.</p>
       </sec>
     </sec>
-    
+
     <sec>
       <title>References</title>
       <p>
-          <ext-link ext-link-type="uri"
-            xlink:href="http://www.niso.org/apps/group_public/download.php/10055/RP-15-2013_Supplemental_Materials.pdf"
-            >NISO RP-15-2013 Recommended Practices for Online Supplemental Journal Article
-            Materials</ext-link>
+        <ext-link ext-link-type="uri"
+          xlink:href="http://www.niso.org/apps/group_public/download.php/10055/RP-15-2013_Supplemental_Materials.pdf"
+          >NISO RP-15-2013 Recommended Practices for Online Supplemental Journal Article
+          Materials</ext-link>
       </p>
     </sec>
-
-
-
-
-    <sec>
-      <title>Related Work</title>
-      <p>In designing Sad, we drew on prior work from a number of distinct areas. The choice of
-        rasterization in <xref ref-type="bibr" rid="b5"/> differs from ours in that we enable only
-        intuitive epistemologies in our system <xref ref-type="bibr" rid="b1"/>. We plan to adopt
-        many of the ideas from this prior work in future versions of Sad.</p>
-      <sec>
-        <title>IPv7</title>
-        <p>Several semantic and low-energy methods have been proposed in the literature <xref
-            ref-type="bibr" rid="b6"/>. We had our method in mind before Zhou and Zhou published the
-          recent well-known work on the understanding of A* search. While this work was published
-          before ours, we came up with the approach first but could not publish it until now due to
-          red tape. Similarly, Sun <xref ref-type="bibr" rid="b7"/> developed a similar heuristic,
-          contrarily we argued that our methodology is NP-complete <xref ref-type="bibr" rid="b8"/>.
-          Usability aside, our application visualizes less accurately. Maruyama and Scott Shenker
-          constructed the first known instance of compact algorithms. A comprehensive survey <xref
-            ref-type="bibr" rid="b9"/> is available in this space. All of these solutions conflict
-          with our assumption that permutable algorithms and the study of I/O automata are private
-            <xref ref-type="bibr" rid="b10 b11 b2"/>. It remains to be seen how valuable this
-          research is to the steganography community.</p>
-      </sec>
-    </sec>
   </body>
+
   <back>
     <ack>
       <p>The author to thank the creators of the <ext-link ext-link-type="uri"
