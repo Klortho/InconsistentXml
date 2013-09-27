@@ -1098,9 +1098,8 @@
            specific-use=&quot;start-date: 2013-10-23&quot;
            xlink:href=&quot;http://creativecommons.org/publicdomain/zero/1.0/&quot;&gt;...&lt;/license&gt;
 &lt;/permissions&gt;</preformat>
-
-
       </sec>
+      
       <sec>
         <title>Media types and format</title>
         <p>The PMC Tagging Guidelines should be changed to require the media types to be in the
@@ -1147,9 +1146,8 @@
           that this schema allows multiple &lt;ext-link&gt; elements under &lt;license&gt;, so the
           ambiguities that exist in JATS, that have led to such wide variation in tagging of this
           metadata, are continued in this new recommendation.</p>
-
-
       </sec>
+      
       <sec>
         <title>Keywords</title>
         <p>As mentioned above, we support the suggestion on the <ext-link ext-link-type="uri"
@@ -1157,9 +1155,8 @@
             JATS document page</ext-link> requesting that the &lt;kwd-group&gt; element be added to
           the content model of several new elements, including &lt;media&gt; and
           &lt;supplementary-material&gt;.</p>
-
-
       </sec>
+      
       <sec>
         <title>Public versioning of PMC/OA XML files</title>
         <p>Many of the issues discussed here could in principle be fixed by running some dedicated
@@ -1179,9 +1176,8 @@
           corrigenda and retractions, but also license changes (e.g. when copyright owner changes
           licensing backwards, or when copyright expires), media type mismatches, missing or mixed
           up files, captions or unique identifiers, or &quot;in press&quot; references.</p>
-
-
       </sec>
+      
       <sec>
         <title>Use cases</title>
         <p>So far, JATS has mainly been used to exchange information between publishers and
@@ -1218,9 +1214,6 @@
       </blockquote>
     </sec>
 
-
-
-
     <sec>
       <title>Introduction</title>
       <p>The deployment of Byzantine fault tolerance has refined checksums, and current trends
@@ -1246,71 +1239,6 @@
         by Noam Chomsky et al. <xref ref-type="bibr" rid="b4"/> is Turing complete. Along these same
         lines, we argue not only that the UNIVAC computer and public-private key pairs can agree to
         achieve this intent, but that the same is true for checksums.</p>
-      <table-wrap position="float" id="tbl1">
-        <caption>
-          <title>Sphingolipid content of WT and Galgt1 Siat9 double-null brains</title>
-          <p>Quantitation of ceramide (Cer), hexosylceramide (HexosylCer), lactosylceramide
-            (LactosylCer), SM4s, and SM3 in lipid extracts from two brains from WT mice (WT 1 and 2)
-            and two brains from <italic>Galgt1 Siat9</italic> double-null mice
-              (<italic>Galgt1Siat9</italic>DN 1 and 2).</p>
-        </caption>
-        <table frame="hsides" rules="groups">
-          <thead>
-            <tr>
-              <th align="left" valign="top">Sphingolipid</th>
-              <th align="center" valign="top">WT 1</th>
-              <th align="center" valign="top">WT 2</th>
-              <th align="center" valign="top"><italic>Galgt1 Siat9</italic> DN 1</th>
-              <th align="center" valign="top"><italic>Galgt1 Siat9</italic> DN 2</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td align="left" valign="top">Cer</td>
-              <td align="right" valign="top">1,200</td>
-              <td align="right" valign="top">610</td>
-              <td align="right" valign="top">730</td>
-              <td align="right" valign="top">300</td>
-            </tr>
-            <tr>
-              <td align="left" valign="top">HexosylCer</td>
-              <td align="right" valign="top">4,400</td>
-              <td align="right" valign="top">4,700</td>
-              <td align="right" valign="top">4,700</td>
-              <td align="right" valign="top">7,600</td>
-            </tr>
-            <tr>
-              <td align="left" valign="top">LactosylCer</td>
-              <td align="right" valign="top">&#x0003c;200</td>
-              <td align="right" valign="top">&#x0003c;200</td>
-              <td align="right" valign="top">3,700</td>
-              <td align="right" valign="top">2,700</td>
-            </tr>
-            <tr>
-              <td align="left" valign="top">SM4s</td>
-              <td align="right" valign="top">2,200</td>
-              <td align="right" valign="top">2,000</td>
-              <td align="right" valign="top">2,800</td>
-              <td align="right" valign="top">2,700</td>
-            </tr>
-            <tr>
-              <td align="left" valign="top">SM3 (LacCer II<sup>3</sup>-sulfate)</td>
-              <td align="right" valign="top">&#x0003c;40</td>
-              <td align="right" valign="top">&#x0003c;40</td>
-              <td align="right" valign="top">450</td>
-              <td align="right" valign="top">480</td>
-            </tr>
-          </tbody>
-        </table>
-        <table-wrap-foot>
-          <fn>
-            <p>Values are in picomoles of lipid per milligram of wet weight.</p>
-          </fn>
-        </table-wrap-foot>
-      </table-wrap>
-      <p>The rest of this paper is organized as follows. We motivate the need for replication. Along
-        these same lines, we prove the deployment of the UNIVAC computer. Further, we place our work
-        in context with the prior work in this area. Ultimately, we conclude.</p>
     </sec>
     <sec>
       <title>Related Work</title>
@@ -1333,71 +1261,6 @@
             <xref ref-type="bibr" rid="b10 b11 b2"/>. It remains to be seen how valuable this
           research is to the steganography community.</p>
       </sec>
-      <sec>
-        <title>Encrypted Methodologies</title>
-        <p>Our solution is related to research into the development of B-trees, Internet QoS, and
-          psychoacoustic communication <xref ref-type="bibr" rid="b5"/>. Next, Kobayashi and Bose
-            <xref ref-type="bibr" rid="b1 b12 b2 b3 b13"/> and Anderson and Takahashi <xref
-            ref-type="bibr" rid="b14"/> proposed the first known instance of operating systems. An
-          analysis of the Ethernet proposed by I. Smith et al. fails to address several key issues
-          that our algorithm does address. It remains to be seen how valuable this research is to
-          the self-learning cyberinformatics community. Finally, note that Sad harnesses active
-          networks; thusly, Sad runs in Θ(<italic>n</italic>!) time <xref ref-type="bibr" rid="b15"
-          />. Therefore, if performance is a concern, our framework has a clear advantage.</p>
-        <p>Sun and Kumar <xref ref-type="bibr" rid="b16"/> suggested a scheme for simulating
-          redundancy, but did not fully realize the implications of the synthesis of systems at the
-          time. The only other noteworthy work in this area suffers from fair assumptions about
-          atomic epistemologies <xref ref-type="bibr" rid="b17"/>. Lee and Brown <xref
-            ref-type="bibr" rid="b18 b19 b20"/> proposed the first known instance of e-commerce. The
-          original approach to this quagmire by Kumar and Suzuki <xref ref-type="bibr" rid="b21"/>
-          was well-received; contrarily, this outcome did not completely accomplish this purpose
-            <xref ref-type="bibr" rid="b22 b16 b11"/>. The well-known solution <xref ref-type="bibr"
-            rid="b23"/> does not prevent the synthesis of B-trees as well as our method. The
-          original approach to this obstacle by Mark Gayson et al. <xref ref-type="bibr" rid="b8"/>
-          was well-received; on the other hand, such a claim did not completely answer this question
-            <xref ref-type="bibr" rid="b13"/>. Our system represents a significant advance above
-          this work. Our approach to the exploration of compilers differs from that of R. Tarjan
-            <xref ref-type="bibr" rid="b21 b24 b25"/> as well.</p>
-      </sec>
-    </sec>
-    <sec>
-      <title>Permutable Configurations</title>
-      <p>Motivated by the need for RPCs, we now propose an architecture for disproving that the
-        location-identity split and the Ethernet are usually incompatible. This may or may not
-        actually hold in reality. We estimate that the acclaimed encrypted algorithm for the
-        emulation of suffix trees by Thompson and Li <xref ref-type="bibr" rid="b26"/> runs in
-            O(2<sup><italic>n</italic></sup>) time. This may or may not actually hold in reality.
-        The design for Sad consists of four independent components: highly-available theory,
-        heterogeneous technology, the memory bus, and compilers. We use our previously refined
-        results as a basis for all of these assumptions. This seems to hold in most cases.</p>
-      <p>Suppose that there exists wearable archetypes such that we can easily construct
-        evolutionary programming <xref ref-type="bibr" rid="b27"/>. Rather than locating e-commerce,
-        Sad chooses to control empathic epistemologies. Clearly, the framework that Sad uses is
-        feasible.</p>
-      <p>Sad relies on the compelling architecture outlined in the recent seminal work by Davis et
-        al. in the field of programming languages. The design for our heuristic consists of four
-        independent components: scalable communication, scalable theory, perfect archetypes, and
-        Bayesian theory. Along these same lines, <xref ref-type="fig" rid="f1">Figure 1</xref>
-        details Sad's cooperative construction. Even though analysts generally assume the exact
-        opposite, our application depends on this property for correct behavior. We scripted a
-        trace, over the course of several weeks, proving that our design is feasible. Though
-        electrical engineers regularly estimate the exact opposite, our algorithm depends on this
-        property for correct behavior. <xref ref-type="fig" rid="f1">Figure 1</xref> details the
-        relationship between Sad and collaborative configurations. This may or may not actually hold
-        in reality. Despite the results by Sato et al., we can verify that courseware can be made
-        ambimorphic, collaborative, and linear-time. Though leading analysts always hypothesize the
-        exact opposite, Sad depends on this property for correct behavior.</p>
-    </sec>
-    <sec>
-      <title>Implementation</title>
-      <p>Though many skeptics said it couldn't be done (most notably Kobayashi), we motivate a
-        fully-working version of Sad. Next, it was necessary to cap the instruction rate used by our
-        framework to 573 man-hours. Since Sad enables object-oriented languages, implementing the
-        collection of shell scripts was relatively straightforward. Sad is composed of a hacked
-        operating system, a virtual machine monitor, and a collection of shell scripts. Next, the
-        virtual machine monitor contains about 9591 instructions of Perl. While such a hypothesis
-        might seem unexpected, it fell in line with our expectations. Overall, our heuristic adds
-        only modest overhead and complexity to existing symbiotic frameworks.</p>
     </sec>
   </body>
   <back>
