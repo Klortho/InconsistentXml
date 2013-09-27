@@ -33,8 +33,8 @@
         </contrib>
         <contrib>
           <name>
-            <surname>Nils</surname>
-            <given-names>Dagsson Moskopp</given-names>
+            <surname>Moskopp</surname>
+            <given-names>Nils Dagsson</given-names>
           </name>
           <aff>?</aff>
           <bio>
@@ -45,9 +45,11 @@
       </contrib-group>
 
       <permissions>
-        <copyright-statement>Copyright 2013 by Daniel Mietchen</copyright-statement>
+        <copyright-statement>
+          The authors assert themselves as the copyright holders of this paper.
+        </copyright-statement>
         <copyright-year>2013</copyright-year>
-        <copyright-holder>Daniel Mietchen</copyright-holder>
+        <copyright-holder>D. Mietchen, C. Maloney, N. Moskopp</copyright-holder>
         <license>
           <license-p>The copyright holder grants the U.S. National Library of Medicine permission to
             archive and post a copy of this paper on the Journal Article Tag Suite Conference
