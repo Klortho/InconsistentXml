@@ -14,10 +14,10 @@
           </name>
           <aff>Museum für Naturkunde - Leibniz-Institut für Evolutions- und Biodiversitätsforschung,
             Berlin, Germany</aff>
-          <aff>Open Knowledge Foundation, Berlin, Germany</aff>
+          <aff>Open Knowledge Foundation Deutschland, Berlin, Germany</aff>
           <bio>
-            <p>Daniel Mietchen is a biophysicist and a consultant to Open Access publishers on
-              matters of publishing technology, including XML-based workflows.</p>
+            <p>Daniel Mietchen is a biophysicist working on interoperability of the biodiversity 
+              literature.</p>
           </bio>
         </contrib>
         <contrib>
@@ -579,7 +579,7 @@
         <p>Many of these standards provide complex mechanisms for specifying or customizing the
           particular terms of a license. We welcome these efforts, and look forward to the time when
           the tags they define can be integrated with JATS. However, the simplest and most
-          fundamental way of robustly signalling a license will probably always be to unambiguously
+          fundamental way of robustly signaling a license will probably always be to unambiguously
           link to a URI that's defined, controlled and perhaps versioned by an established
           organization such as Creative Commons.</p>
 
@@ -702,7 +702,8 @@
         <preformat>&lt;supplementary-material content-type=&quot;local-data&quot; id=&quot;pone.0023819.s009&quot;&gt;
   ...
   &lt;media xlink:href=&quot;pone.0023819.s009.rar&quot; mimetype=&quot;audio&quot; mime-subtype=&quot;x-realaudio&quot;&gt;
-  ...</preformat>
+  ...
+&lt;/supplementary-material></preformat>
         <p>Furthermore, PMC returns the (wrong) HTTP &quot;Content-Type&quot; header
           &quot;application/octet-stream&quot;.</p>
         <p>
@@ -723,7 +724,8 @@
         <preformat>&lt;supplementary-material content-type=&quot;local-data&quot; id=&quot;pone.0002276.s002&quot;&gt;
   ...
   &lt;media xlink:href=&quot;pone.0002276.s002.doc&quot; mimetype=&quot;application&quot; mime-subtype=&quot;msword&quot;&gt;
-  ...</preformat>
+  ...
+&lt;/supplementary-material></preformat>
         <p>
           <bold>
             <italic>Media type misidentified in publisher XML</italic>
@@ -743,7 +745,8 @@
             >PMC XML</ext-link> is wrong too, but in a different way:</p>
         <preformat>&lt;supplementary-material content-type=&quot;local-data&quot; id=&quot;SM1&quot;&gt;
   &lt;media xlink:href=&quot;Movie_1.MP4&quot; mimetype=&quot;video&quot; mime-subtype=&quot;quicktime&quot;&gt;
-  ...</preformat>
+  ...
+&lt;/supplementary-material></preformat>
         <p>
           <bold>
             <italic>Missing media type in XML</italic>
@@ -815,7 +818,7 @@
           </bold>
         </p>
         <p>In a few cases, the source XML of suitably licensed articles available from PMC do not
-          have any reference to the multimedia files whatsoever. For example <ext-link
+          have any reference to the multimedia files whatsoever. For example, <ext-link
             ext-link-type="uri"
             xlink:href="http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&amp;id=3104346"
             >PMC3104346</ext-link> has two supplemental videos, which can be viewed <ext-link
@@ -1096,7 +1099,7 @@
     <sec id='recommendations'>
       <title>Recommendations</title>
       <p>We will thus end by discussing some more long-term prospects for enhancing the
-        discoverability of reuseable open-access content, combined with practical recommendations
+        discoverability of reusable open-access content, combined with practical recommendations
         for how the current situation might be improved. </p>
 
       <sec id='rec-license'>
