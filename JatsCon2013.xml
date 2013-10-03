@@ -331,9 +331,9 @@
 &lt;/permissions&gt;</preformat>
         <p>These statements in the &lt;copyright-statement&gt; element may (<ext-link
             ext-link-type="uri"
-            xlink:href="http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&amp;id=PMC3143982PMC3605902/"
+            xlink:href="http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&amp;id=PMC3605902/"
             >PMC3605902</ext-link>) or may not (<ext-link ext-link-type="uri"
-            xlink:href="http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&amp;id=PMC3143982PMC3589467/"
+            xlink:href="http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&amp;id=PMC3589467/"
             >PMC3589467</ext-link>) contain an xlink:href attribute, even within otherwise identical
           license text.</p>
         <p>At the time of this writing, PMC has <ext-link ext-link-type="uri"
@@ -344,7 +344,7 @@
           the OA subset, it was found that 1%, do in fact have a Creative Commons license, but the
           license information is completely outside of the &lt;permissions&gt; element. For example,
           in <ext-link ext-link-type="uri"
-            xlink:href="http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&amp;id=PMC3143982PMC3717328/"
+            xlink:href="http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&amp;id=PMC3717328/"
             >PMC3717328</ext-link>, the license information is given in a &lt;fn&gt; element within
           the back matter:</p>
         <preformat>&lt;fn id=&quot;FN5&quot;&gt;
