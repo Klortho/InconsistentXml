@@ -15,9 +15,9 @@ git clone https://github.com/Klortho/InconsistentXml.git
 
 # Get the JATS preview stylesheets
 git clone https://github.com/NCBITools/JATSPreviewStylesheets.git
-cd InconsistentXml
 
-# Transform!  Result is in InconsistentXml.html, which you can re-commit, if you want.
+# Transform!  Result is in JatsCon2013.html, which you can re-commit, if you want.
+cd InconsistentXml
 saxon9 -s:JatsCon2013.xml -o:JatsCon2013.html \
   -xsl:../JATSPreviewStylesheets/xslt/main/jats-html.xsl
 ```

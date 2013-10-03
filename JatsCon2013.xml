@@ -1056,8 +1056,8 @@
         <p>In many articles, no keywords or subject tags were given at all, other than the
           &quot;heading&quot; subject, which is not useful for this purpose. For example, <ext-link
             ext-link-type="uri"
-            xlink:href="http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&amp;id=PMC3425056"
-            >PMC3425056</ext-link> has only this markup:</p>
+            xlink:href="http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&amp;id=PMC3546446"
+            >PMC3546446</ext-link> has only this markup:</p>
         <preformat>&lt;subj-group subj-group-type=&quot;heading&quot;&gt;
   &lt;subject&gt;Case Report&lt;/subject&gt;
 &lt;/subj-group&gt;</preformat>
