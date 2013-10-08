@@ -1,6 +1,9 @@
 JATS-Con paper, 2013
 ====================
 
+A preview version of this document is (as of the time of this writing, 10/8/2013) online at
+[http://chrismaloney.org/InconsistentXml/JatsCon2013.html](http://chrismaloney.org/InconsistentXml/JatsCon2013.html).
+
 To preview this, use the JATSPreviewStylesheets, which depends on you're being able
 to run XSLT2 transformations.  The instructions below assume this is set up with the
 alias `saxon9`.
